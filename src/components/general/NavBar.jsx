@@ -1,40 +1,37 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
+import { Link } from 'react-router-dom';
 import { GRAY, PINK } from '../../styles/colors';
-import { BodyText, Button } from '../../styles/styles';
-import logo from '../../images/logo.png';
+import logo from '../../assets/logo/logo.png';
+// import About from './About';
 
-export const navButton = styled(Button)`
-  background-color: none;
-  font-size: 10pt;
-`;
+// export const NavButton = styled(Button)`
+//   background-color: none;
+//   font-size: 10pt;
+// `;
 
 export default function NavBar() {
   return (
     <div className={navBar}>
       <div className={left}>
-        <Logo>
-          <img alt="tspoon logo" src={logo} />
-        </Logo>
-        <navButton>
-          <BodyText className={hoverUnderlineAnimation}>About</BodyText>
-        </navButton>
-        <navButton>
-          <BodyText className={hoverUnderlineAnimation}>Blog</BodyText>
-        </navButton>
+        <Link to="/tspoon-web/">
+          <Img alt="tspoon logo" src={logo} />
+        </Link>
+        <Link to="/tspoon-web/about">About</Link>
+        <Link to="/tspoon-web/blog">Blog</Link>
+        {/* <div className={hoverUnderlineAnimation}>Blog</div> */}
       </div>
-      <navButton className={right}>
-        <BodyText className={hoverUnderlineAnimation}>Help</BodyText>
-      </navButton>
+      <Link className={right} to="/tspoon-web/contact-us">
+        Contact Us
+      </Link>
+      {/* <div className={[right]}>Contact Us</div> */}
     </div>
   );
 }
 
-const Logo = styled.div`
-  img {
-    width: 70px;
-    height: auto;
-  }
+const Img = styled.img`
+  width: 70px;
+  height: auto;
   background-color: ${GRAY};
 `;
 
@@ -62,31 +59,31 @@ const navBar = css`
   }
 `;
 
-const hoverUnderlineAnimation = css`
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
+// const hoverUnderlineAnimation = css`
+//   cursor: pointer;
+//   display: inline-block;
+//   position: relative;
 
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--accent);
-    transition: transform 0.2s ease-out;
-  }
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     width: 100%;
+//     transform: scaleX(0);
+//     height: 1px;
+//     bottom: 0;
+//     left: 0;
+//     background-color: var(--accent);
+//     transition: transform 0.2s ease-out;
+//   }
 
-  &:hover::after {
-    transform: scaleX(1);
-  }
+//   &:hover::after {
+//     transform: scaleX(1);
+//   }
 
-  /* Only way to show underline animation on mobile (no hover); however, line stays active until clicking off the button */
-  @media only screen and (max-width: 400px) {
-    &::after {
-      transform: scaleX(1);
-    }
-  }
-`;
+//   /* Only way to show underline animation on mobile (no hover); however, line stays active until clicking off the button */
+//   @media only screen and (max-width: 400px) {
+//     &::after {
+//       transform: scaleX(1);
+//     }
+//   }
+// `;

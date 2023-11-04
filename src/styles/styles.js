@@ -2,13 +2,16 @@ import '@fontsource/source-sans-pro'; // Defaults to weight 400
 import '@fontsource/source-sans-pro/400.css'; // Specify weight
 import '@fontsource/source-sans-pro/400-italic.css'; // Specify weight and style
 import '@fontsource/source-sans-pro/600.css'; // Specify weight and style
+import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
 // import { css } from '@linaria/atomic';
-import { BEIGE, GRAY, GREEN, GREEN_LIGHT, PINK, WHITE } from './colors';
+import { css } from '@linaria/atomic';
+import { BEIGE, BLACK, GRAY, GREEN, GREEN_LIGHT, PINK, WHITE } from './colors';
 
 export const smallFontSize = `10pt`;
-export const bodyFontSize = `16pt`;
+export const smallHeadingFontSize = `12pt`;
+export const bodyFontSize = `14pt`;
 export const heading3FontSize = `20pt`;
 export const heading2FontSize = `24pt`;
 export const heading1FontSize = '32pt';
@@ -22,6 +25,15 @@ export const appTopPadding = '100';
 export const borderRadius = 16;
 // TODO: technically Spacing cannot reach 20px, look to unify spacing
 export const horizontalPadding = 20;
+
+// TEMPORARY screen width solution
+export const screenWidth = window.innerWidth;
+
+export const Title = styled.h1`
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-size: ${titleFontSize};
+`;
 
 export const Heading2 = styled.h2`
   font-family: 'Source Sans Pro';
@@ -37,15 +49,51 @@ export const Heading3 = styled.h3`
 
 export const BodyText = styled.p`
   font-family: 'Source Sans Pro';
-  font-weight: 400;
+  font-weight: 200;
   margin: 0;
+  font-size: ${bodyFontSize};
 `;
 
-export const smallText = styled.div`
+export const SmallHeading = styled.h3`
   font-family: 'Source Sans Pro';
   font-weight: 400;
   margin: 0;
+  font-size: ${smallHeadingFontSize};
+`;
+
+export const SmallText = styled.div`
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  margin: 0;
   font-size: ${smallFontSize};
+`;
+
+export const MobileFlow = css``;
+
+export const Section = styled.div`
+  background-color: ${GRAY};
+  color: ${BLACK};
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  justify-items: center;
+  gap: 6vw;
+  padding: 3rem 8rem;
+  div {
+    max-width: 300px;
+  }
+  @media (max-width: 600px) {
+    padding: 3rem 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const PinkSection = styled(Section)`
+  background-color: ${PINK};
+  flex-direction: column;
+  color: ${WHITE};
 `;
 
 const sStyles = {
@@ -330,9 +378,10 @@ const sStyles = {
     paddingRight: 4
   },
   titleFont: {
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
     flexDirection: 'row',
-    fontFamily: 'SourceSans3_600SemiBold',
+    fontFamily: 'Source Sans Pro',
+    fontWeight: 600,
     fontSize: titleFontSize
   },
   width100: {
@@ -354,6 +403,7 @@ const sStyles = {
 export default sStyles;
 
 export const Button = styled.button`
+  margin: 0;
   cursor: pointer;
   display: flex;
   border: none;
@@ -365,11 +415,6 @@ export const Button = styled.button`
     width: 17px;
     height: auto;
   }
-`;
-
-export const FancyButton = styled(Button)`
-  /* background-color: black; */
-  text-decoration: underline;
 `;
 
 export const Heading1 = styled.h1`

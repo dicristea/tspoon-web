@@ -1,62 +1,68 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import { BodyText, Button } from '../../styles/styles';
-
-export const navButton = styled(Button)`
-  background-color: none;
-  font-size: 8pt;
-`;
+import { BodyText, SmallText } from '../../styles/styles';
 
 export default function Footer() {
   return (
     <FooterSection>
       <BodyText>Socials</BodyText>
       <FooterBar>
-        <BodyText className={left}>2023 tspoon inc.</BodyText>
-        <div className={right}>
-          <navButton>Privacy</navButton>
-          <navButton>Community Guidelines</navButton>
-          <navButton>Terms of Service</navButton>
-        </div>
+        <SmallText className={terms}>
+          <a href="google.com">Privacy</a>
+          <a href="google.com">Community Guidelines</a>
+          <a href="google.com">Terms of Service</a>
+        </SmallText>
+        <SmallText className={incorporated}>2023 tspoon inc.</SmallText>
       </FooterBar>
     </FooterSection>
   );
 }
 
-const left = css`
-  margin-right: auto;
-`;
-const right = css`
+const terms = css`
+  flex-direction: row;
+  align-items: flex-end;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   gap: 2vw;
+`;
+const incorporated = css`
+  margin-left: auto;
+  @media (max-width: 600px) {
+    margin-left: 0%;
+  }
 `;
 
 export const FooterSection = styled.div`
   color: black;
-  padding: 4vw;
+  padding: 8vw;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 4vw;
+
   div {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @media (max-width: 600px) {
   }
 `;
 
 export const FooterBar = styled.footer`
   font-size: small;
-  padding: 4vw;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
   z-index: 5;
-  div {
-    display: flex;
-    align-items: center;
+  flex-direction: row;
+  gap: 4vw;
+  @media (max-width: 600px) {
+    flex-direction: column;
   }
 `;
 

@@ -1,12 +1,9 @@
-import React from 'react';
-
-import { heading2FontSize } from '../../styles/styles';
-import Text from './Text';
+import { BodyText, heading2FontSize } from '../../styles/styles';
 
 export default function EmptySection() {
   return (
     <div style={styles.emptyContainer}>
-      <Text style={styles.emptyText}>Nothing here yet!</Text>
+      <BodyText style={styles.emptyText}>Nothing here yet!</BodyText>
     </div>
   );
 }
