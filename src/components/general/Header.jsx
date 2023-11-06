@@ -127,7 +127,6 @@ const HeaderDiv = styled.header`
   background-color: ${PINK};
   padding: 0 2rem 4rem 2rem;
   width: 100%;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;

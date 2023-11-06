@@ -3,18 +3,31 @@ import ReactDOM from 'react-dom/client';
 import './styles/global';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import About from './components/Pages/About';
-import Home from './components/Pages/Home';
+import About from './components/routes/About';
+import Blog from './components/routes/Blog';
+import Contact from './components/routes/Contact';
+import ErrorBoundary from './components/routes/ErrorBoundary';
+
+import App from './App';
 // import App from './App';
 
 const router = createBrowserRouter([
   {
     path: '/tspoon-web/',
-    element: <Home />
+    element: <App />,
+    errorElement: <ErrorBoundary />
   },
   {
-    path: '/tspoon-web/',
+    path: '/tspoon-web/about',
     element: <About />
+  },
+  {
+    path: '/tspoon-web/blog',
+    element: <Blog />
+  },
+  {
+    path: '/tspoon-web/contact-us',
+    element: <Contact />
   }
 ]);
 

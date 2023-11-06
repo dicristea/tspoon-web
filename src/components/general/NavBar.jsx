@@ -51,7 +51,7 @@ const navBar = css`
   align-items: center;
   justify-items: center;
   justify-content: center;
-  z-index: 5;
+  z-index: 1000;
   background-color: ${PINK};
   div {
     display: flex;
