@@ -4,13 +4,11 @@ import { BLACK, WHITE } from '../../styles/colors';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
-import NavBar from '../general/NavBar';
 import DownloadSection from '../general/DownloadSection';
 
 export default function Home() {
   return (
     <div>
-      <NavBar />
       <Header className={fontColorWhite} page="Title" />
       <Section>
         <div>

@@ -3,7 +3,6 @@ import android from '../../assets/android.png';
 
 import { BodyText, Heading2, Section } from '../../styles/styles';
 import { BLACK, WHITE } from '../../styles/colors';
-import NavBar from '../general/NavBar';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DownloadSection from '../general/DownloadSection';
@@ -11,7 +10,6 @@ import DownloadSection from '../general/DownloadSection';
 export default function Blog() {
   return (
     <div>
-      <NavBar />
       <Header className={fontColorWhite} page="Blog" />
       <Section className={fontColorBlack}>
         <div>

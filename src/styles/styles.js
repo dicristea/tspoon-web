@@ -7,7 +7,7 @@ import '@fontsource/source-sans-pro/200.css'; // Specify weight
 import { styled } from '@linaria/react';
 // import { css } from '@linaria/atomic';
 import { css } from '@linaria/atomic';
-import { BEIGE, BLACK, GRAY, GREEN, GREEN_LIGHT, PINK, WHITE } from './colors';
+import { BEIGE, BLACK, GRAY, GREEN, GREEN_HALF_OPAQUE, GREEN_LIGHT, PINK, WHITE } from './colors';
 
 export const smallFontSize = `10pt`;
 export const smallHeadingFontSize = `12pt`;
@@ -18,6 +18,7 @@ export const heading1FontSize = '32pt';
 export const titleFontSize = `40pt`;
 export const iconSize = '36px';
 export const darkBackgroundColor = GREEN;
+export const darkTransBackgroundColor = GREEN_HALF_OPAQUE;
 export const lightBackgroundColor = GRAY;
 export const darkFontColor = WHITE;
 export const lightFontColor = GREEN;
@@ -250,6 +251,10 @@ const sStyles = {
     height: 80,
     width: 80,
     fill: GREEN
+  },
+  linkStyle: {
+    textDecoration: 'none',
+    color: WHITE
   },
   justifyContentCenter: {
     justifyContent: 'center'

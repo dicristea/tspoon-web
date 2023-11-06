@@ -1,65 +1,109 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import sStyles, { BodyText, Button } from '../../styles/styles';
+import sStyles, { BodyText, Button, darkTransBackgroundColor } from '../../styles/styles';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
+import NavBar from './NavBar';
 
 export default function Header({ page }) {
   switch (page) {
     case 'Title': {
       return (
-        <HeaderDiv>
-          <TitleSection>
-            <TitleImages>
-              <img alt="logo" className={placeholderImageA} src={logo} />
-              <img alt="logo" className={placeholderImageB} src={logo} />
-            </TitleImages>
-            <Title>
-              <List>
-                <li>No</li>
-                <li>Nameless</li>
-                <li>Chefs</li>
-              </List>
-            </Title>
-            <TitleImages>
-              <img alt="logo" className={placeholderImageC} src={logo} />
-              <img alt="logo" className={placeholderImageD} src={logo} />
-            </TitleImages>
-          </TitleSection>
-          <div className="download-buttons">
-            <Button>Download iOS</Button>
-            <Button>
-              Download
-              <img alt="android logo" src={android} />
-            </Button>
-          </div>
-        </HeaderDiv>
+        <>
+          <NavBar />
+          <HeaderDiv>
+            <TitleSection>
+              <TitleImages>
+                <img alt="logo" className={placeholderImageA} src={logo} />
+                <img alt="logo" className={placeholderImageB} src={logo} />
+              </TitleImages>
+              <Title>
+                <List>
+                  <li>No</li>
+                  <li>Nameless</li>
+                  <li>Chefs</li>
+                </List>
+              </Title>
+              <TitleImages>
+                <img alt="logo" className={placeholderImageC} src={logo} />
+                <img alt="logo" className={placeholderImageD} src={logo} />
+              </TitleImages>
+            </TitleSection>
+            <div className="download-buttons">
+              <Button>Download iOS</Button>
+              <Button>
+                Download
+                <img alt="android logo" src={android} />
+              </Button>
+            </div>
+          </HeaderDiv>
+        </>
       );
     }
     case 'About': {
       return (
-        <HeaderDiv>
-          <TitleSection>
-            <BodyText>About Us</BodyText>
-            <Title>Made by nameless chefs.</Title>
-          </TitleSection>
-        </HeaderDiv>
+        <>
+          <NavBar greenColor />
+          <HeaderDiv className={GreenHeader}>
+            <AboutTitleSection>
+              <BodyText>About Us</BodyText>
+              <Title>Made by nameless chefs.</Title>
+            </AboutTitleSection>
+          </HeaderDiv>
+        </>
       );
     }
     case 'Blog': {
       return (
-        <HeaderDiv>
-          <TitleSection>
-            <Title>Blog.</Title>
-          </TitleSection>
-        </HeaderDiv>
+        <>
+          <NavBar />
+          <HeaderDiv>
+            <TitleSection>
+              <Title>Blog.</Title>
+            </TitleSection>
+          </HeaderDiv>
+        </>
+      );
+    }
+    case 'Contact': {
+      return (
+        <>
+          <NavBar />
+          <HeaderDiv>
+            <TitleSection>
+              <Title>Tell us what you think!</Title>
+            </TitleSection>
+          </HeaderDiv>
+        </>
       );
     }
     default:
       return null;
   }
 }
+
+const GreenHeader = css`
+  background-color: ${darkTransBackgroundColor};
+`;
+
+const AboutTitleSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  gap: 6vw;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 6vw;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 15vw;
+  }
+`;
 
 const placeholderImageA = css`
   border: 1px ${WHITE} solid;
@@ -107,6 +151,7 @@ const placeholderImageD = css`
 `;
 
 const Title = styled.div`
+  text-align: center;
   ${sStyles.titleFont}
   line-height: 5rem;
   ${sStyles.zIndexHighest}
