@@ -1,7 +1,6 @@
 import { styled } from '@linaria/react';
 import { Routes, Route } from 'react-router-dom';
 import { GRAY, WHITE } from './styles/colors';
-// import NavBar from './components/general/NavBar';
 import About from './components/routes/About';
 import Home from './components/routes/Home';
 import Blog from './components/routes/Blog';
@@ -11,7 +10,6 @@ import ErrorBoundary from './components/routes/ErrorBoundary';
 function App() {
   return (
     <AppContainer id="root">
-      {/* <NavBar /> */}
       <Home />
       <Routes>
         <Route element={<Home />} errorElement={<ErrorBoundary />} path="/tspoon-web/" />

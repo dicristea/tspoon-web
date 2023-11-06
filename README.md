@@ -1,4 +1,5 @@
 React Libraries
+- [npm: react-svg](https://www.npmjs.com/package/react-svg)
 - [npm: react-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [npm: @fontsource/source-sans-pro](https://www.npmjs.com/package/@fontsource/source-sans-pro)
 - [npm: @linaria/react](https://www.npmjs.com/package/@linaria/react)

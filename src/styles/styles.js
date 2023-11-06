@@ -5,9 +5,7 @@ import '@fontsource/source-sans-pro/600.css'; // Specify weight and style
 import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
-// import { css } from '@linaria/atomic';
-import { css } from '@linaria/atomic';
-import { BEIGE, BLACK, GRAY, GREEN, GREEN_HALF_OPAQUE, GREEN_LIGHT, PINK, WHITE } from './colors';
+import { BEIGE, BLACK, GRAY, GREEN, GREEN_LIGHT, PINK, WHITE } from './colors';
 
 export const smallFontSize = `10pt`;
 export const smallHeadingFontSize = `12pt`;
@@ -18,14 +16,14 @@ export const heading1FontSize = '32pt';
 export const titleFontSize = `40pt`;
 export const iconSize = '36px';
 export const darkBackgroundColor = GREEN;
-export const darkTransBackgroundColor = GREEN_HALF_OPAQUE;
+export const darkTransBackgroundColor = GREEN_LIGHT;
 export const lightBackgroundColor = GRAY;
 export const darkFontColor = WHITE;
 export const lightFontColor = GREEN;
 export const appTopPadding = '100';
-export const borderRadius = 16;
+export const borderRadius = '16pt';
 // TODO: technically Spacing cannot reach 20px, look to unify spacing
-export const horizontalPadding = 20;
+export const horizontalPadding = '32px';
 
 // TEMPORARY screen width solution
 export const screenWidth = window.innerWidth;
@@ -69,8 +67,6 @@ export const SmallText = styled.div`
   font-size: ${smallFontSize};
 `;
 
-export const MobileFlow = css``;
-
 export const Section = styled.div`
   background-color: ${GRAY};
   color: ${BLACK};
@@ -86,8 +82,7 @@ export const Section = styled.div`
   }
   @media (max-width: 600px) {
     padding: 3rem 3rem;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
   }
 `;
 
@@ -98,9 +93,10 @@ export const PinkSection = styled(Section)`
 `;
 
 const sStyles = {
-  zIndexLowest: { zIndex: -1000, elevation: -1000 },
-  zIndexLower: { zIndex: -200, elevation: -200 },
-  zIndexHighest: { zIndex: 1000, elevation: 1000 },
+  zIndexLowest: { zIndex: -1000 },
+  zIndexLower: { zIndex: -200 },
+  zIndexHigher: { zIndex: 200 },
+  zIndexHighest: { zIndex: 1000 },
   alignItemsCenter: {
     alignItems: 'center'
   },
@@ -129,11 +125,31 @@ const sStyles = {
     fontFamily: 'Source Sans Pro',
     fontSize: bodyFontSize
   },
+  button: {
+    alignItems: 'center',
+    alignSelf: 'center',
+    backgroundColor: BEIGE,
+    color: WHITE,
+    margin: '0',
+    border: 'none',
+    justifyContent: 'center',
+    borderRadius,
+    padding: '4pt 10pt',
+    textDecoration: 'none',
+    cursor: 'pointer'
+  },
   overrideFontColor: {
     color: WHITE
   },
   capitalize: {
     textTransform: 'capitalize'
+  },
+  downloadButtons: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '4vw',
+    paddingTop: '2rem'
   },
   flex: {
     flex: 1
@@ -210,7 +226,7 @@ const sStyles = {
     fontFamily: 'SourceSans3_400Regular',
     fontSize: heading3FontSize
   },
-  smallIcon: {
+  whiteSmallIcon: {
     color: WHITE,
     fontSize: 20,
     height: 20,
@@ -224,33 +240,19 @@ const sStyles = {
     width: 32,
     fill: WHITE
   },
-  xLargeIcon: {
-    color: WHITE,
-    fontSize: 80,
-    height: 80,
-    width: 80,
-    fill: WHITE
-  },
-  lightSmallIcon: {
-    color: GREEN,
+  pinkSmallIcon: {
+    color: PINK,
     fontSize: 20,
     height: 20,
     width: 20,
-    fill: GREEN
+    fill: PINK
   },
-  lightMediumIcon: {
-    color: GREEN,
+  pnkMediumIcon: {
+    color: PINK,
     fontSize: 32,
     height: 32,
     width: 32,
-    fill: GREEN
-  },
-  lightXLargeIcon: {
-    color: GREEN,
-    fontSize: 80,
-    height: 80,
-    width: 80,
-    fill: GREEN
+    fill: PINK
   },
   linkStyle: {
     textDecoration: 'none',
@@ -287,100 +289,16 @@ const sStyles = {
     height: 172,
     width: 172
   },
-  darkNormalEmptyImage: {
-    borderColor: GREEN_LIGHT,
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    borderRadius: 8,
-    padding: 40 // determines size of icon
-  },
-  lightNormalEmptyImage: {
-    borderColor: GRAY,
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    borderRadius: 8,
-    padding: 40 // determines size of icon
-  },
-  errorNormalEmptyImage: {
-    borderColor: PINK,
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    borderRadius: 8,
-    padding: 40 // determines size of icon
-  },
   smallImageSize: {
     height: 60,
     width: 60
   },
-  smallEmptyImage: {
-    fill: WHITE,
-    borderColor: GREEN_LIGHT,
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    borderRadius: 4,
-    padding: 8 // determines size of icon
-  },
-  errorSmallEmptyImage: {
-    fill: WHITE,
-    borderColor: PINK,
-    borderStyle: 'dashed',
-    borderWidth: 4,
-    borderRadius: 4,
-    padding: 8 // determines size of icon
-  },
-  smallTag: {
+  socialButtons: {
+    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
-    alignSelf: 'flex-start',
-    backgroundColor: BEIGE,
-    borderRadius: 16,
-    justifyContent: 'center',
-    paddingHorizontal: 8
-  },
-  submitButton: {
-    alignItems: 'center',
-    alignSelf: 'center',
-    backgroundColor: BEIGE,
-    justifyContent: 'center',
-    borderRadius: '12px',
-    paddingHorizontal: 20,
-    paddingVertical: 4,
-    textDecoration: 'none',
-    cursor: 'pointer'
-  },
-  submitText: {
-    color: WHITE,
-    fontFamily: 'SourceSans3_500Medium',
-    fontSize: heading2FontSize
-  },
-  tag: {
-    alignItems: 'center',
-    alignSelf: 'flex-start',
-    backgroundColor: BEIGE,
-    borderRadius: 32,
-    justifyContent: 'center',
-    marginRight: 4,
-    marginVertical: 2,
-    paddingHorizontal: 12,
-    paddingVertical: 6
-  },
-  tagNoMargin: {
-    alignItems: 'center',
-    alignSelf: 'flex-start',
-    backgroundColor: BEIGE,
-    borderRadius: 20,
-    justifyContent: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 8
-  },
-  textInputErrorView: {
-    backgroundColor: PINK,
-    borderRadius: 16,
-    paddingLeft: 4,
-    paddingRight: 4
-  },
-  textInputNormalView: {
-    paddingLeft: 4,
-    paddingRight: 4
+    gap: '2vw',
+    paddingTop: '2rem'
   },
   titleFont: {
     alignSelf: 'center',
@@ -394,31 +312,32 @@ const sStyles = {
   },
   width80: {
     width: '80%'
-  },
-  zIndex1: {
-    zIndex: 1,
-    elevation: 1
-  },
-  zTop: {
-    zIndex: 1000,
-    elevation: 1000
   }
 };
 
 export default sStyles;
 
 export const Button = styled.button`
-  margin: 0;
-  cursor: pointer;
   display: flex;
-  border: none;
-  padding: 4pt 8pt;
-  color: ${WHITE};
-  ${sStyles.submitButton}
-  gap:2vw;
+  ${sStyles.button}
+  gap: 0.2rem;
   img {
-    width: 17px;
-    height: auto;
+    width: auto;
+    height: 1rem;
+  }
+`;
+
+export const ImgButton = styled.button`
+  display: flex;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  img {
+    width: auto;
+    height: 2rem;
   }
 `;
 
