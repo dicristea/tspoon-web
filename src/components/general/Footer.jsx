@@ -1,22 +1,64 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import { BodyText, SmallText } from '../../styles/styles';
+import sStyles, { Button, ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
+import { BLACK, PINK } from '../../styles/colors';
+import googlePlayBadge from '../../assets/google-play/google-play-badge.png';
+import appleStoreBadge from '../../assets/app-store/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg';
+// import AppStoreBadge from '../../assets/app-store/Download_on_App_Store/Black_lockup/SVG/AppStoreBadge';
+// import FacebookIcon from '../../assets/facebook/Secondary Logo/Facebook_Logo_Secondary';
 
 export default function Footer() {
   return (
     <FooterSection>
-      <BodyText>Socials</BodyText>
+      <Socials>
+        <div style={sStyles.downloadButtons}>
+          <ImgButton>
+            <img alt="Download on Google Play." src={googlePlayBadge} />
+          </ImgButton>
+          {/* <AppStoreBadge /> */}
+          <ImgButton>
+            <img alt="Download on the Apple Store." src={appleStoreBadge} />
+          </ImgButton>
+        </div>
+        <div style={sStyles.socialButtons}>
+          <Button>Facebook</Button>
+          <Button>Insta</Button>
+          <Button>Tiktok</Button>
+        </div>
+      </Socials>
       <FooterBar>
         <SmallText className={terms}>
-          <a href="google.com">Privacy</a>
-          <a href="google.com">Community Guidelines</a>
-          <a href="google.com">Terms of Service</a>
+          <a className={hoverChange} href="https://www.google.com" rel="noreferrer" target="_blank">
+            Privacy
+          </a>
+          <a className={hoverChange} href="https://www.google.com" rel="noreferrer" target="_blank">
+            Community Guidelines
+          </a>
+          <a className={hoverChange} href="https://www.google.com" rel="noreferrer" target="_blank">
+            Terms of Service
+          </a>
         </SmallText>
-        <SmallText className={incorporated}>2023 tspoon inc.</SmallText>
+        <SmallText className={incorporated}>©2023 tspoon Inc.</SmallText>
       </FooterBar>
     </FooterSection>
   );
 }
+
+const Socials = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const hoverChange = css`
+  color: ${BLACK};
+  text-decoration: none;
+  background: linear-gradient(${PINK}, ${PINK}) bottom / 0 0.1em no-repeat;
+  transition: 200ms background-size;
+  &:hover {
+    color: ${PINK};
+    background-size: 100% 0.1em;
+  }
+`;
 
 const terms = css`
   flex-direction: row;
@@ -36,7 +78,7 @@ const incorporated = css`
 
 export const FooterSection = styled.div`
   color: black;
-  padding: 8vw;
+  padding: ${horizontalPadding} ${horizontalPadding};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -65,32 +107,3 @@ export const FooterBar = styled.footer`
     flex-direction: column;
   }
 `;
-
-// const hoverUnderlineAnimation = css`
-//   cursor: pointer;
-//   display: inline-block;
-//   position: relative;
-
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     transform: scaleX(0);
-//     height: 1px;
-//     bottom: 0;
-//     left: 0;
-//     background-color: var(--accent);
-//     transition: transform 0.2s ease-out;
-//   }
-
-//   &:hover::after {
-//     transform: scaleX(1);
-//   }
-
-//   /* Only way to show underline animation on mobile (no hover); however, line stays active until clicking off the button */
-//   @media only screen and (max-width: 400px) {
-//     &::after {
-//       transform: scaleX(1);
-//     }
-//   }
-// `;

@@ -1,6 +1,11 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import sStyles, { BodyText, Button, darkTransBackgroundColor } from '../../styles/styles';
+import sStyles, {
+  BodyText,
+  Button,
+  darkTransBackgroundColor,
+  horizontalPadding
+} from '../../styles/styles';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
@@ -30,7 +35,7 @@ export default function Header({ page }) {
                 <img alt="logo" className={placeholderImageD} src={logo} />
               </TitleImages>
             </TitleSection>
-            <div className="download-buttons">
+            <div style={sStyles.downloadButtons}>
               <Button>Download iOS</Button>
               <Button>
                 Download
@@ -87,69 +92,6 @@ const GreenHeader = css`
   background-color: ${darkTransBackgroundColor};
 `;
 
-const AboutTitleSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-  gap: 6vw;
-  @media (max-width: 600px) {
-    flex-direction: column;
-    gap: 6vw;
-  }
-  @media (max-width: 600px) {
-    flex-direction: column;
-    gap: 15vw;
-  }
-`;
-
-const placeholderImageA = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
-  transform: rotate(10deg);
-  margin-left: 50px;
-  @media (max-width: 600px) {
-    margin-left: 0px;
-    transform: rotate(15deg);
-  }
-`;
-const placeholderImageB = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
-  transform: rotate(-20deg);
-  margin-right: 50px;
-  @media (max-width: 600px) {
-    margin-right: 0px;
-    transform: rotate(-15deg);
-  }
-`;
-const placeholderImageC = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
-  transform: rotate(-10deg);
-  margin-right: 50px;
-  @media (max-width: 600px) {
-    margin-right: 0px;
-    transform: rotate(15deg);
-  }
-`;
-const placeholderImageD = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
-  transform: rotate(20deg);
-  margin-left: 50px;
-  @media (max-width: 600px) {
-    margin-left: 0px;
-    transform: rotate(-15deg);
-  }
-`;
-
 const Title = styled.div`
   text-align: center;
   ${sStyles.titleFont}
@@ -170,19 +112,23 @@ const List = styled.ul`
 const HeaderDiv = styled.header`
   color: ${WHITE};
   background-color: ${PINK};
-  padding: 0 2rem 4rem 2rem;
+  padding-bottom: 4rem;
+  padding-left: ${horizontalPadding};
+  padding-right: ${horizontalPadding};
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   justify-content: center;
-  z-index: 5;
-  div.download-buttons {
-    display: flex;
-    align-items: center;
-    gap: 4vw;
-    padding-top: 2rem;
+  min-height: 440px;
+  div {
+    button {
+      height: 2rem;
+    }
+  }
+  @media (max-width: 650px) {
+    height: min-content;
   }
 `;
 
@@ -191,15 +137,21 @@ const TitleSection = styled.div`
   flex-direction: row;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  gap: 6vw;
-  @media (max-width: 600px) {
+  gap: 10vw;
+  @media (max-width: 650px) {
     flex-direction: column;
-    gap: 6vw;
+    gap: 8vw;
   }
-  @media (max-width: 600px) {
-    flex-direction: column;
-    gap: 15vw;
-  }
+`;
+
+const AboutTitleSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+  gap: 2vw;
 `;
 
 const TitleImages = styled.div`
@@ -208,8 +160,53 @@ const TitleImages = styled.div`
   gap: 8vw;
   flex-direction: column;
   justify-content: center;
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     flex-direction: row;
     gap: 15vw;
+  }
+`;
+
+const placeholderImageA = css`
+  border: 1px ${WHITE} solid;
+  background-color: ${WHITE};
+  width: 80px;
+  transform: rotate(10deg);
+  margin-left: 50px;
+  @media (max-width: 650px) {
+    margin-left: 0px;
+    transform: rotate(15deg);
+  }
+`;
+const placeholderImageB = css`
+  border: 1px ${WHITE} solid;
+  background-color: ${WHITE};
+  width: 80px;
+  transform: rotate(-20deg);
+  margin-right: 50px;
+  @media (max-width: 650px) {
+    margin-right: 0px;
+    transform: rotate(-15deg);
+  }
+`;
+const placeholderImageC = css`
+  border: 1px ${WHITE} solid;
+  background-color: ${WHITE};
+  width: 80px;
+  transform: rotate(-10deg);
+  margin-right: 50px;
+  @media (max-width: 650px) {
+    margin-right: 0px;
+    transform: rotate(15deg);
+  }
+`;
+const placeholderImageD = css`
+  border: 1px ${WHITE} solid;
+  background-color: ${WHITE};
+  width: 80px;
+  transform: rotate(20deg);
+  margin-left: 50px;
+  @media (max-width: 650px) {
+    margin-left: 0px;
+    transform: rotate(-15deg);
   }
 `;

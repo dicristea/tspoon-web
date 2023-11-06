@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
 import { Link } from 'react-router-dom';
-import { GRAY, PINK } from '../../styles/colors';
+import { GRAY, PINK, WHITE } from '../../styles/colors';
 import logo from '../../assets/logo/logo.png';
 import sStyles, { darkBackgroundColor } from '../../styles/styles';
 // import About from './About';
@@ -14,33 +14,23 @@ import sStyles, { darkBackgroundColor } from '../../styles/styles';
 export default function NavBar({ greenColor }) {
   return (
     <div className={navBar} style={{ 'background-color': greenColor ? darkBackgroundColor : PINK }}>
-      <div className={left}>
+      <div className="left">
         <Link to="/tspoon-web/">
           <Img alt="tspoon logo" src={logo} />
         </Link>
-        <Link style={sStyles.linkStyle} to="/tspoon-web/about">
+        <Link className={hoverChange} style={sStyles.linkStyle} to="/tspoon-web/about">
           About
         </Link>
-        <Link style={sStyles.linkStyle} to="/tspoon-web/blog">
+        <Link className={hoverChange} style={sStyles.linkStyle} to="/tspoon-web/blog">
           Blog
         </Link>
-        {/* <div className={hoverUnderlineAnimation}>Blog</div> */}
       </div>
-      <Link className={right} style={sStyles.linkStyle} to="/tspoon-web/contact-us">
+      <Link className={hoverChange} style={sStyles.linkStyle} to="/tspoon-web/contact-us">
         Contact Us
       </Link>
-      {/* <div className={[right]}>Contact Us</div> */}
     </div>
   );
 }
-
-// const GreenHeader = css`
-//   background-color: ${GREEN};
-// `;
-
-// const PinkHeader = css`
-//   background-color: ${GREEN};
-// `;
 
 const Img = styled.img`
   width: 70px;
@@ -48,11 +38,15 @@ const Img = styled.img`
   background-color: ${GRAY};
 `;
 
-const left = css`
-  gap: 4vw;
-`;
-const right = css`
-  margin-left: auto;
+const hoverChange = css`
+  color: ${WHITE};
+  text-decoration: none;
+  padding-bottom: 0.2em;
+  background: linear-gradient(${WHITE}, ${WHITE}) bottom / 0 0.1em no-repeat;
+  transition: 200ms background-size;
+  &:hover {
+    background-size: 100% 0.1em;
+  }
 `;
 
 const navBar = css`
@@ -63,12 +57,15 @@ const navBar = css`
   display: flex;
   align-items: center;
   justify-items: center;
-  justify-content: center;
+  ${sStyles.justifyContentSpaceBetween}
   z-index: 1000;
   background-color: ${PINK};
   div {
     display: flex;
     align-items: center;
+  }
+  .left {
+    gap: 4vw;
   }
 `;
 

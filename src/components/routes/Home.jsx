@@ -23,8 +23,8 @@ export default function Home() {
           </BodyText>
         </div>
       </Section>
-      <Section>
-        <div>
+      <Section className={sectionTwo}>
+        <div className="item-a">
           <Heading2 className={noMargin}>Functionality #2</Heading2>
           <BodyText>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -32,12 +32,11 @@ export default function Home() {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </BodyText>
         </div>
-        <div>
+        <div className="item-b">
           <img alt="placeholder 2" className={placeholderImage} src={logo} />
         </div>
       </Section>
       <DownloadSection />
-
       <Footer className={fontColorBlack} />
     </div>
   );
@@ -60,5 +59,14 @@ const placeholderImage = css`
   background-color: ${WHITE};
   width: 200px;
   @media (max-width: 600px) {
+  }
+`;
+
+const sectionTwo = css`
+  .item-a {
+    @media (max-width: 600px) {
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
   }
 `;
