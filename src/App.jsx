@@ -1,21 +1,27 @@
 import { styled } from '@linaria/react';
 import { Routes, Route } from 'react-router-dom';
 import { GRAY, WHITE } from './styles/colors';
-import NavBar from './components/general/NavBar';
-import About from './components/Pages/About';
-import Home from './components/Pages/Home';
-import Blog from './components/Pages/Blog';
-import Contact from './components/Pages/Contact';
+// import NavBar from './components/general/NavBar';
+import About from './components/routes/About';
+import Home from './components/routes/Home';
+import Blog from './components/routes/Blog';
+import Contact from './components/routes/Contact';
+import ErrorBoundary from './components/routes/ErrorBoundary';
 
 function App() {
   return (
-    <AppContainer>
-      <NavBar />
+    <AppContainer id="root">
+      {/* <NavBar /> */}
+      <Home />
       <Routes>
-        <Route element={<Home />} path="/tspoon-web//*" />
-        <Route element={<About />} path="/tspoon-web/about" />
-        <Route element={<Blog />} path="/tspoon-web/blog" />
-        <Route element={<Contact />} path="/tspoon-web/contact-us" />
+        <Route element={<Home />} errorElement={<ErrorBoundary />} path="/tspoon-web/" />
+        <Route element={<About />} errorElement={<ErrorBoundary />} path="/tspoon-web/about" />
+        <Route element={<Blog />} errorElement={<ErrorBoundary />} path="/tspoon-web/blog" />
+        <Route
+          element={<Contact />}
+          errorElement={<ErrorBoundary />}
+          path="/tspoon-web/contact-us"
+        />
       </Routes>
     </AppContainer>
   );
