@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tspoon-web/static/css/main.b07216b8.css",
-    "main.js": "/tspoon-web/static/js/main.06b93d4d.js",
+    "main.css": "/tspoon-web/static/css/main.050ed1a1.css",
+    "main.js": "/tspoon-web/static/js/main.b4d59762.js",
     "static/js/529.ac56d81b.chunk.js": "/tspoon-web/static/js/529.ac56d81b.chunk.js",
     "static/media/source-sans-pro-latin-ext-400-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-ext-400-normal.185cedfb4e64a9a8801a.woff",
     "static/media/source-sans-pro-latin-ext-600-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-ext-600-normal.7388c38c78f7a7897242.woff",
@@ -19,6 +19,7 @@
     "static/media/source-sans-pro-latin-600-normal.woff2": "/tspoon-web/static/media/source-sans-pro-latin-600-normal.ee990a93df71bfdfb3b5.woff2",
     "static/media/source-sans-pro-latin-200-normal.woff2": "/tspoon-web/static/media/source-sans-pro-latin-200-normal.c48548105569470b2222.woff2",
     "static/media/source-sans-pro-latin-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-latin-400-italic.b18071ef839d81641fd0.woff2",
+    "static/media/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg": "/tspoon-web/static/media/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.8c4986ee4828b47d16f5cd694ef065f2.svg",
     "static/media/source-sans-pro-cyrillic-400-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-400-normal.a00a7030792ec450d68c.woff",
     "static/media/source-sans-pro-cyrillic-600-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-600-normal.3548415e49cad8a4cd8a.woff",
     "static/media/source-sans-pro-cyrillic-200-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-200-normal.af2055f47667c1077162.woff",
@@ -61,12 +62,12 @@
     "static/media/source-sans-pro-cyrillic-ext-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-400-italic.41906219e220514551f6.woff2",
     "static/media/source-sans-pro-greek-ext-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-greek-ext-400-italic.6ee15c031bbbbac74572.woff2",
     "index.html": "/tspoon-web/index.html",
-    "main.b07216b8.css.map": "/tspoon-web/static/css/main.b07216b8.css.map",
-    "main.06b93d4d.js.map": "/tspoon-web/static/js/main.06b93d4d.js.map",
+    "main.050ed1a1.css.map": "/tspoon-web/static/css/main.050ed1a1.css.map",
+    "main.b4d59762.js.map": "/tspoon-web/static/js/main.b4d59762.js.map",
     "529.ac56d81b.chunk.js.map": "/tspoon-web/static/js/529.ac56d81b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b07216b8.css",
-    "static/js/main.06b93d4d.js"
+    "static/css/main.050ed1a1.css",
+    "static/js/main.b4d59762.js"
   ]
 }
