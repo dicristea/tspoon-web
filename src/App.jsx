@@ -11,10 +11,10 @@ function App() {
   return (
     <AppContainer id="root">
       <Routes>
-        <Route element={<Home />} errorElement={<ErrorBoundary />} path="//*" />
-        <Route element={<About />} errorElement={<ErrorBoundary />} path="/about" />
-        <Route element={<Blog />} errorElement={<ErrorBoundary />} path="/blog" />
-        <Route element={<Contact />} errorElement={<ErrorBoundary />} path="/contact-us" />
+        <Route exact element={<Home />} errorElement={<ErrorBoundary />} path="/*" />
+        <Route exact element={<About />} errorElement={<ErrorBoundary />} path="/about" />
+        <Route exact element={<Blog />} errorElement={<ErrorBoundary />} path="/blog" />
+        <Route exact element={<Contact />} errorElement={<ErrorBoundary />} path="/contact-us" />
       </Routes>
     </AppContainer>
   );

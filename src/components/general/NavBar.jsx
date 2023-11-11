@@ -44,7 +44,10 @@ const hoverChange = css`
 `;
 
 const navBar = css`
-  padding: 4vw;
+  padding: 2rem 3rem;
+  @media (max-width: 650px) {
+    padding: 4vw;
+  }
   top: 0;
   left: 0;
   width: 100%;

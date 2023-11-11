@@ -76,7 +76,7 @@ export const Section = styled.div`
   justify-content: center;
   justify-items: center;
   gap: 6vw;
-  padding: 3rem 8rem;
+  padding: 6vw 8rem;
   div {
     max-width: 300px;
   }
@@ -297,7 +297,7 @@ const sStyles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: '2vw',
+    gap: '8vw',
     paddingTop: '2rem'
   },
   textAlignCenter: {
