@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7073ee93.css",
-    "main.js": "/static/js/main.4a24cf2e.js",
+    "main.css": "/static/css/main.76017757.css",
+    "main.js": "/static/js/main.87ab120d.js",
     "static/js/529.ac56d81b.chunk.js": "/static/js/529.ac56d81b.chunk.js",
     "static/media/App_Store_Badge.svg": "/static/media/App_Store_Badge.b97a4108e5955e8b914cc16fffc2bdd3.svg",
     "static/media/source-sans-pro-latin-ext-400-normal.woff": "/static/media/source-sans-pro-latin-ext-400-normal.185cedfb4e64a9a8801a.woff",
@@ -68,12 +68,12 @@
     "static/media/source-sans-pro-cyrillic-ext-400-italic.woff2": "/static/media/source-sans-pro-cyrillic-ext-400-italic.41906219e220514551f6.woff2",
     "static/media/source-sans-pro-greek-ext-400-italic.woff2": "/static/media/source-sans-pro-greek-ext-400-italic.6ee15c031bbbbac74572.woff2",
     "index.html": "/index.html",
-    "main.7073ee93.css.map": "/static/css/main.7073ee93.css.map",
-    "main.4a24cf2e.js.map": "/static/js/main.4a24cf2e.js.map",
+    "main.76017757.css.map": "/static/css/main.76017757.css.map",
+    "main.87ab120d.js.map": "/static/js/main.87ab120d.js.map",
     "529.ac56d81b.chunk.js.map": "/static/js/529.ac56d81b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7073ee93.css",
-    "static/js/main.4a24cf2e.js"
+    "static/css/main.76017757.css",
+    "static/js/main.87ab120d.js"
   ]
 }
