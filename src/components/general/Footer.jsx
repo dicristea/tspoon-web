@@ -1,11 +1,12 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import sStyles, { Button, ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
+import sStyles, { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
 import { BLACK, PINK } from '../../styles/colors';
-import googlePlayBadge from '../../assets/google-play/google-play-badge.png';
-import appleStoreBadge from '../../assets/app-store/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg';
-// import AppStoreBadge from '../../assets/app-store/Download_on_App_Store/Black_lockup/SVG/AppStoreBadge';
-// import FacebookIcon from '../../assets/facebook/Secondary Logo/Facebook_Logo_Secondary';
+import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
+import GooglePlayBadge from '../../assets/appstore-badges/Play_Store_Badge.svg';
+import InstagramIcon from '../../assets/social-icons/IG_Icon.svg';
+import FacebookIcon from '../../assets/social-icons/FB_Icon.svg';
+import TiktikIcon from '../../assets/social-icons/TikTok_Icon.svg';
 
 export default function Footer() {
   return (
@@ -13,17 +14,22 @@ export default function Footer() {
       <Socials>
         <div style={sStyles.downloadButtons}>
           <ImgButton>
-            <img alt="Download on Google Play." src={googlePlayBadge} />
+            <img alt="Download on Google Play." src={GooglePlayBadge} />
           </ImgButton>
-          {/* <AppStoreBadge /> */}
           <ImgButton>
-            <img alt="Download on the Apple Store." src={appleStoreBadge} />
+            <img alt="Download on the Apple Store." src={AppleStoreBadge} />
           </ImgButton>
         </div>
         <div style={sStyles.socialButtons}>
-          <Button>Facebook</Button>
-          <Button>Insta</Button>
-          <Button>Tiktok</Button>
+          <ImgButton>
+            <img alt="Connect with us on Facebook" src={FacebookIcon} />
+          </ImgButton>
+          <ImgButton>
+            <img alt="Connect with us on Instagram." src={InstagramIcon} />
+          </ImgButton>
+          <ImgButton>
+            <img alt="Connect with us on Tiktok." src={TiktikIcon} />
+          </ImgButton>
         </div>
       </Socials>
       <FooterBar>
@@ -88,7 +94,7 @@ export const FooterSection = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   @media (max-width: 600px) {
   }

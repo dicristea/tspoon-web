@@ -1,22 +1,17 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
 import { Link } from 'react-router-dom';
-import { GRAY, PINK, WHITE } from '../../styles/colors';
-import logo from '../../assets/logo/logo.png';
+import { PINK, WHITE } from '../../styles/colors';
+import pinkStemLogo from '../../assets/logo/White_Trans.svg';
+import greenStemLogo from '../../assets/logo/White_Green_Stem_Trans.svg';
 import sStyles, { darkBackgroundColor } from '../../styles/styles';
-// import About from './About';
-
-// export const NavButton = styled(Button)`
-//   background-color: none;
-//   font-size: 10pt;
-// `;
 
 export default function NavBar({ greenColor }) {
   return (
-    <div className={navBar} style={{ 'background-color': greenColor ? darkBackgroundColor : PINK }}>
+    <div className={navBar} style={{ backgroundColor: greenColor ? darkBackgroundColor : PINK }}>
       <div className="left">
         <Link to="/tspoon-web/">
-          <Img alt="tspoon logo" src={logo} />
+          <Img alt="tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
         </Link>
         <Link className={hoverChange} style={sStyles.linkStyle} to="/tspoon-web/about">
           About
@@ -33,9 +28,8 @@ export default function NavBar({ greenColor }) {
 }
 
 const Img = styled.img`
-  width: 70px;
-  height: auto;
-  background-color: ${GRAY};
+  width: auto;
+  height: 2rem;
 `;
 
 const hoverChange = css`
@@ -65,7 +59,7 @@ const navBar = css`
     align-items: center;
   }
   .left {
-    gap: 4vw;
+    gap: 2vw;
   }
 `;
 
