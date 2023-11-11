@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tspoon-web/static/css/main.7e0b6aad.css",
-    "main.js": "/tspoon-web/static/js/main.bd0668f8.js",
+    "main.css": "/tspoon-web/static/css/main.eef6ffa8.css",
+    "main.js": "/tspoon-web/static/js/main.2cb6d7be.js",
     "static/js/529.ac56d81b.chunk.js": "/tspoon-web/static/js/529.ac56d81b.chunk.js",
     "static/media/App_Store_Badge.svg": "/tspoon-web/static/media/App_Store_Badge.b97a4108e5955e8b914cc16fffc2bdd3.svg",
     "static/media/source-sans-pro-latin-ext-400-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-ext-400-normal.185cedfb4e64a9a8801a.woff",
@@ -68,12 +68,12 @@
     "static/media/source-sans-pro-cyrillic-ext-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-400-italic.41906219e220514551f6.woff2",
     "static/media/source-sans-pro-greek-ext-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-greek-ext-400-italic.6ee15c031bbbbac74572.woff2",
     "index.html": "/tspoon-web/index.html",
-    "main.7e0b6aad.css.map": "/tspoon-web/static/css/main.7e0b6aad.css.map",
-    "main.bd0668f8.js.map": "/tspoon-web/static/js/main.bd0668f8.js.map",
+    "main.eef6ffa8.css.map": "/tspoon-web/static/css/main.eef6ffa8.css.map",
+    "main.2cb6d7be.js.map": "/tspoon-web/static/js/main.2cb6d7be.js.map",
     "529.ac56d81b.chunk.js.map": "/tspoon-web/static/js/529.ac56d81b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e0b6aad.css",
-    "static/js/main.bd0668f8.js"
+    "static/css/main.eef6ffa8.css",
+    "static/js/main.2cb6d7be.js"
   ]
 }
