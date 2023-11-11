@@ -330,13 +330,14 @@ export const Button = styled.button`
   }
 `;
 
-export const ImgButton = styled.button`
+export const ImgButton = styled.a`
   display: flex;
   margin: 0;
   border-radius: 0;
   border: none;
   background: none;
   padding: 0;
+  text-decoration: none;
   cursor: pointer;
   img {
     width: auto;
