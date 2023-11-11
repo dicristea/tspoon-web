@@ -300,6 +300,9 @@ const sStyles = {
     gap: '2vw',
     paddingTop: '2rem'
   },
+  textAlignCenter: {
+    textAlign: 'center'
+  },
   titleFont: {
     alignSelf: 'center',
     flexDirection: 'row',
