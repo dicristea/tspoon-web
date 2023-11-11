@@ -13,21 +13,21 @@ export default function Footer() {
     <FooterSection>
       <Socials>
         <div style={sStyles.downloadButtons}>
-          <ImgButton>
+          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
             <img alt="Download on Google Play." src={GooglePlayBadge} />
           </ImgButton>
-          <ImgButton>
+          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
             <img alt="Download on the Apple Store." src={AppleStoreBadge} />
           </ImgButton>
         </div>
         <div style={sStyles.socialButtons}>
-          <ImgButton>
+          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
             <img alt="Connect with us on Facebook" src={FacebookIcon} />
           </ImgButton>
-          <ImgButton>
+          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
             <img alt="Connect with us on Instagram." src={InstagramIcon} />
           </ImgButton>
-          <ImgButton>
+          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
             <img alt="Connect with us on Tiktok." src={TiktikIcon} />
           </ImgButton>
         </div>

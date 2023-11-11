@@ -10,7 +10,6 @@ import ErrorBoundary from './components/routes/ErrorBoundary';
 function App() {
   return (
     <AppContainer id="root">
-      <Home />
       <Routes>
         <Route element={<Home />} errorElement={<ErrorBoundary />} path="//*" />
         <Route element={<About />} errorElement={<ErrorBoundary />} path="/about" />
