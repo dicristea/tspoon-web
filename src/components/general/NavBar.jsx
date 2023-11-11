@@ -10,17 +10,17 @@ export default function NavBar({ greenColor }) {
   return (
     <div className={navBar} style={{ backgroundColor: greenColor ? darkBackgroundColor : PINK }}>
       <div className="left">
-        <Link to="/tspoon-web/">
+        <Link to="/">
           <Img alt="tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
         </Link>
-        <Link className={hoverChange} style={sStyles.linkStyle} to="/tspoon-web/about">
+        <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
           About
         </Link>
-        <Link className={hoverChange} style={sStyles.linkStyle} to="/tspoon-web/blog">
+        <Link className={hoverChange} style={sStyles.linkStyle} to="/blog">
           Blog
         </Link>
       </div>
-      <Link className={hoverChange} style={sStyles.linkStyle} to="/tspoon-web/contact-us">
+      <Link className={hoverChange} style={sStyles.linkStyle} to="/contact-us">
         Contact Us
       </Link>
     </div>

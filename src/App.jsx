@@ -12,14 +12,10 @@ function App() {
     <AppContainer id="root">
       <Home />
       <Routes>
-        <Route element={<Home />} errorElement={<ErrorBoundary />} path="/tspoon-web//*" />
-        <Route element={<About />} errorElement={<ErrorBoundary />} path="/tspoon-web/about" />
-        <Route element={<Blog />} errorElement={<ErrorBoundary />} path="/tspoon-web/blog" />
-        <Route
-          element={<Contact />}
-          errorElement={<ErrorBoundary />}
-          path="/tspoon-web/contact-us"
-        />
+        <Route element={<Home />} errorElement={<ErrorBoundary />} path="//*" />
+        <Route element={<About />} errorElement={<ErrorBoundary />} path="/about" />
+        <Route element={<Blog />} errorElement={<ErrorBoundary />} path="/blog" />
+        <Route element={<Contact />} errorElement={<ErrorBoundary />} path="/contact-us" />
       </Routes>
     </AppContainer>
   );

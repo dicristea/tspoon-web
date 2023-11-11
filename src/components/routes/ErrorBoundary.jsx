@@ -1,4 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import { css } from '@linaria/atomic';
+import { styled } from '@linaria/react';
 import { useRouteError } from 'react-router-dom';
 import { BLACK } from '../../styles/colors';
 import NavBar from '../general/NavBar';
@@ -14,22 +16,35 @@ const fontColorBlack = css`
   color: ${BLACK};
 `;
 
+const ErrorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
+const ErrorSection = styled.div`
+  flex-grow: 1;
+  padding: 10vw 4vw;
+  text-align: center;
+`;
+
 export default function ErrorBoundary() {
   const error = useRouteError();
   console.error(error);
 
   return (
-    <div id="error-page">
+    <ErrorContainer id="error-page">
       <NavBar />
-      <div className="ErrorPage" id="error-page">
-        <Heading1>Oops!</Heading1>
-        <p>Sorry, an unexpected error has occurred.</p>
+      <ErrorSection>
+        <Heading1>Slow down there Chef!</Heading1>
+        <p>Sorry, this page doesn't exist.</p>
+
         <p>
           <i>{error.statusText || error.message}</i>
         </p>
-      </div>
+      </ErrorSection>
       <DownloadSection />
       <Footer className={fontColorBlack} />
-    </div>
+    </ErrorContainer>
   );
 }
