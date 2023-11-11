@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/tspoon-web/static/css/main.050ed1a1.css",
-    "main.js": "/tspoon-web/static/js/main.b4d59762.js",
+    "main.css": "/tspoon-web/static/css/main.7e0b6aad.css",
+    "main.js": "/tspoon-web/static/js/main.bd0668f8.js",
     "static/js/529.ac56d81b.chunk.js": "/tspoon-web/static/js/529.ac56d81b.chunk.js",
+    "static/media/App_Store_Badge.svg": "/tspoon-web/static/media/App_Store_Badge.b97a4108e5955e8b914cc16fffc2bdd3.svg",
     "static/media/source-sans-pro-latin-ext-400-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-ext-400-normal.185cedfb4e64a9a8801a.woff",
     "static/media/source-sans-pro-latin-ext-600-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-ext-600-normal.7388c38c78f7a7897242.woff",
     "static/media/source-sans-pro-latin-ext-200-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-ext-200-normal.58bdb82cf53be247573f.woff",
@@ -15,11 +16,11 @@
     "static/media/source-sans-pro-latin-600-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-600-normal.204e29178cf9358fa13d.woff",
     "static/media/source-sans-pro-latin-200-normal.woff": "/tspoon-web/static/media/source-sans-pro-latin-200-normal.7665bddffe5ac4f84acb.woff",
     "static/media/source-sans-pro-latin-400-italic.woff": "/tspoon-web/static/media/source-sans-pro-latin-400-italic.0a9124b59ae79e781b08.woff",
+    "static/media/Play_Store_Badge.svg": "/tspoon-web/static/media/Play_Store_Badge.16db2ca787891659be329b06699abcff.svg",
     "static/media/source-sans-pro-latin-400-normal.woff2": "/tspoon-web/static/media/source-sans-pro-latin-400-normal.1402accbefdec6a25762.woff2",
     "static/media/source-sans-pro-latin-600-normal.woff2": "/tspoon-web/static/media/source-sans-pro-latin-600-normal.ee990a93df71bfdfb3b5.woff2",
     "static/media/source-sans-pro-latin-200-normal.woff2": "/tspoon-web/static/media/source-sans-pro-latin-200-normal.c48548105569470b2222.woff2",
     "static/media/source-sans-pro-latin-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-latin-400-italic.b18071ef839d81641fd0.woff2",
-    "static/media/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg": "/tspoon-web/static/media/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.8c4986ee4828b47d16f5cd694ef065f2.svg",
     "static/media/source-sans-pro-cyrillic-400-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-400-normal.a00a7030792ec450d68c.woff",
     "static/media/source-sans-pro-cyrillic-600-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-600-normal.3548415e49cad8a4cd8a.woff",
     "static/media/source-sans-pro-cyrillic-200-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-200-normal.af2055f47667c1077162.woff",
@@ -39,6 +40,8 @@
     "static/media/source-sans-pro-greek-400-normal.woff2": "/tspoon-web/static/media/source-sans-pro-greek-400-normal.9c7d72dcc7a044db07b1.woff2",
     "static/media/source-sans-pro-greek-600-normal.woff2": "/tspoon-web/static/media/source-sans-pro-greek-600-normal.d957dc4c044b538e2427.woff2",
     "static/media/source-sans-pro-greek-200-normal.woff2": "/tspoon-web/static/media/source-sans-pro-greek-200-normal.d2659fb9e61db56e9e11.woff2",
+    "static/media/White_Green_Stem_Trans.svg": "/tspoon-web/static/media/White_Green_Stem_Trans.da4fafa8a6f5e0c0f4cf4c100bd3d7cd.svg",
+    "static/media/White_Trans.svg": "/tspoon-web/static/media/White_Trans.30e167e98a693094972b07eb54e326f9.svg",
     "static/media/source-sans-pro-cyrillic-ext-400-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-400-normal.3fe9e8e4c00e9124b9c7.woff",
     "static/media/source-sans-pro-cyrillic-ext-600-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-600-normal.41e63e0d2745829bf25e.woff",
     "static/media/source-sans-pro-cyrillic-ext-200-normal.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-200-normal.f9ed927580aeb8407c43.woff",
@@ -49,9 +52,12 @@
     "static/media/source-sans-pro-greek-ext-200-normal.woff2": "/tspoon-web/static/media/source-sans-pro-greek-ext-200-normal.9a74bc4920ca91d4d3e1.woff2",
     "static/media/source-sans-pro-vietnamese-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-vietnamese-400-italic.666385b3d9910390a5fd.woff2",
     "static/media/source-sans-pro-vietnamese-200-normal.woff2": "/tspoon-web/static/media/source-sans-pro-vietnamese-200-normal.47b075c75f8ae6252966.woff2",
+    "static/media/IG_Icon.svg": "/tspoon-web/static/media/IG_Icon.f085f82cc649a15b805193d151f76555.svg",
     "static/media/source-sans-pro-cyrillic-ext-400-normal.woff2": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-400-normal.de95c5209ef26bf69ccf.woff2",
     "static/media/source-sans-pro-cyrillic-ext-600-normal.woff2": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-600-normal.29a55ddb4816749dfc22.woff2",
     "static/media/source-sans-pro-cyrillic-ext-200-normal.woff2": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-200-normal.7e02d973dc5716dcccf8.woff2",
+    "static/media/TikTok_Icon.svg": "/tspoon-web/static/media/TikTok_Icon.a33924e45df1a4d52eed605be2b529b0.svg",
+    "static/media/FB_Icon.svg": "/tspoon-web/static/media/FB_Icon.96fde0ca6320c9b8d896c59fc75de0eb.svg",
     "static/media/App Icon_Trans.svg": "/tspoon-web/static/media/App Icon_Trans.c125450e8684cccefe5ca48605f806a7.svg",
     "static/media/source-sans-pro-greek-400-italic.woff": "/tspoon-web/static/media/source-sans-pro-greek-400-italic.2505da4de90b8496a5af.woff",
     "static/media/source-sans-pro-cyrillic-400-italic.woff": "/tspoon-web/static/media/source-sans-pro-cyrillic-400-italic.048fc96a2819af517709.woff",
@@ -62,12 +68,12 @@
     "static/media/source-sans-pro-cyrillic-ext-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-cyrillic-ext-400-italic.41906219e220514551f6.woff2",
     "static/media/source-sans-pro-greek-ext-400-italic.woff2": "/tspoon-web/static/media/source-sans-pro-greek-ext-400-italic.6ee15c031bbbbac74572.woff2",
     "index.html": "/tspoon-web/index.html",
-    "main.050ed1a1.css.map": "/tspoon-web/static/css/main.050ed1a1.css.map",
-    "main.b4d59762.js.map": "/tspoon-web/static/js/main.b4d59762.js.map",
+    "main.7e0b6aad.css.map": "/tspoon-web/static/css/main.7e0b6aad.css.map",
+    "main.bd0668f8.js.map": "/tspoon-web/static/js/main.bd0668f8.js.map",
     "529.ac56d81b.chunk.js.map": "/tspoon-web/static/js/529.ac56d81b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.050ed1a1.css",
-    "static/js/main.b4d59762.js"
+    "static/css/main.7e0b6aad.css",
+    "static/js/main.bd0668f8.js"
   ]
 }
