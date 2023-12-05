@@ -167,9 +167,7 @@ const TitleImages = styled.div`
 `;
 
 const placeholderImageA = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
+  ${sStyles.placeholderImage}
   transform: rotate(10deg);
   margin-left: 50px;
   @media (max-width: 650px) {
@@ -178,9 +176,7 @@ const placeholderImageA = css`
   }
 `;
 const placeholderImageB = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
+  ${sStyles.placeholderImage}
   transform: rotate(-20deg);
   margin-right: 50px;
   @media (max-width: 650px) {
@@ -189,9 +185,7 @@ const placeholderImageB = css`
   }
 `;
 const placeholderImageC = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
+  ${sStyles.placeholderImage}
   transform: rotate(-10deg);
   margin-right: 50px;
   @media (max-width: 650px) {
@@ -200,9 +194,7 @@ const placeholderImageC = css`
   }
 `;
 const placeholderImageD = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 80px;
+  ${sStyles.placeholderImage}
   transform: rotate(20deg);
   margin-left: 50px;
   @media (max-width: 650px) {

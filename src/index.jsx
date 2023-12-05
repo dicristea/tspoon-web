@@ -1,20 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/global';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import About from './components/routes/About';
 import Blog from './components/routes/Blog';
 import Contact from './components/routes/Contact';
 import ErrorBoundary from './components/routes/ErrorBoundary';
 
-import App from './App';
-// import App from './App';
+import Root from './components/routes/Root';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Root />,
     errorElement: <ErrorBoundary />
   },
   {

@@ -289,6 +289,11 @@ const sStyles = {
     height: 172,
     width: 172
   },
+  placeholderImage: {
+    border: `1px ${WHITE} solid`,
+    backgroundColor: `${WHITE}`,
+    width: '80px'
+  },
   smallImageSize: {
     height: 60,
     width: 60
