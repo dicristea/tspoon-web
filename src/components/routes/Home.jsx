@@ -1,5 +1,12 @@
 import { css } from '@linaria/atomic';
-import { BodyText, Heading2, Section } from '../../styles/styles';
+import {
+  BodyText,
+  Heading3,
+  Section,
+  h3PaddingBottom,
+  placeholderImage,
+  textPaddingBottom
+} from '../../styles/styles';
 import { BLACK, WHITE } from '../../styles/colors';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 import Header from '../general/Header';
@@ -15,21 +22,25 @@ export default function Home() {
           <img alt="placeholder 1" className={placeholderImage} src={logo} />
         </div>
         <div>
-          <Heading2 className={noMargin}>Functionality #1</Heading2>
-          <BodyText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <Heading3 className={h3PaddingBottom}>Chef, build your name.</Heading3>
+          <BodyText className={textPaddingBottom}>
+            No nameless Chefs means we want to give the power to every Chef whos cooking
+            masterpieces go unnoticed and consumed too fast.
+          </BodyText>
+          <BodyText className={textPaddingBottom}>
+            tspoon is where Chefs can build their brand and share their creations with loved ones
+            near and far.
           </BodyText>
         </div>
       </Section>
-      <Section className={sectionTwo}>
-        <div className="item-a">
-          <Heading2 className={noMargin}>Functionality #2</Heading2>
-          <BodyText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <Section>
+        <div className={itemA}>
+          <Heading3 className={h3PaddingBottom}>Where your next dinner plans are found.</Heading3>
+          <BodyText>Date night? Parents coming into town?</BodyText>
+          <BodyText className={textPaddingBottom}>Housewarming party?</BodyText>
+          <BodyText className={textPaddingBottom}>
+            Find plans for your next meal, and cook easily and eiciently with easy to navigate
+            instructions for a hassle-free cooking process.
           </BodyText>
         </div>
         <div className="item-b">
@@ -42,10 +53,6 @@ export default function Home() {
   );
 }
 
-const noMargin = css`
-  margin: 0;
-`;
-
 const fontColorWhite = css`
   color: ${WHITE};
 `;
@@ -54,19 +61,11 @@ const fontColorBlack = css`
   color: ${BLACK};
 `;
 
-const placeholderImage = css`
-  border: 1px ${WHITE} solid;
-  background-color: ${WHITE};
-  width: 200px;
-  @media (max-width: 600px) {
-  }
-`;
-
-const sectionTwo = css`
-  .item-a {
-    @media (max-width: 600px) {
-      grid-row-start: 2;
-      grid-row-end: 3;
-    }
+const itemA = css`
+  text-align: right;
+  @media (max-width: 700px) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: left;
   }
 `;

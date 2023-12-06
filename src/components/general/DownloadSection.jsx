@@ -1,13 +1,13 @@
 import { css, styled } from '@linaria/atomic';
-import sStyles, { Heading3, PinkSection, SmallHeading, SmallText } from '../../styles/styles';
+import sStyles, { Heading3, SmallHeading, SmallSection, SmallText } from '../../styles/styles';
 import android from '../../assets/android.png';
-import { PINK, WHITE } from '../../styles/colors';
+import { GREEN, PINK, WHITE } from '../../styles/colors';
 
-export default function DownloadSection() {
+export default function DownloadSection({ greenColor }) {
   return (
     <div>
-      <PinkSection className={flexColumn}>
-        <Heading3>Downloads</Heading3>
+      <SmallSection className={flexColumn} style={{ backgroundColor: greenColor ? GREEN : PINK }}>
+        <Heading3 style={{ color: WHITE }}>Downloads</Heading3>
         <ButtonContainer className={mobile}>
           {/* Will need iOS card later */}
           {/* <DownloadCard>
@@ -17,15 +17,15 @@ export default function DownloadSection() {
               <SmallText>Scan to Download on iOS</SmallText>
             </div>
           </DownloadCard> */}
-          <DownloadCard>
+          <div className={downloadCard} style={{ backgroundColor: greenColor ? GREEN : PINK }}>
             <img alt="QR Code for Google Play download" src={android} />
             <div>
               <SmallHeading>Download tSpoon Now!</SmallHeading>
               <SmallText>Scan to Download on Google Play</SmallText>
             </div>
-          </DownloadCard>
+          </div>
         </ButtonContainer>
-      </PinkSection>
+      </SmallSection>
     </div>
   );
 }
@@ -46,7 +46,7 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-export const DownloadCard = styled.div`
+export const downloadCard = css`
   display: flex;
   flex-direction: row;
   align-items: center;

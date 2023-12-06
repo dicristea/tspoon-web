@@ -1,7 +1,7 @@
 import { css } from '@linaria/atomic';
-import android from '../../assets/android.png';
+import logo from '../../assets/logo/App Icon_Trans.svg';
 
-import sStyles, { BodyText, Heading2, Section } from '../../styles/styles';
+import sStyles, { BodyText, Heading2, Section, placeholderImage } from '../../styles/styles';
 import { BLACK, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
@@ -12,10 +12,10 @@ export default function Blog() {
     <div>
       <Header className={fontColorWhite} page="Blog" />
       <Section className={fontColorBlack}>
-        <div style={sStyles.flexColumnCenter}>
+        <div className={blogCard}>
           <Heading2>Blog Post 1</Heading2>
           <div>
-            <img alt="placeholder 1" src={android} />
+            <img alt="placeholder 1" className={placeholderImage} src={logo} />
           </div>
           <BodyText style={sStyles.textAlignCenter}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -23,10 +23,10 @@ export default function Blog() {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </BodyText>
         </div>
-        <div style={sStyles.flexColumnCenter}>
+        <div className={blogCard}>
           <Heading2>Blog Post 2</Heading2>
           <div>
-            <img alt="placeholder 1" src={android} />
+            <img alt="placeholder 1" className={placeholderImage} src={logo} />
           </div>
           <BodyText style={sStyles.textAlignCenter}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -40,6 +40,11 @@ export default function Blog() {
     </div>
   );
 }
+
+const blogCard = css`
+  ${sStyles.flexColumnCenter}
+  ${sStyles.gap30}
+`;
 
 const fontColorWhite = css`
   color: ${WHITE};

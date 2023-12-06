@@ -1,11 +1,6 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import sStyles, {
-  BodyText,
-  Button,
-  darkTransBackgroundColor,
-  horizontalPadding
-} from '../../styles/styles';
+import sStyles, { BodyText, Button, GreenBackground, horizontalPadding } from '../../styles/styles';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
@@ -50,7 +45,7 @@ export default function Header({ page }) {
       return (
         <>
           <NavBar greenColor />
-          <HeaderDiv className={GreenHeader}>
+          <HeaderDiv className={GreenBackground}>
             <AboutTitleSection>
               <BodyText>About Us</BodyText>
               <Title>Made by nameless chefs.</Title>
@@ -88,10 +83,6 @@ export default function Header({ page }) {
   }
 }
 
-const GreenHeader = css`
-  background-color: ${darkTransBackgroundColor};
-`;
-
 const Title = styled.div`
   text-align: center;
   ${sStyles.titleFont}
@@ -127,7 +118,7 @@ const HeaderDiv = styled.header`
       height: 2rem;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     height: min-content;
   }
 `;
@@ -138,7 +129,7 @@ const TitleSection = styled.div`
   padding-bottom: 2rem;
   padding-top: 2rem;
   gap: 10vw;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     flex-direction: column;
     gap: 8vw;
   }
@@ -160,7 +151,7 @@ const TitleImages = styled.div`
   gap: 8vw;
   flex-direction: column;
   justify-content: center;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     flex-direction: row;
     gap: 15vw;
   }
@@ -170,7 +161,7 @@ const placeholderImageA = css`
   ${sStyles.placeholderImage}
   transform: rotate(10deg);
   margin-left: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-left: 0px;
     transform: rotate(15deg);
   }
@@ -179,7 +170,7 @@ const placeholderImageB = css`
   ${sStyles.placeholderImage}
   transform: rotate(-20deg);
   margin-right: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-right: 0px;
     transform: rotate(-15deg);
   }
@@ -188,7 +179,7 @@ const placeholderImageC = css`
   ${sStyles.placeholderImage}
   transform: rotate(-10deg);
   margin-right: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-right: 0px;
     transform: rotate(15deg);
   }
@@ -197,7 +188,7 @@ const placeholderImageD = css`
   ${sStyles.placeholderImage}
   transform: rotate(20deg);
   margin-left: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-left: 0px;
     transform: rotate(-15deg);
   }
