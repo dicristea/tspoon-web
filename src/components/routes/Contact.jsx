@@ -1,7 +1,7 @@
 import { css } from '@linaria/atomic';
-import android from '../../assets/android.png';
+import logo from '../../assets/logo/App Icon_Trans.svg';
 
-import { BodyText, Heading2, Section } from '../../styles/styles';
+import { BodyText, Heading2, Section, placeholderImage } from '../../styles/styles';
 import { BLACK, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
@@ -13,8 +13,8 @@ export default function Contact() {
       <Header className={fontColorWhite} page="Contact" />
       <Section className={fontColorBlack}>
         <div>
-          <img alt="placeholder 1" src={android} />
-        </div>
+          <img alt="placeholder 1" className={placeholderImage} src={logo} />
+        </div>{' '}
         <div>
           <Heading2>Contact us</Heading2>
           <BodyText>

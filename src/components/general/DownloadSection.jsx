@@ -7,7 +7,7 @@ export default function DownloadSection({ greenColor }) {
   return (
     <div>
       <SmallSection className={flexColumn} style={{ backgroundColor: greenColor ? GREEN : PINK }}>
-        <Heading3>Downloads</Heading3>
+        <Heading3 style={{ color: WHITE }}>Downloads</Heading3>
         <ButtonContainer className={mobile}>
           {/* Will need iOS card later */}
           {/* <DownloadCard>

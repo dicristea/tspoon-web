@@ -23,8 +23,26 @@ export const darkFontColor = WHITE;
 export const lightFontColor = GREEN;
 export const appTopPadding = '100';
 export const borderRadius = '16pt';
+
+export const placeholderImage = css`
+  border: 1px ${WHITE} solid;
+  background-color: ${WHITE};
+  width: 250px;
+`;
+
 // TODO: technically Spacing cannot reach 20px, look to unify spacing
 export const horizontalPadding = '32px';
+
+export const h2PaddingBottom = css`
+  padding-bottom: ${heading2FontSize};
+`;
+
+export const h3PaddingBottom = css`
+  padding-bottom: ${heading3FontSize};
+`;
+export const textPaddingBottom = css`
+  padding-bottom: ${bodyFontSize};
+`;
 
 // TEMPORARY screen width solution
 export const screenWidth = window.innerWidth;
@@ -40,15 +58,19 @@ export const Title = styled.h1`
 `;
 
 export const Heading2 = styled.h2`
+  margin: 0;
   font-family: 'Source Sans Pro';
   font-weight: 600;
   font-size: ${heading2FontSize};
+  color: ${GREEN};
 `;
 
 export const Heading3 = styled.h3`
+  margin: 0;
   font-family: 'Source Sans Pro';
   font-weight: 600;
   font-size: ${heading3FontSize};
+  color: ${GREEN};
 `;
 
 export const BodyText = styled.p`
@@ -77,15 +99,15 @@ export const Section = styled.div`
   color: ${BLACK};
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   justify-items: center;
   gap: 6vw;
-  padding: 6vw 8rem;
+  padding: 4rem 0;
   div {
     max-width: 300px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
     padding: 3rem 3rem;
     display: grid;
   }

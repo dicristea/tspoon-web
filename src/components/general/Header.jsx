@@ -118,7 +118,7 @@ const HeaderDiv = styled.header`
       height: 2rem;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     height: min-content;
   }
 `;
@@ -129,7 +129,7 @@ const TitleSection = styled.div`
   padding-bottom: 2rem;
   padding-top: 2rem;
   gap: 10vw;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     flex-direction: column;
     gap: 8vw;
   }
@@ -151,7 +151,7 @@ const TitleImages = styled.div`
   gap: 8vw;
   flex-direction: column;
   justify-content: center;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     flex-direction: row;
     gap: 15vw;
   }
@@ -161,7 +161,7 @@ const placeholderImageA = css`
   ${sStyles.placeholderImage}
   transform: rotate(10deg);
   margin-left: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-left: 0px;
     transform: rotate(15deg);
   }
@@ -170,7 +170,7 @@ const placeholderImageB = css`
   ${sStyles.placeholderImage}
   transform: rotate(-20deg);
   margin-right: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-right: 0px;
     transform: rotate(-15deg);
   }
@@ -179,7 +179,7 @@ const placeholderImageC = css`
   ${sStyles.placeholderImage}
   transform: rotate(-10deg);
   margin-right: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-right: 0px;
     transform: rotate(15deg);
   }
@@ -188,7 +188,7 @@ const placeholderImageD = css`
   ${sStyles.placeholderImage}
   transform: rotate(20deg);
   margin-left: 50px;
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     margin-left: 0px;
     transform: rotate(-15deg);
   }
