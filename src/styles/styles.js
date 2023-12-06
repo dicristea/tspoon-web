@@ -318,7 +318,7 @@ const sStyles = {
     height: 172,
     width: 172
   },
-  placeholderImage: {
+  rotatedPlaceholderImage: {
     border: `1px ${WHITE} solid`,
     backgroundColor: `${WHITE}`,
     width: '80px'

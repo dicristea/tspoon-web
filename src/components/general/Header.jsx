@@ -158,7 +158,7 @@ const TitleImages = styled.div`
 `;
 
 const placeholderImageA = css`
-  ${sStyles.placeholderImage}
+  ${sStyles.rotatedPlaceholderImage}
   transform: rotate(10deg);
   margin-left: 50px;
   @media (max-width: 700px) {
@@ -167,7 +167,7 @@ const placeholderImageA = css`
   }
 `;
 const placeholderImageB = css`
-  ${sStyles.placeholderImage}
+  ${sStyles.rotatedPlaceholderImage}
   transform: rotate(-20deg);
   margin-right: 50px;
   @media (max-width: 700px) {
@@ -176,7 +176,7 @@ const placeholderImageB = css`
   }
 `;
 const placeholderImageC = css`
-  ${sStyles.placeholderImage}
+  ${sStyles.rotatedPlaceholderImage}
   transform: rotate(-10deg);
   margin-right: 50px;
   @media (max-width: 700px) {
@@ -185,7 +185,7 @@ const placeholderImageC = css`
   }
 `;
 const placeholderImageD = css`
-  ${sStyles.placeholderImage}
+  ${sStyles.rotatedPlaceholderImage}
   transform: rotate(20deg);
   margin-left: 50px;
   @media (max-width: 700px) {
