@@ -15,21 +15,24 @@ export default function Home() {
           <img alt="placeholder 1" className={placeholderImage} src={logo} />
         </div>
         <div>
-          <Heading2 className={noMargin}>Functionality #1</Heading2>
+          <Heading2 className={noMargin}>Chef, build your name.</Heading2>
           <BodyText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            No nameless Chefs means we want to give the power to every Chef whos cooking
+            masterpieces go unnoticed and consumed too fast.
+            <BodyText>
+              tspoon is where Chefs can build their brand and share their creations with loved ones
+              near and far.
+            </BodyText>
           </BodyText>
         </div>
       </Section>
       <Section className={sectionTwo}>
         <div className="item-a">
-          <Heading2 className={noMargin}>Functionality #2</Heading2>
+          <Heading2 className={noMargin}>Where your next dinner plans are found.</Heading2>
+          <BodyText>Date night? Parents coming into town? Housewarming party?</BodyText>
           <BodyText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Find plans for your next meal, and cook easily and eiciently with easy to navigate
+            instructions for a hassle-free cooking process.
           </BodyText>
         </div>
         <div className="item-b">

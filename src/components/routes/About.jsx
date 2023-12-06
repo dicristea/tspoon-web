@@ -16,15 +16,22 @@ export default function About() {
           <img alt="placeholder 1" src={android} />
         </div>
         <div>
-          <Heading2>Why do we do this?</Heading2>
+          <Heading2>Why do we cook?</Heading2>
           <BodyText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            My mom used to have a magnet on our fridge, just a souvenir piece from her trip to
+            Hawaii. As novelty as the item is, every time I walked into Tracy’s Kitchen I knew that
+            I would be in for a treat, something always with a creative twist. So, my mom cooks
+            amazing food, but she does not go forth into the world as a Chef. Thus, she remains
+            nameless.
+          </BodyText>
+          <BodyText>
+            We here at tspoon wonder how many other Chefs might be going nameless in the world.
+            Whether your recipe is inspiring or inspired, it will find a home on tspoon and find its
+            way to another.
           </BodyText>
         </div>
       </Section>
-      <DownloadSection />
+      <DownloadSection greenColor />
       <Footer className={fontColorBlack} />
     </div>
   );

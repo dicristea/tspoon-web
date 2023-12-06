@@ -1,11 +1,6 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import sStyles, {
-  BodyText,
-  Button,
-  darkTransBackgroundColor,
-  horizontalPadding
-} from '../../styles/styles';
+import sStyles, { BodyText, Button, GreenBackground, horizontalPadding } from '../../styles/styles';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
@@ -50,7 +45,7 @@ export default function Header({ page }) {
       return (
         <>
           <NavBar greenColor />
-          <HeaderDiv className={GreenHeader}>
+          <HeaderDiv className={GreenBackground}>
             <AboutTitleSection>
               <BodyText>About Us</BodyText>
               <Title>Made by nameless chefs.</Title>
@@ -87,10 +82,6 @@ export default function Header({ page }) {
       return null;
   }
 }
-
-const GreenHeader = css`
-  background-color: ${darkTransBackgroundColor};
-`;
 
 const Title = styled.div`
   text-align: center;

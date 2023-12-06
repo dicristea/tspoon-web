@@ -5,6 +5,7 @@ import '@fontsource/source-sans-pro/600.css'; // Specify weight and style
 import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
+import { css } from '@linaria/atomic';
 import { BEIGE, BLACK, GRAY, GREEN, GREEN_LIGHT, PINK, WHITE } from './colors';
 
 export const smallFontSize = `10pt`;
@@ -27,6 +28,10 @@ export const horizontalPadding = '32px';
 
 // TEMPORARY screen width solution
 export const screenWidth = window.innerWidth;
+
+export const GreenBackground = css`
+  background-color: ${darkTransBackgroundColor};
+`;
 
 export const Title = styled.h1`
   font-family: 'Source Sans Pro';
@@ -86,8 +91,7 @@ export const Section = styled.div`
   }
 `;
 
-export const PinkSection = styled(Section)`
-  background-color: ${PINK};
+export const SmallSection = styled(Section)`
   flex-direction: column;
   color: ${WHITE};
 `;
@@ -118,8 +122,11 @@ const sStyles = {
   alignTextCenter: {
     textAlign: 'center'
   },
-  backgroundBeige: {
-    backgroundColor: BEIGE
+  backgroundPink: {
+    backgroundColor: PINK
+  },
+  backgroundGreen: {
+    backgroundColor: GREEN
   },
   bodyFont: {
     fontFamily: 'Source Sans Pro',
