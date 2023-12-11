@@ -24,7 +24,7 @@ export default function Home() {
         <div>
           <Heading3 className={h3PaddingBottom}>Chef, build your name.</Heading3>
           <BodyText className={textPaddingBottom}>
-            No nameless Chefs means we want to give the power to every Chef whos cooking
+            No nameless Chefs means we want to give the power to every Chef whose cooking
             masterpieces go unnoticed and consumed too fast.
           </BodyText>
           <BodyText className={textPaddingBottom}>
@@ -39,7 +39,7 @@ export default function Home() {
           <BodyText>Date night? Parents coming into town?</BodyText>
           <BodyText className={textPaddingBottom}>Housewarming party?</BodyText>
           <BodyText className={textPaddingBottom}>
-            Find plans for your next meal, and cook easily and eiciently with easy to navigate
+            Find plans for your next meal, and cook easily and efficiently with easy to navigate
             instructions for a hassle-free cooking process.
           </BodyText>
         </div>

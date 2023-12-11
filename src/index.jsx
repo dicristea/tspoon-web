@@ -1,39 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/global';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import About from './components/routes/About';
-import Blog from './components/routes/Blog';
-import Contact from './components/routes/Contact';
-import ErrorBoundary from './components/routes/ErrorBoundary';
 
-import Root from './components/routes/Root';
-
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <Root />,
-    errorElement: <ErrorBoundary />
-  },
-  {
-    path: '/about',
-    element: <About />
-  },
-  {
-    path: '/blog',
-    element: <Blog />
-  },
-  {
-    path: '/contact-us',
-    element: <Contact />
-  }
-]);
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
