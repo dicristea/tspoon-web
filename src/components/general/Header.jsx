@@ -1,6 +1,12 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import sStyles, { BodyText, Button, GreenBackground, horizontalPadding } from '../../styles/styles';
+import sStyles, {
+  BodyText,
+  Button,
+  GreenBackground,
+  Title,
+  horizontalPadding
+} from '../../styles/styles';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
@@ -82,13 +88,6 @@ export default function Header({ page }) {
       return null;
   }
 }
-
-const Title = styled.div`
-  text-align: center;
-  ${sStyles.titleFont}
-  line-height: 5rem;
-  ${sStyles.zIndexHighest}
-`;
 
 const List = styled.ul`
   text-decoration: none;

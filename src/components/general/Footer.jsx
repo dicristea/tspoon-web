@@ -96,8 +96,6 @@ export const FooterSection = styled.div`
     flex-direction: column;
     align-items: center;
   }
-  @media (max-width: 600px) {
-  }
 `;
 
 export const FooterBar = styled.footer`

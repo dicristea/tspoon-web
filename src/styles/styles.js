@@ -55,6 +55,9 @@ export const Title = styled.h1`
   font-family: 'Source Sans Pro';
   font-weight: 600;
   font-size: ${titleFontSize};
+  text-align: center;
+  line-height: 5rem;
+  z-index: 1000;
 `;
 
 export const Heading2 = styled.h2`
@@ -157,13 +160,10 @@ const sStyles = {
   button: {
     alignItems: 'center',
     alignSelf: 'center',
-    backgroundColor: BEIGE,
-    color: WHITE,
     margin: '0',
-    border: 'none',
     justifyContent: 'center',
     borderRadius,
-    padding: '4pt 10pt',
+    padding: '6pt 12pt',
     textDecoration: 'none',
     cursor: 'pointer'
   },
@@ -314,9 +314,13 @@ const sStyles = {
     height: '15px',
     width: 'auto'
   },
+  bigLoadingAnimation: {
+    height: 350,
+    width: 'auto'
+  },
   normalImageSize: {
-    height: 172,
-    width: 172
+    height: 175,
+    width: 'auto'
   },
   rotatedPlaceholderImage: {
     border: `1px ${WHITE} solid`,
@@ -354,8 +358,24 @@ const sStyles = {
 
 export default sStyles;
 
+export const WaitlistSubmitButton = styled.button`
+  display: flex;
+  background-color: ${GRAY};
+  color: black;
+  border: 1px solid black;
+  ${sStyles.button}
+  gap: 0.2rem;
+  img {
+    width: auto;
+    height: 1rem;
+  }
+`;
+
 export const Button = styled.button`
   display: flex;
+  border: none;
+  background-color: ${BEIGE};
+  color: WHITE;
   ${sStyles.button}
   gap: 0.2rem;
   img {
