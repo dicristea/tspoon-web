@@ -5,13 +5,20 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
+import JoinWaitlist from './components/routes/JoinWaitlist';
+
+const LAUCH_WEBSITE_LIVE = false;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
-      <App />
-    </BrowserRouter>
+    {!LAUCH_WEBSITE_LIVE ? (
+      <JoinWaitlist />
+    ) : (
+      <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
+        <App />
+      </BrowserRouter>
+    )}
   </React.StrictMode>
 );
 
