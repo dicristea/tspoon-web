@@ -11,10 +11,14 @@ export default function JoinWaitlist() {
     <div className={waitlistContainer}>
       <Section className={noPadding}>
         <Title className={waitlistTitle}>Something's Cooking...</Title>
-        <img alt="placeholder 1" src={loadingAnimation} style={sStyles.bigLoadingAnimation} />
+        <img
+          alt="Tspoon wok toss loading animation."
+          className={wokAnimation}
+          src={loadingAnimation}
+        />
         <WaitlistForm />
       </Section>
-      <SocialsFooter className={fontColorBlack} />
+      <SocialsFooter className={socialsFooter} />
     </div>
   );
 }
@@ -23,8 +27,10 @@ const waitlistContainer = css`
   display: grid;
   padding-top: 100px;
   height: 100%;
+  gap: 10vh;
   @media (max-width: 600px) {
-    padding-top: 0;
+    padding-top: 5vh;
+    gap: 0;
   }
 `;
 
@@ -35,11 +41,21 @@ const noPadding = css`
 `;
 
 const waitlistTitle = css`
-  margin-bottom: 0;
   color: ${PINK};
+  margin: 50px;
+  @media (max-width: 600px) {
+    margin-bottom: 0;
+  }
 `;
 
-const fontColorBlack = css`
+const wokAnimation = css`
+  ${sStyles.bigImageSize}
+  @media (max-width: 600px) {
+    ${sStyles.normalImageSize}
+  }
+`;
+
+const socialsFooter = css`
   color: ${BLACK};
   align-self: end;
 `;

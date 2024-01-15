@@ -6,7 +6,7 @@ import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import { BEIGE, BLACK, GRAY, GREEN, GREEN_LIGHT, PINK, WHITE } from './colors';
+import { BEIGE, BLACK, GRAY, GREEN, GREEN_LIGHT, PINK, PINK_HALF_OPAQUE, WHITE } from './colors';
 
 export const smallFontSize = `10pt`;
 export const smallHeadingFontSize = `12pt`;
@@ -314,12 +314,12 @@ const sStyles = {
     height: '15px',
     width: 'auto'
   },
-  bigLoadingAnimation: {
+  bigImageSize: {
     height: 350,
     width: 'auto'
   },
   normalImageSize: {
-    height: 175,
+    height: 200,
     width: 'auto'
   },
   rotatedPlaceholderImage: {
@@ -368,6 +368,9 @@ export const WaitlistSubmitButton = styled.button`
   img {
     width: auto;
     height: 1rem;
+  }
+  &:hover {
+    background-color: ${PINK_HALF_OPAQUE};
   }
 `;
 
