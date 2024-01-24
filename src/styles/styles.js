@@ -53,7 +53,7 @@ export const GreenBackground = css`
 
 export const Title = styled.h1`
   font-family: 'Source Sans Pro';
-  font-weight: 600;
+  font-weight: 700;
   font-size: ${titleFontSize};
   text-align: center;
   line-height: 5rem;

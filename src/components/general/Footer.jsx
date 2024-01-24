@@ -44,7 +44,7 @@ export default function Footer() {
             Terms of Service
           </a>
         </SmallText>
-        <SmallText className={incorporated}>©2023 tspoon Inc.</SmallText>
+        <SmallText className={incorporated}>©2023 Tspoon Inc.</SmallText>
       </FooterBar>
     </FooterSection>
   );

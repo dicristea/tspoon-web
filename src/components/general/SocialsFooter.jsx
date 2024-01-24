@@ -1,21 +1,15 @@
 import { styled } from '@linaria/react';
 import sStyles, { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
 import InstagramIcon from '../../assets/social-icons/IG_Icon.svg';
-import FacebookIcon from '../../assets/social-icons/FB_Icon.svg';
-import TiktikIcon from '../../assets/social-icons/TikTok_Icon.svg';
+// import FacebookIcon from '../../assets/social-icons/FB_Icon.svg';
+// import TiktokIcon from '../../assets/social-icons/TikTok_Icon.svg';
 
 export default function SocialsFooter() {
   return (
     <FooterSection>
       <div style={sStyles.socialButtons}>
         <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-          <img alt="Connect with us on Facebook" src={FacebookIcon} />
-        </ImgButton>
-        <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
           <img alt="Connect with us on Instagram." src={InstagramIcon} />
-        </ImgButton>
-        <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-          <img alt="Connect with us on Tiktok." src={TiktikIcon} />
         </ImgButton>
       </div>
       <FooterBar>

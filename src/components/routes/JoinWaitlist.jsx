@@ -16,6 +16,16 @@ export default function JoinWaitlist() {
           className={wokAnimation}
           src={loadingAnimation}
         />
+        {/* <section className="form" id="form">
+          <iframe
+            height="554"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSciNNrpsv4qrffi8eKZ-Hexw-GRWdlsWnuCXU5-uvgZGxbS9Q/viewform?embedded=true"
+            title="Google Form"
+            width="640"
+          >
+            Loading…
+          </iframe>
+        </section> */}
         <WaitlistForm />
       </Section>
       <SocialsFooter className={socialsFooter} />
