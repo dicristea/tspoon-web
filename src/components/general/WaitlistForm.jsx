@@ -30,6 +30,7 @@ export default function WaitlistForm() {
 
     // eslint-disable-next-line no-unused-vars
     const res = await fetch(url, {
+      mode: 'no-cors',
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
