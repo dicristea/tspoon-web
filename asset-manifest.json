@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4df3ed2e.css",
+    "main.css": "/static/css/main.d1183b8d.css",
     "main.js": "/static/js/main.37b78e5b.js",
     "static/js/529.ac56d81b.chunk.js": "/static/js/529.ac56d81b.chunk.js",
     "static/media/Loading_Animation_color.gif": "/static/media/Loading_Animation_color.be7afe0bf114e8751cb8.gif",
@@ -156,6 +156,7 @@
     "static/media/source-sans-pro-greek-ext-400-italic.woff": "/static/media/source-sans-pro-greek-ext-400-italic.cb3cf4687157f0ca0304.woff",
     "static/media/source-sans-pro-greek-ext-700-italic.woff": "/static/media/source-sans-pro-greek-ext-700-italic.9c7ceb82d989c139f725.woff",
     "static/media/source-sans-pro-greek-ext-900-italic.woff": "/static/media/source-sans-pro-greek-ext-900-italic.55bdf9c370104536f273.woff",
+    "index.html": "/index.html",
     "static/media/source-sans-pro-greek-200-italic.woff2": "/static/media/source-sans-pro-greek-200-italic.920325cfe46112b710fc.woff2",
     "static/media/source-sans-pro-greek-300-italic.woff2": "/static/media/source-sans-pro-greek-300-italic.b97b581dd047a1fb45d7.woff2",
     "static/media/source-sans-pro-greek-400-italic.woff2": "/static/media/source-sans-pro-greek-400-italic.31a9b3d6372f5a3de0f0.woff2",
@@ -170,7 +171,6 @@
     "static/media/source-sans-pro-cyrillic-ext-700-italic.woff2": "/static/media/source-sans-pro-cyrillic-ext-700-italic.506dadfaf7deb96786c9.woff2",
     "static/media/source-sans-pro-cyrillic-700-italic.woff2": "/static/media/source-sans-pro-cyrillic-700-italic.0dbf05fe04382e30701b.woff2",
     "static/media/source-sans-pro-cyrillic-ext-300-italic.woff2": "/static/media/source-sans-pro-cyrillic-ext-300-italic.edd9efd45e3c78550dac.woff2",
-    "index.html": "/index.html",
     "static/media/source-sans-pro-cyrillic-400-italic.woff2": "/static/media/source-sans-pro-cyrillic-400-italic.c943a0b87a5dea17d379.woff2",
     "static/media/source-sans-pro-cyrillic-300-italic.woff2": "/static/media/source-sans-pro-cyrillic-300-italic.f4476ebe2f4d917f6ae6.woff2",
     "static/media/source-sans-pro-cyrillic-ext-400-italic.woff2": "/static/media/source-sans-pro-cyrillic-ext-400-italic.41906219e220514551f6.woff2",
@@ -181,12 +181,12 @@
     "static/media/source-sans-pro-greek-ext-900-italic.woff2": "/static/media/source-sans-pro-greek-ext-900-italic.cb2c3b74cd6928fe1b02.woff2",
     "static/media/source-sans-pro-greek-ext-600-italic.woff2": "/static/media/source-sans-pro-greek-ext-600-italic.6d7636e72f6e17812af7.woff2",
     "static/media/source-sans-pro-greek-ext-700-italic.woff2": "/static/media/source-sans-pro-greek-ext-700-italic.34d65dd8d8d035797afc.woff2",
-    "main.4df3ed2e.css.map": "/static/css/main.4df3ed2e.css.map",
+    "main.d1183b8d.css.map": "/static/css/main.d1183b8d.css.map",
     "main.37b78e5b.js.map": "/static/js/main.37b78e5b.js.map",
     "529.ac56d81b.chunk.js.map": "/static/js/529.ac56d81b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4df3ed2e.css",
+    "static/css/main.d1183b8d.css",
     "static/js/main.37b78e5b.js"
   ]
 }
