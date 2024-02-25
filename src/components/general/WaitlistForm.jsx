@@ -53,6 +53,7 @@ export default function WaitlistForm() {
                 autoComplete
                 required
                 className={input}
+                id={NAME_ID}
                 name={NAME_ID}
                 type="text"
                 value={formData[NAME_ID]}
@@ -65,6 +66,7 @@ export default function WaitlistForm() {
                 autoComplete
                 required
                 className={input}
+                id={EMAIL_ID}
                 name={EMAIL_ID}
                 type="email"
                 value={formData[EMAIL_ID]}

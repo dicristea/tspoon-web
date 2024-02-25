@@ -58,6 +58,9 @@ export const Title = styled.h1`
   text-align: center;
   line-height: 5rem;
   z-index: 1000;
+  @media (max-width: 600px) {
+    font-size: ${heading1FontSize};
+  }
 `;
 
 export const Heading2 = styled.h2`
@@ -335,8 +338,7 @@ const sStyles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: '8vw',
-    paddingTop: '2rem'
+    gap: '8vw'
   },
   textAlignCenter: {
     textAlign: 'center'

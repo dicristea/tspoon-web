@@ -35,11 +35,11 @@ export default function JoinWaitlist() {
 
 const waitlistContainer = css`
   display: grid;
-  padding-top: 100px;
-  height: 100%;
+  padding-top: 4vw;
+  height: 100vh;
   gap: 10vh;
   @media (max-width: 600px) {
-    padding-top: 5vh;
+    padding-top: 0;
     gap: 0;
   }
 `;
