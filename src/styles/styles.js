@@ -53,6 +53,15 @@ export const normalImageSize = css`
   }
 `;
 
+export const bigImageSize = css`
+  width: auto;
+  height: 450px;
+  @media (max-width: 500px) {
+    width: auto;
+    height: 300px;
+  }
+`;
+
 // TEMPORARY screen width solution
 export const screenWidth = window.innerWidth;
 
