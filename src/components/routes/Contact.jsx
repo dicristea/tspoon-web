@@ -27,6 +27,7 @@ export default function Contact() {
 }
 
 const ContactSection = styled(Section)`
+  padding: 4rem 0;
   div {
     display: flex;
     flex-direction: column;
