@@ -1,36 +1,30 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
+import { useContext } from 'react';
 import sStyles, { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
 import { BLACK, PINK } from '../../styles/colors';
 import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
 import GooglePlayBadge from '../../assets/appstore-badges/Play_Store_Badge.svg';
-import InstagramIcon from '../../assets/social-icons/IG_Icon.svg';
-import FacebookIcon from '../../assets/social-icons/FB_Icon.svg';
-import TiktikIcon from '../../assets/social-icons/TikTok_Icon.svg';
+import { AppContext } from '../../utils/context';
+import SocialsFooter from './SocialsFooter';
 
 export default function Footer() {
+  const { LAUCH_LIVE } = useContext(AppContext);
+
   return (
     <FooterSection>
       <Socials>
-        <div style={sStyles.downloadButtons}>
-          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-            <img alt="Download on Google Play." src={GooglePlayBadge} />
-          </ImgButton>
-          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-            <img alt="Download on the Apple Store." src={AppleStoreBadge} />
-          </ImgButton>
-        </div>
-        <div style={sStyles.socialButtons}>
-          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-            <img alt="Connect with us on Facebook" src={FacebookIcon} />
-          </ImgButton>
-          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-            <img alt="Connect with us on Instagram." src={InstagramIcon} />
-          </ImgButton>
-          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-            <img alt="Connect with us on Tiktok." src={TiktikIcon} />
-          </ImgButton>
-        </div>
+        {LAUCH_LIVE ? (
+          <div style={sStyles.downloadButtons}>
+            <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
+              <img alt="Download on Google Play." src={GooglePlayBadge} />
+            </ImgButton>
+            <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
+              <img alt="Download on the Apple Store." src={AppleStoreBadge} />
+            </ImgButton>
+          </div>
+        ) : null}
+        <SocialsFooter />
       </Socials>
       <FooterBar>
         <SmallText className={terms}>
@@ -51,8 +45,7 @@ export default function Footer() {
 }
 
 const Socials = styled.div`
-  display: flex;
-  flex-direction: column;
+  gap: 40px;
 `;
 
 const hoverChange = css`
@@ -67,6 +60,7 @@ const hoverChange = css`
 `;
 
 const terms = css`
+  display: flex;
   flex-direction: row;
   align-items: flex-end;
   @media (max-width: 600px) {
@@ -89,13 +83,7 @@ export const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4vw;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  gap: 50px;
 `;
 
 export const FooterBar = styled.footer`

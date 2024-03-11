@@ -1,10 +1,18 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { css } from '@linaria/atomic';
-import sStyles, { WaitlistSubmitButton } from '../../styles/styles';
-import { GRAY, GREEN, GREEN_HALF_OPAQUE } from '../../styles/colors';
+import sStyles, { Button, Heading3 } from '../../styles/styles';
+import {
+  BEIGE,
+  GRAY,
+  GREEN,
+  GREEN_HALF_OPAQUE,
+  PINK,
+  PINK_HALF_OPAQUE,
+  WHITE
+} from '../../styles/colors';
 
-export default function WaitlistForm() {
+export default function WaitlistForm({ location, sectionColor }) {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     'entry.1549536226': '',
@@ -38,8 +46,10 @@ export default function WaitlistForm() {
     });
   }
   return (
-    <div className="contactFormWrapper">
-      <div className="formheader" />
+    <div className={formWrapper}>
+      <Heading3 className={formHeader} id="waitlist">
+        Something&apos;s cooking!
+      </Heading3>
       <div className="formcontact">
         {submit ? (
           <div className={sStyles.alignItemsCenter}>
@@ -52,7 +62,7 @@ export default function WaitlistForm() {
               <input
                 autoComplete
                 required
-                className={input}
+                className={location === 'section' ? sectionInput : input}
                 id={NAME_ID}
                 name={NAME_ID}
                 type="text"
@@ -65,7 +75,7 @@ export default function WaitlistForm() {
               <input
                 autoComplete
                 required
-                className={input}
+                className={location === 'section' ? sectionInput : input}
                 id={EMAIL_ID}
                 name={EMAIL_ID}
                 type="email"
@@ -73,7 +83,10 @@ export default function WaitlistForm() {
                 onChange={handleInputData(EMAIL_ID)}
               />
             </fieldset>
-            <WaitlistSubmitButton type="submit">JOIN THE WAITLIST</WaitlistSubmitButton>
+            {console.log(sectionColor)}
+            <Button className={sectionColor === 'pink' ? greenButton : pinkButton} type="submit">
+              JOIN THE WAITLIST
+            </Button>
           </form>
         )}
       </div>
@@ -81,18 +94,46 @@ export default function WaitlistForm() {
   );
 }
 
+const greenButton = css`
+  background-color: ${GREEN};
+  border: 1px solid ${GREEN};
+  &:hover {
+    color: white;
+    background-color: ${GREEN_HALF_OPAQUE};
+  }
+`;
+
+const pinkButton = css`
+  background-color: ${PINK};
+  border: 1px solid ${PINK};
+  &:hover {
+    color: white;
+    background-color: ${PINK_HALF_OPAQUE};
+  }
+`;
+
+const formWrapper = css`
+  color: white;
+`;
+
+const formHeader = css`
+  color: white;
+  padding: 20px 0px;
+`;
+
 const waitlistForm = css`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  color: ${WHITE};
 `;
 
-const input = css`
+const sectionInput = css`
   outline: none;
   border: none;
-  border-bottom: 2px solid ${GREEN};
-  background-color: ${GRAY};
+  border-bottom: 2px solid ${WHITE};
+  background: transparent;
   display: flex;
   align-items: center;
   padding: 4px 2px;
@@ -107,7 +148,30 @@ const input = css`
     box-shadow: inset 0 0 20px 20px #23232329;
   }
   &:hover {
-    border-bottom: 2px solid ${GREEN_HALF_OPAQUE};
+    border-bottom: 2px solid ${BEIGE};
+  }
+`;
+
+const input = css`
+  outline: none;
+  border: none;
+  border-bottom: 2px solid ${GREEN};
+  background: transparent;
+  display: flex;
+  align-items: center;
+  padding: 4px 2px;
+  text-decoration: none;
+  &:-webkit-autofill
+    + &:-webkit-autofill:hover
+    + &:-webkit-autofill:focus
+    + &:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: ${GRAY};
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+  }
+  &:hover {
+    border-bottom: 2px solid ${BEIGE};
   }
 `;
 

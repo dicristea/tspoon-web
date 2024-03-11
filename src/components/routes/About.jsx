@@ -5,20 +5,19 @@ import {
   Heading2,
   Section,
   h3PaddingBottom,
-  placeholderImage,
   textPaddingBottom
 } from '../../styles/styles';
-import { BLACK, WHITE } from '../../styles/colors';
+import { WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DownloadSection from '../general/DownloadSection';
-import logo from '../../assets/logo/App Icon_Trans.svg';
+import TracysKitchen from '../../assets/artwork/AboutUs_Block.svg';
 
 export default function About() {
   return (
-    <div>
+    <>
       <Header className={fontColorWhite} page="About" />
-      <Section className={fontColorBlack}>
+      <Section className={aboutContainer}>
         <div>
           <Heading2 className={h3PaddingBottom}>Why do we cook?</Heading2>
           <BodyText className={textPaddingBottom}>
@@ -35,19 +34,24 @@ export default function About() {
           </BodyText>
         </div>
         <div>
-          <img alt="placeholder 1" className={placeholderImage} src={logo} />
+          <img alt="Tracy's Kitchen" className={tracyskitchen} src={TracysKitchen} />
         </div>
       </Section>
-      <DownloadSection greenColor />
-      <Footer className={fontColorBlack} />
-    </div>
+      <DownloadSection sectionColor="green" />
+      <Footer />
+    </>
   );
 }
 
-const fontColorWhite = css`
-  color: ${WHITE};
+const aboutContainer = css`
+  padding: 4rem 0;
 `;
 
-const fontColorBlack = css`
-  color: ${BLACK};
+const tracyskitchen = css`
+  height: auto;
+  width: 350px;
+`;
+
+const fontColorWhite = css`
+  color: ${WHITE};
 `;

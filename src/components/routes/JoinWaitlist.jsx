@@ -6,6 +6,8 @@ import loadingAnimation from '../../assets/Loading_Animation_color.gif';
 import SocialsFooter from '../general/SocialsFooter';
 import WaitlistForm from '../general/WaitlistForm';
 
+// TEMPORARILY NOT IN USE
+
 export default function JoinWaitlist() {
   return (
     <div className={waitlistContainer}>

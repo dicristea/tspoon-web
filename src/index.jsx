@@ -6,19 +6,23 @@ import reportWebVitals from './reportWebVitals';
 
 import App from './App';
 import JoinWaitlist from './components/routes/JoinWaitlist';
+import { AppContext } from './utils/context';
 
-const LAUCH_WEBSITE_LIVE = false;
+const LAUCH_LIVE = false;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {!LAUCH_WEBSITE_LIVE ? (
-      <JoinWaitlist />
-    ) : (
-      <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
-        <App />
-      </BrowserRouter>
-    )}
+    <AppContext.Provider value={LAUCH_LIVE}>
+      {LAUCH_LIVE ? (
+        // CURRENTLY NOT IN USE => will become modal
+        <JoinWaitlist />
+      ) : (
+        <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
+          <App />
+        </BrowserRouter>
+      )}
+    </AppContext.Provider>
   </React.StrictMode>
 );
 

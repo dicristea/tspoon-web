@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
-import { css } from '@linaria/atomic';
+// import { css } from '@linaria/atomic';
+import { useContext } from 'react';
 import sStyles, {
   BodyText,
   Button,
@@ -7,12 +8,14 @@ import sStyles, {
   Title,
   horizontalPadding
 } from '../../styles/styles';
-import logo from '../../assets/logo/App Icon_Trans.svg';
+// import logo from '../../assets/logo/App Icon_Trans.svg';
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
+import { AppContext } from '../../utils/context';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
+  const { LAUCH_LIVE } = useContext(AppContext);
   switch (page) {
     case 'Title': {
       return (
@@ -20,10 +23,10 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv>
             <TitleSection>
-              <TitleImages>
+              {/* <TitleImages>
                 <img alt="logo" className={placeholderImageA} src={logo} />
                 <img alt="logo" className={placeholderImageB} src={logo} />
-              </TitleImages>
+              </TitleImages> */}
               <Title>
                 <List>
                   <li>No</li>
@@ -31,17 +34,25 @@ export default function Header({ page }) {
                   <li>Chefs</li>
                 </List>
               </Title>
-              <TitleImages>
+              {/* <TitleImages>
                 <img alt="logo" className={placeholderImageC} src={logo} />
                 <img alt="logo" className={placeholderImageD} src={logo} />
-              </TitleImages>
+              </TitleImages> */}
             </TitleSection>
             <div style={sStyles.downloadButtons}>
-              <Button>Download iOS</Button>
-              <Button>
-                Download
-                <img alt="android logo" src={android} />
-              </Button>
+              {LAUCH_LIVE ? (
+                <>
+                  <Button>Download iOS</Button>
+                  <Button>
+                    Download
+                    <img alt="android logo" src={android} />
+                  </Button>
+                </>
+              ) : (
+                <AnchorTag href="#waitlist">
+                  <Button>JOIN OUR WAITLIST</Button>
+                </AnchorTag>
+              )}
             </div>
           </HeaderDiv>
         </>
@@ -88,6 +99,10 @@ export default function Header({ page }) {
       return null;
   }
 }
+
+const AnchorTag = styled.a`
+  text-decoration: none;
+`;
 
 const List = styled.ul`
   text-decoration: none;
@@ -144,51 +159,51 @@ const AboutTitleSection = styled.div`
   gap: 2vw;
 `;
 
-const TitleImages = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8vw;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: 700px) {
-    flex-direction: row;
-    gap: 15vw;
-  }
-`;
+// const TitleImages = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 8vw;
+//   flex-direction: column;
+//   justify-content: center;
+//   @media (max-width: 700px) {
+//     flex-direction: row;
+//     gap: 15vw;
+//   }
+// `;
 
-const placeholderImageA = css`
-  ${sStyles.rotatedPlaceholderImage}
-  transform: rotate(10deg);
-  margin-left: 50px;
-  @media (max-width: 700px) {
-    margin-left: 0px;
-    transform: rotate(15deg);
-  }
-`;
-const placeholderImageB = css`
-  ${sStyles.rotatedPlaceholderImage}
-  transform: rotate(-20deg);
-  margin-right: 50px;
-  @media (max-width: 700px) {
-    margin-right: 0px;
-    transform: rotate(-15deg);
-  }
-`;
-const placeholderImageC = css`
-  ${sStyles.rotatedPlaceholderImage}
-  transform: rotate(-10deg);
-  margin-right: 50px;
-  @media (max-width: 700px) {
-    margin-right: 0px;
-    transform: rotate(15deg);
-  }
-`;
-const placeholderImageD = css`
-  ${sStyles.rotatedPlaceholderImage}
-  transform: rotate(20deg);
-  margin-left: 50px;
-  @media (max-width: 700px) {
-    margin-left: 0px;
-    transform: rotate(-15deg);
-  }
-`;
+// const placeholderImageA = css`
+//   ${sStyles.rotatedPlaceholderImage}
+//   transform: rotate(10deg);
+//   margin-left: 50px;
+//   @media (max-width: 700px) {
+//     margin-left: 0px;
+//     transform: rotate(15deg);
+//   }
+// `;
+// const placeholderImageB = css`
+//   ${sStyles.rotatedPlaceholderImage}
+//   transform: rotate(-20deg);
+//   margin-right: 50px;
+//   @media (max-width: 700px) {
+//     margin-right: 0px;
+//     transform: rotate(-15deg);
+//   }
+// `;
+// const placeholderImageC = css`
+//   ${sStyles.rotatedPlaceholderImage}
+//   transform: rotate(-10deg);
+//   margin-right: 50px;
+//   @media (max-width: 700px) {
+//     margin-right: 0px;
+//     transform: rotate(15deg);
+//   }
+// `;
+// const placeholderImageD = css`
+//   ${sStyles.rotatedPlaceholderImage}
+//   transform: rotate(20deg);
+//   margin-left: 50px;
+//   @media (max-width: 700px) {
+//     margin-left: 0px;
+//     transform: rotate(-15deg);
+//   }
+// `;

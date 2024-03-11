@@ -16,9 +16,9 @@ export default function NavBar({ greenColor }) {
         <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
           About
         </Link>
-        <Link className={hoverChange} style={sStyles.linkStyle} to="/blog">
+        {/* <Link className={hoverChange} style={sStyles.linkStyle} to="/blog">
           Blog
-        </Link>
+        </Link> */}
       </div>
       <Link className={hoverChange} style={sStyles.linkStyle} to="/contact-us">
         Contact Us

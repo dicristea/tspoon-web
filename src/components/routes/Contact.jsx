@@ -1,34 +1,43 @@
-import { css } from '@linaria/atomic';
-import logo from '../../assets/logo/App Icon_Trans.svg';
-
-import { BodyText, Heading2, Section, placeholderImage } from '../../styles/styles';
+import { css, styled } from '@linaria/atomic';
+import { BodyText, Heading2, Section } from '../../styles/styles';
 import { BLACK, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DownloadSection from '../general/DownloadSection';
 
+// Connect using EmailJS
+
 export default function Contact() {
   return (
     <div>
       <Header className={fontColorWhite} page="Contact" />
-      <Section className={fontColorBlack}>
-        <div>
-          <img alt="placeholder 1" className={placeholderImage} src={logo} />
-        </div>{' '}
+      <ContactSection className={fontColorBlack}>
         <div>
           <Heading2>Contact us</Heading2>
           <BodyText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            If you&apos;d like to know more about us, have any questions, or would like to get
+            involved, please feel free to contact us at &quot;cookonspoon&quot; at gmail.
           </BodyText>
         </div>
-      </Section>
-      <DownloadSection />
+      </ContactSection>
+      <DownloadSection sectionColor="pink" />
       <Footer className={fontColorBlack} />
     </div>
   );
 }
+
+const ContactSection = styled(Section)`
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+  }
+  @media (max-width: 700px) {
+    padding: 3rem 3rem;
+    display: grid;
+  }
+`;
 
 const fontColorWhite = css`
   color: ${WHITE};
@@ -37,3 +46,5 @@ const fontColorWhite = css`
 const fontColorBlack = css`
   color: ${BLACK};
 `;
+
+// https://javascript.plainenglish.io/how-to-build-a-contact-form-in-react-that-sends-emails-using-emailjs-70011d2563a3

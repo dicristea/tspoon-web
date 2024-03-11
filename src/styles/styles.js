@@ -6,7 +6,7 @@ import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import { BEIGE, BLACK, GRAY, GREEN, GREEN_LIGHT, PINK, PINK_HALF_OPAQUE, WHITE } from './colors';
+import { BEIGE, BLACK, GRAY, GREEN, GREEN_HALF_OPAQUE, GREEN_LIGHT, PINK, WHITE } from './colors';
 
 export const smallFontSize = `10pt`;
 export const smallHeadingFontSize = `12pt`;
@@ -42,6 +42,15 @@ export const h3PaddingBottom = css`
 `;
 export const textPaddingBottom = css`
   padding-bottom: ${bodyFontSize};
+`;
+
+export const normalImageSize = css`
+  width: auto;
+  height: 350px;
+  @media (max-width: 500px) {
+    width: auto;
+    height: 300px;
+  }
 `;
 
 // TEMPORARY screen width solution
@@ -109,17 +118,16 @@ export const Section = styled.div`
   justify-content: center;
   justify-items: center;
   gap: 6vw;
-  padding: 4rem 0;
   div {
     max-width: 300px;
   }
   @media (max-width: 700px) {
-    padding: 3rem 3rem;
     display: grid;
   }
 `;
 
 export const SmallSection = styled(Section)`
+  padding: 4rem 0;
   flex-direction: column;
   color: ${WHITE};
 `;
@@ -166,7 +174,7 @@ const sStyles = {
     margin: '0',
     justifyContent: 'center',
     borderRadius,
-    padding: '6pt 12pt',
+    padding: '10pt 14pt',
     textDecoration: 'none',
     cursor: 'pointer'
   },
@@ -317,22 +325,10 @@ const sStyles = {
     height: '15px',
     width: 'auto'
   },
-  bigImageSize: {
-    height: 350,
-    width: 'auto'
-  },
-  normalImageSize: {
-    height: 200,
-    width: 'auto'
-  },
   rotatedPlaceholderImage: {
     border: `1px ${WHITE} solid`,
     backgroundColor: `${WHITE}`,
     width: '80px'
-  },
-  smallImageSize: {
-    height: 60,
-    width: 60
   },
   socialButtons: {
     display: 'flex',
@@ -360,22 +356,6 @@ const sStyles = {
 
 export default sStyles;
 
-export const WaitlistSubmitButton = styled.button`
-  display: flex;
-  background-color: ${GRAY};
-  color: black;
-  border: 1px solid black;
-  ${sStyles.button}
-  gap: 0.2rem;
-  img {
-    width: auto;
-    height: 1rem;
-  }
-  &:hover {
-    background-color: ${PINK_HALF_OPAQUE};
-  }
-`;
-
 export const Button = styled.button`
   display: flex;
   border: none;
@@ -386,6 +366,10 @@ export const Button = styled.button`
   img {
     width: auto;
     height: 1rem;
+  }
+  &:hover {
+    color: white;
+    background-color: ${GREEN_HALF_OPAQUE};
   }
 `;
 

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import sStyles, { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
+import sStyles, { ImgButton, horizontalPadding } from '../../styles/styles';
 import InstagramIcon from '../../assets/social-icons/IG_Icon.svg';
 // import FacebookIcon from '../../assets/social-icons/FB_Icon.svg';
 import TiktokIcon from '../../assets/social-icons/TikTok_Icon.svg';
@@ -19,9 +19,6 @@ export default function SocialsFooter() {
           </ImgButton>
         </div>
       </SocialsContainer>
-      <FooterBar>
-        <SmallText>©2023 tspoon Inc.</SmallText>
-      </FooterBar>
     </FooterSection>
   );
 }

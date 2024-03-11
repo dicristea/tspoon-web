@@ -8,7 +8,9 @@ import pinkStemLogo from '../../assets/logo/White_Trans.svg';
 import greenStemLogo from '../../assets/logo/White_Green_Stem_Trans.svg';
 import sStyles, { darkBackgroundColor, screenWidth } from '../../styles/styles';
 
-export default function NavBar({ greenColor }) {
+// TEMPORARILY NOT IN USE
+
+export default function MobileNavBar({ greenColor }) {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const ref = useRef(null);
 

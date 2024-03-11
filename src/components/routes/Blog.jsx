@@ -35,7 +35,7 @@ export default function Blog() {
           </BodyText>
         </div>
       </Section>
-      <DownloadSection />
+      <DownloadSection sectionColor="pink" />
       <Footer className={fontColorBlack} />
     </div>
   );
