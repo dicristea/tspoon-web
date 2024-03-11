@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { css } from '@linaria/atomic';
-import sStyles, { Section, Title, bigImageSize, normalImageSize } from '../../styles/styles';
+import { Section, Title, bigImageSize, normalImageSize } from '../../styles/styles';
 import { BLACK, PINK } from '../../styles/colors';
 import loadingAnimation from '../../assets/Loading_Animation_color.gif';
 import SocialsFooter from '../general/SocialsFooter';
