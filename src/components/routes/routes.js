@@ -12,7 +12,19 @@ export const routes = [
     href: '/blog'
   },
   {
-    title: 'Contact Us',
-    href: '/contact-us'
+    title: 'Contact',
+    href: '/contact'
+  },
+  {
+    title: 'Privacy',
+    href: '/privacy'
+  },
+  {
+    title: 'Community Guidelines',
+    href: '/community-guidelines'
+  },
+  {
+    title: 'Terms of Service',
+    href: '/terms'
   }
 ];

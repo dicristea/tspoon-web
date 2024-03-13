@@ -6,6 +6,9 @@ import Home from './components/routes/Home';
 import Blog from './components/routes/Blog';
 import Contact from './components/routes/Contact';
 import ErrorBoundary from './components/routes/ErrorBoundary';
+import Privacy from './components/routes/Privacy';
+import Terms from './components/routes/Terms';
+import CommunityGuidelines from './components/routes/CommunityGuidelines';
 
 function App() {
   return (
@@ -15,7 +18,10 @@ function App() {
         <Route exact element={<Home />} path="" />
         <Route element={<About />} path="/about" />
         <Route element={<Blog />} path="/blog" />
-        <Route element={<Contact />} path="/contact-us" />
+        <Route element={<Contact />} path="/contact" />
+        <Route element={<Privacy />} path="/privacy" />
+        <Route element={<CommunityGuidelines />} path="/community-guidelines" />
+        <Route element={<Terms />} path="/terms" />
         <Route element={<ErrorBoundary />} />
       </Routes>
       {/* </BrowserRouter> */}

@@ -1,6 +1,7 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import sStyles, { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
 import { BLACK, PINK } from '../../styles/colors';
 import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
@@ -28,17 +29,17 @@ export default function Footer() {
       </Socials>
       <FooterBar>
         <SmallText className={terms}>
-          <a className={hoverChange} href="https://www.google.com" rel="noreferrer" target="_blank">
+          <Link className={hoverChange} to="/privacy">
             Privacy
-          </a>
-          <a className={hoverChange} href="https://www.google.com" rel="noreferrer" target="_blank">
+          </Link>
+          <Link className={hoverChange} to="/community-guidelines">
             Community Guidelines
-          </a>
-          <a className={hoverChange} href="https://www.google.com" rel="noreferrer" target="_blank">
+          </Link>
+          <Link className={hoverChange} to="/terms">
             Terms of Service
-          </a>
+          </Link>
         </SmallText>
-        <SmallText className={incorporated}>©2023 Tspoon Inc.</SmallText>
+        <SmallText className={incorporated}>© 2024 Tspoon, LLC.</SmallText>
       </FooterBar>
     </FooterSection>
   );

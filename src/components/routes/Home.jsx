@@ -44,7 +44,7 @@ export default function Home() {
               masterpieces go unnoticed and consumed too fast.
             </BodyText>
             <BodyText className={textPaddingBottom}>
-              tspoon is where Chefs can build their brand and share their creations with loved ones
+              Tspoon is where Chefs can build their brand and share their creations with loved ones
               near and far.
             </BodyText>
           </div>

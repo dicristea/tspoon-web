@@ -83,7 +83,6 @@ export default function WaitlistForm({ location, sectionColor }) {
                 onChange={handleInputData(EMAIL_ID)}
               />
             </fieldset>
-            {console.log(sectionColor)}
             <Button className={sectionColor === 'pink' ? greenButton : pinkButton} type="submit">
               JOIN THE WAITLIST
             </Button>

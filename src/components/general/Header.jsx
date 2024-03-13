@@ -2,13 +2,13 @@ import { styled } from '@linaria/react';
 // import { css } from '@linaria/atomic';
 import { useContext } from 'react';
 import sStyles, {
-  BodyText,
+  AnchorTag,
   Button,
   GreenBackground,
+  List,
   Title,
   horizontalPadding
 } from '../../styles/styles';
-// import logo from '../../assets/logo/App Icon_Trans.svg';
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
 import { AppContext } from '../../utils/context';
@@ -50,7 +50,7 @@ export default function Header({ page }) {
                 </>
               ) : (
                 <AnchorTag href="#waitlist">
-                  <Button>JOIN OUR WAITLIST</Button>
+                  <Button>JOIN THE WAITLIST</Button>
                 </AnchorTag>
               )}
             </div>
@@ -64,7 +64,6 @@ export default function Header({ page }) {
           <NavBar greenColor />
           <HeaderDiv className={GreenBackground}>
             <AboutTitleSection>
-              <BodyText>About Us</BodyText>
               <Title>Made by nameless chefs.</Title>
             </AboutTitleSection>
           </HeaderDiv>
@@ -99,20 +98,6 @@ export default function Header({ page }) {
       return null;
   }
 }
-
-const AnchorTag = styled.a`
-  text-decoration: none;
-`;
-
-const List = styled.ul`
-  text-decoration: none;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 
 const HeaderDiv = styled.header`
   color: ${WHITE};

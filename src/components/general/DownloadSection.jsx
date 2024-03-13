@@ -23,7 +23,7 @@ export default function DownloadSection({ sectionColor }) {
             {/* <DownloadCard>
             <img alt="QR Code for iOS download" src={android} />
             <div>
-              <SmallHeading>Download tSpoon Now!</SmallHeading>
+              <SmallHeading>Download Tspoon Now!</SmallHeading>
               <SmallText>Scan to Download on iOS</SmallText>
             </div>
           </DownloadCard> */}
@@ -33,7 +33,7 @@ export default function DownloadSection({ sectionColor }) {
             >
               <img alt="QR Code for Google Play download" src={android} />
               <div>
-                <SmallHeading>Download tSpoon Now!</SmallHeading>
+                <SmallHeading>Download Tspoon Now!</SmallHeading>
                 <SmallText>Scan to Download on Google Play</SmallText>
               </div>
             </div>

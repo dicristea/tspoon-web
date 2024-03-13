@@ -28,8 +28,8 @@ export default function About() {
             nameless.
           </BodyText>
           <BodyText className={textPaddingBottom}>
-            We here at tspoon wonder how many other Chefs might be going nameless in the world.
-            Whether your recipe is inspiring or inspired, it will find a home on tspoon and find its
+            We here at Tspoon wonder how many other Chefs might be going nameless in the world.
+            Whether your recipe is inspiring or inspired, it will find a home on Tspoon and find its
             way to another.
           </BodyText>
         </div>

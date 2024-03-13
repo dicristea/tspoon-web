@@ -12,7 +12,7 @@ import sStyles, { darkBackgroundColor, screenWidth } from '../../styles/styles';
 
 export default function MobileNavBar({ greenColor }) {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-  const ref = useRef(null);
+  // const ref = useRef(null);
 
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
@@ -20,12 +20,12 @@ export default function MobileNavBar({ greenColor }) {
 
   return (
     <div className={navBar} style={{ backgroundColor: greenColor ? darkBackgroundColor : PINK }}>
-      {console.log(screenWidth)}
+      {/* {console.log(screenWidth)} */}
       {screenWidth > 650 ? (
         <>
           <div className="left">
             <Link to="/">
-              <Img alt="tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
+              <Img alt="Tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
             </Link>
             <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
               About
@@ -41,7 +41,7 @@ export default function MobileNavBar({ greenColor }) {
       ) : (
         <div className={hamburger}>
           <Link to="/">
-            <Img alt="tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
+            <Img alt="Tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
           </Link>
           <Hamburger
             direction="left"
