@@ -6,7 +6,17 @@ import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
 import { css } from '@linaria/atomic';
-import { BEIGE, BLACK, GRAY, GREEN, GREEN_HALF_OPAQUE, GREEN_LIGHT, PINK, WHITE } from './colors';
+import {
+  BEIGE,
+  BLACK,
+  GRAY,
+  GREEN,
+  GREEN_HALF_OPAQUE,
+  GREEN_LIGHT,
+  PINK,
+  PINK_HALF_OPAQUE,
+  WHITE
+} from './colors';
 
 export const titleFontSize = `40pt`;
 export const heading1FontSize = '32pt';
@@ -84,7 +94,8 @@ export const Title = styled.h1`
   font-weight: 700;
   font-size: ${titleFontSize};
   text-align: center;
-  line-height: 5rem;
+  line-height: 2rem;
+  padding: 0;
   z-index: 1000;
   @media (max-width: 600px) {
     font-size: ${heading1FontSize};
@@ -172,8 +183,7 @@ export const AnchorTag = styled.a`
 export const List = styled.ul`
   text-decoration: none;
   list-style-type: none;
-  padding-left: 2rem;
-  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -430,6 +440,24 @@ export const Button = styled.button`
   &:hover {
     color: white;
     background-color: ${GREEN_HALF_OPAQUE};
+  }
+`;
+
+export const greenButton = css`
+  background-color: ${GREEN};
+  border: 1px solid ${GREEN};
+  &:hover {
+    color: white;
+    background-color: ${GREEN_HALF_OPAQUE};
+  }
+`;
+
+export const pinkButton = css`
+  background-color: ${PINK};
+  border: 1px solid ${PINK};
+  &:hover {
+    color: white;
+    background-color: ${PINK_HALF_OPAQUE};
   }
 `;
 

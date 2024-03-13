@@ -1,16 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { css } from '@linaria/atomic';
-import sStyles, { Button, Heading3 } from '../../styles/styles';
-import {
-  BEIGE,
-  GRAY,
-  GREEN,
-  GREEN_HALF_OPAQUE,
-  PINK,
-  PINK_HALF_OPAQUE,
-  WHITE
-} from '../../styles/colors';
+import sStyles, { Button, Heading3, greenButton, pinkButton } from '../../styles/styles';
+import { BEIGE, GRAY, GREEN, WHITE } from '../../styles/colors';
 
 export default function WaitlistForm({ location, sectionColor }) {
   const [submit, setSubmit] = useState(false);
@@ -92,24 +84,6 @@ export default function WaitlistForm({ location, sectionColor }) {
     </div>
   );
 }
-
-const greenButton = css`
-  background-color: ${GREEN};
-  border: 1px solid ${GREEN};
-  &:hover {
-    color: white;
-    background-color: ${GREEN_HALF_OPAQUE};
-  }
-`;
-
-const pinkButton = css`
-  background-color: ${PINK};
-  border: 1px solid ${PINK};
-  &:hover {
-    color: white;
-    background-color: ${PINK_HALF_OPAQUE};
-  }
-`;
 
 const formWrapper = css`
   color: white;

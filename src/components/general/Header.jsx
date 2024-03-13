@@ -7,6 +7,7 @@ import sStyles, {
   GreenBackground,
   List,
   Title,
+  greenButton,
   horizontalPadding
 } from '../../styles/styles';
 import android from '../../assets/android.png';
@@ -27,13 +28,17 @@ export default function Header({ page }) {
                 <img alt="logo" className={placeholderImageA} src={logo} />
                 <img alt="logo" className={placeholderImageB} src={logo} />
               </TitleImages> */}
-              <Title>
-                <List>
-                  <li>No</li>
-                  <li>Nameless</li>
-                  <li>Chefs</li>
-                </List>
-              </Title>
+              <List>
+                <li>
+                  <Title>No</Title>
+                </li>
+                <li>
+                  <Title>Nameless</Title>
+                </li>
+                <li>
+                  <Title>Chefs</Title>
+                </li>
+              </List>
               {/* <TitleImages>
                 <img alt="logo" className={placeholderImageC} src={logo} />
                 <img alt="logo" className={placeholderImageD} src={logo} />
@@ -50,7 +55,7 @@ export default function Header({ page }) {
                 </>
               ) : (
                 <AnchorTag href="#waitlist">
-                  <Button>JOIN THE WAITLIST</Button>
+                  <Button className={greenButton}>JOIN THE WAITLIST</Button>
                 </AnchorTag>
               )}
             </div>
