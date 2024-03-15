@@ -1,11 +1,9 @@
 import {
   BodyText,
   Heading2,
-  Heading3,
   OrderedList,
   TextSection,
   h2PaddingBottom,
-  h3PaddingBottom,
   textPaddingBottom
 } from '../../styles/styles';
 import Footer from '../general/Footer';
@@ -18,7 +16,6 @@ export default function CommunityGuidelines() {
       <NavBar greenColor />
       <TextSection>
         <Heading2 className={h2PaddingBottom}>Community Guidelines</Heading2>
-        <Heading3 className={h3PaddingBottom}>General</Heading3>
         <BodyText className={textPaddingBottom}>
           Welcome to Tspoon! We&apos;re delighted to have you join our community of passionate food
           enthusiasts. To ensure a positive and enjoyable experience for everyone, we have

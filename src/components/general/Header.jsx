@@ -5,7 +5,6 @@ import sStyles, {
   AnchorTag,
   Button,
   GreenBackground,
-  List,
   Title,
   greenButton,
   horizontalPadding
@@ -28,17 +27,11 @@ export default function Header({ page }) {
                 <img alt="logo" className={placeholderImageA} src={logo} />
                 <img alt="logo" className={placeholderImageB} src={logo} />
               </TitleImages> */}
-              <List>
-                <li>
-                  <Title>No</Title>
-                </li>
-                <li>
-                  <Title>Nameless</Title>
-                </li>
-                <li>
-                  <Title>Chefs</Title>
-                </li>
-              </List>
+              <Title>
+                No <br />
+                Nameless <br />
+                Chefs
+              </Title>
               {/* <TitleImages>
                 <img alt="logo" className={placeholderImageC} src={logo} />
                 <img alt="logo" className={placeholderImageD} src={logo} />
@@ -132,10 +125,8 @@ const TitleSection = styled.div`
   flex-direction: row;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  gap: 10vw;
   @media (max-width: 700px) {
     flex-direction: column;
-    gap: 8vw;
   }
 `;
 

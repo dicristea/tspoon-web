@@ -23,7 +23,7 @@ export const heading1FontSize = '32pt';
 export const heading2FontSize = `24pt`;
 export const heading3FontSize = `20pt`;
 export const heading4FontSize = `16pt`;
-export const smallHeadingFontSize = `12pt`;
+export const smallHeadingFontSize = `14pt`;
 export const bodyFontSize = `14pt`;
 export const smallFontSize = `10pt`;
 export const iconSize = '36px';
@@ -94,11 +94,12 @@ export const Title = styled.h1`
   font-weight: 700;
   font-size: ${titleFontSize};
   text-align: center;
-  line-height: 2rem;
+  line-height: 6rem;
   padding: 0;
   z-index: 1000;
   @media (max-width: 600px) {
     font-size: ${heading1FontSize};
+    line-height: 4rem;
   }
 `;
 
