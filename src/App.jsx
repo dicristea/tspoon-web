@@ -22,6 +22,7 @@ function App() {
         <Route element={<Privacy />} path="/privacy" />
         <Route element={<CommunityGuidelines />} path="/community-guidelines" />
         <Route element={<Terms />} path="/terms" />
+        <Route path="../%PUBLIC_URL%/.well-known/assetlinks.json" />
         <Route element={<ErrorBoundary />} />
       </Routes>
       {/* </BrowserRouter> */}

@@ -26,5 +26,9 @@ export const routes = [
   {
     title: 'Terms of Service',
     href: '/terms'
+  },
+  {
+    title: 'App Linking',
+    href: '/%PUBLIC_URL%/.well-known/assetlinks.json'
   }
 ];
