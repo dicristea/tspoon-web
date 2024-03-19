@@ -13,7 +13,6 @@ import CommunityGuidelines from './components/routes/CommunityGuidelines';
 function App() {
   return (
     <AppContainer id="App">
-      {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
       <Routes>
         <Route exact element={<Home />} path="" />
         <Route element={<About />} path="/about" />
@@ -22,10 +21,9 @@ function App() {
         <Route element={<Privacy />} path="/privacy" />
         <Route element={<CommunityGuidelines />} path="/community-guidelines" />
         <Route element={<Terms />} path="/terms" />
-        <Route path="../%PUBLIC_URL%/.well-known/assetlinks.json" />
+        <Route path="../public/.well-known/assetlinks.json" />
         <Route element={<ErrorBoundary />} />
       </Routes>
-      {/* </BrowserRouter> */}
     </AppContainer>
   );
 }

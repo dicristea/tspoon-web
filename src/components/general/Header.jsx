@@ -12,6 +12,10 @@ import sStyles, {
 import android from '../../assets/android.png';
 import { PINK, WHITE } from '../../styles/colors';
 import { AppContext } from '../../utils/context';
+import RandomCharacter1 from '../../assets/artwork/RandomChar_1.svg';
+import RandomCharacter2 from '../../assets/artwork/RandomChar_2.svg';
+import RandomCharacter3 from '../../assets/artwork/RandomChar_3.svg';
+import RandomCharacter4 from '../../assets/artwork/RandomChar_4.svg';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
@@ -23,19 +27,19 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv>
             <TitleSection>
-              {/* <TitleImages>
-                <img alt="logo" className={placeholderImageA} src={logo} />
-                <img alt="logo" className={placeholderImageB} src={logo} />
-              </TitleImages> */}
+              <TitleImages>
+                <img alt="logo" src={RandomCharacter1} />
+                <img alt="logo" src={RandomCharacter2} />
+              </TitleImages>
               <Title>
                 No <br />
                 Nameless <br />
                 Chefs
               </Title>
-              {/* <TitleImages>
-                <img alt="logo" className={placeholderImageC} src={logo} />
-                <img alt="logo" className={placeholderImageD} src={logo} />
-              </TitleImages> */}
+              <TitleImages>
+                <img alt="logo" src={RandomCharacter3} />
+                <img alt="logo" src={RandomCharacter4} />
+              </TitleImages>
             </TitleSection>
             <div style={sStyles.downloadButtons}>
               {LAUCH_LIVE ? (
@@ -140,17 +144,19 @@ const AboutTitleSection = styled.div`
   gap: 2vw;
 `;
 
-// const TitleImages = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 8vw;
-//   flex-direction: column;
-//   justify-content: center;
-//   @media (max-width: 700px) {
-//     flex-direction: row;
-//     gap: 15vw;
-//   }
-// `;
+const TitleImages = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  @media (max-width: 700px) {
+    flex-direction: row;
+    gap: 15vw;
+  }
+  img {
+    height: 300px;
+  }
+`;
 
 // const placeholderImageA = css`
 //   ${sStyles.rotatedPlaceholderImage}
