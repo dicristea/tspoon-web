@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { useContext } from 'react';
-import { css } from '@linaria/core';
+// import { css } from '@linaria/core';
 import {
   AnchorTag,
   Button,
@@ -23,7 +23,8 @@ import Diana from '../../assets/artwork/Diana.svg';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
-  const { LAUCH_LIVE, screenWidth } = useContext(AppContext);
+  const { LAUCH_LIVE } = useContext(AppContext);
+  // screenWidth
   switch (page) {
     case 'Title': {
       return (
@@ -31,12 +32,7 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv>
             <TitleSection>
-              {screenWidth > 800 ? (
-                <TitleImages>
-                  <img alt="logo" className={headerChefs} src={RandomCharacter1} />
-                  <img alt="logo" src={RandomCharacter2} />
-                </TitleImages>
-              ) : null}
+              {/* {screenWidth > 800 ? <TitleImages /> : null} */}
               <MiddleTitleSection>
                 <Title>
                   No <br />
@@ -60,6 +56,8 @@ export default function Header({ page }) {
                 </div>
               </MiddleTitleSection>
               <TitleImages>
+                <img alt="logo" src={RandomCharacter1} />
+                <img alt="logo" src={RandomCharacter2} />
                 <img alt="logo" src={RandomCharacter3} />
                 <img alt="logo" src={RandomCharacter4} />
               </TitleImages>
@@ -102,11 +100,11 @@ export default function Header({ page }) {
       return (
         <>
           <NavBar />
-          <HeaderDiv>
+          <ContactHeaderDiv>
             <TitleSection>
               <Title>Tell us what you think!</Title>
             </TitleSection>
-          </HeaderDiv>
+          </ContactHeaderDiv>
         </>
       );
     }
@@ -125,32 +123,36 @@ const HeaderDiv = styled.header`
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  justify-content: flex-end;
+  height: 90vh;
+`;
+
+const ContactHeaderDiv = styled(HeaderDiv)`
   justify-content: center;
-  height: 100%;
-  @media (max-width: 700px) {
-    height: 100%;
-  }
+  height: 50vh;
 `;
 
 const TitleSection = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 2rem;
-  align-items: flex-end;
   div {
+    gap: 3vw;
     img {
-      width: 200px;
+      width: 130px;
       height: auto;
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
-  }
-  div {
-    img {
-      width: 150px;
-      height: auto;
+    gap: 0;
+    div {
+      gap: 1.2rem;
+      img {
+        width: 100px;
+        height: auto;
+      }
     }
   }
 `;
@@ -161,9 +163,6 @@ const MiddleTitleSection = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 4rem;
-  @media (max-width: 700px) {
-    padding-bottom: 0;
-  }
 `;
 
 const AboutTitleSection = styled.div`
@@ -172,6 +171,7 @@ const AboutTitleSection = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 4rem;
+  gap: 20vh;
   div {
     gap: 2vw;
     img {
@@ -181,7 +181,6 @@ const AboutTitleSection = styled.div`
   }
   @media (max-width: 700px) {
     div {
-      gap: 2vw;
       img {
         width: 80px;
         height: auto;
@@ -192,7 +191,7 @@ const AboutTitleSection = styled.div`
 
 const TitleImages = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-direction: row;
   justify-content: center;
   @media (max-width: 700px) {
@@ -200,8 +199,8 @@ const TitleImages = styled.div`
   }
 `;
 
-const headerChefs = css`
-  @media (max-width: 700px) {
-    margin-left: 0px;
-  }
-`;
+// const headerChefs = css`
+//   @media (max-width: 700px) {
+//     margin-left: 0px;
+//   }
+// `;

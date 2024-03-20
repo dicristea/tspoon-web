@@ -12,15 +12,14 @@ export default function NavBar({ greenColor }) {
       <Link to="/">
         <Img alt="Tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
       </Link>
-      <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
-        About
-      </Link>
-      {/* <Link className={hoverChange} style={sStyles.linkStyle} to="/blog">
-          Blog
-        </Link> */}
-      <Link className={hoverChange} style={sStyles.linkStyle} to="/contact">
-        Contact
-      </Link>
+      <div className="right">
+        <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
+          About
+        </Link>
+        <Link className={hoverChange} style={sStyles.linkStyle} to="/contact">
+          Contact
+        </Link>
+      </div>
     </nav>
   );
 }
@@ -59,8 +58,8 @@ const navBar = css`
     display: flex;
     align-items: center;
   }
-  .left {
-    gap: 2vw;
+  .right {
+    gap: 1rem;
   }
 `;
 

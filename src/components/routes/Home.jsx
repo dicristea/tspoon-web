@@ -29,7 +29,7 @@ export default function Home() {
               instructions for a hassle-free cooking process.
             </BodyText>
           </div>
-          <div className="item-b">
+          <div className="itemB">
             <img alt="Artwork of chef" className={normalImageSize} src={DinnerArtwork} />
           </div>
         </Section>
@@ -72,7 +72,6 @@ const fontColorBlack = css`
 `;
 
 const itemA = css`
-  text-align: left;
   @media (max-width: 700px) {
     grid-row-start: 2;
     grid-row-end: 3;
