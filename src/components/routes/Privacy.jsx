@@ -47,12 +47,6 @@ export default function Privacy() {
           personalize our platform and its services. Detailed below are some of the information
           types we collect.
         </BodyText>
-        <Heading3 className={h3PaddingBottom}>Information</Heading3>
-        <BodyText className={textPaddingBottom}>
-          We collect a wide range of information from our users to provide, maintain, enhance, and
-          personalize our platform and its services. Detailed below are some of the information
-          types we collect.
-        </BodyText>
         <Heading4 className={h4PaddingBottom}>Information You Provide</Heading4>
         <BodyText className={textPaddingBottom}>
           When you use Tspoon, we collect information that you provide to us. When you first set up

@@ -8,11 +8,14 @@ import App from './App';
 import { AppContext } from './utils/context';
 
 const LAUCH_LIVE = false;
+const screenWidth = window.innerWidth;
+
+const AppValues = { LAUCH_LIVE, screenWidth };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppContext.Provider value={LAUCH_LIVE}>
+    <AppContext.Provider value={AppValues}>
       <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
         <App />
       </BrowserRouter>

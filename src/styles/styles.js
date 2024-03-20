@@ -12,7 +12,6 @@ import {
   GRAY,
   GREEN,
   GREEN_HALF_OPAQUE,
-  GREEN_LIGHT,
   PINK,
   PINK_HALF_OPAQUE,
   WHITE
@@ -28,7 +27,7 @@ export const bodyFontSize = `14pt`;
 export const smallFontSize = `10pt`;
 export const iconSize = '36px';
 export const darkBackgroundColor = GREEN;
-export const darkTransBackgroundColor = GREEN_LIGHT;
+export const darkTransBackgroundColor = GREEN;
 export const lightBackgroundColor = GRAY;
 export const darkFontColor = WHITE;
 export const lightFontColor = GREEN;
@@ -83,8 +82,6 @@ export const bigImageSize = css`
 `;
 
 // TEMPORARY screen width solution
-export const screenWidth = window.innerWidth;
-
 export const GreenBackground = css`
   background-color: ${darkTransBackgroundColor};
 `;
@@ -395,11 +392,6 @@ const sStyles = {
     display: 'flex',
     height: '15px',
     width: 'auto'
-  },
-  rotatedPlaceholderImage: {
-    border: `1px ${WHITE} solid`,
-    backgroundColor: `${WHITE}`,
-    width: '80px'
   },
   socialButtons: {
     display: 'flex',

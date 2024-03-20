@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './utils/ScrollToTop';
 import { GRAY, WHITE } from './styles/colors';
 import About from './components/routes/About';
 import Home from './components/routes/Home';
@@ -13,6 +14,7 @@ import CommunityGuidelines from './components/routes/CommunityGuidelines';
 function App() {
   return (
     <AppContainer id="App">
+      <ScrollToTop />
       <Routes>
         <Route exact element={<Home />} path="" />
         <Route element={<About />} path="/about" />

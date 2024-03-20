@@ -9,17 +9,15 @@ import sStyles, { darkBackgroundColor } from '../../styles/styles';
 export default function NavBar({ greenColor }) {
   return (
     <nav className={navBar} style={{ backgroundColor: greenColor ? darkBackgroundColor : PINK }}>
-      <div className="left">
-        <Link to="/">
-          <Img alt="Tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
-        </Link>
-        <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
-          About
-        </Link>
-        {/* <Link className={hoverChange} style={sStyles.linkStyle} to="/blog">
+      <Link to="/">
+        <Img alt="Tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
+      </Link>
+      <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
+        About
+      </Link>
+      {/* <Link className={hoverChange} style={sStyles.linkStyle} to="/blog">
           Blog
         </Link> */}
-      </div>
       <Link className={hoverChange} style={sStyles.linkStyle} to="/contact">
         Contact
       </Link>

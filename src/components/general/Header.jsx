@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
-// import { css } from '@linaria/atomic';
 import { useContext } from 'react';
-import sStyles, {
+import { css } from '@linaria/core';
+import {
   AnchorTag,
   Button,
   GreenBackground,
@@ -16,10 +16,14 @@ import RandomCharacter1 from '../../assets/artwork/RandomChar_1.svg';
 import RandomCharacter2 from '../../assets/artwork/RandomChar_2.svg';
 import RandomCharacter3 from '../../assets/artwork/RandomChar_3.svg';
 import RandomCharacter4 from '../../assets/artwork/RandomChar_4.svg';
+import Paul from '../../assets/artwork/Paul.svg';
+import Andrew from '../../assets/artwork/Andrew.svg';
+import Forest from '../../assets/artwork/Forest.svg';
+import Diana from '../../assets/artwork/Diana.svg';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
-  const { LAUCH_LIVE } = useContext(AppContext);
+  const { LAUCH_LIVE, screenWidth } = useContext(AppContext);
   switch (page) {
     case 'Title': {
       return (
@@ -27,35 +31,39 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv>
             <TitleSection>
-              <TitleImages>
-                <img alt="logo" src={RandomCharacter1} />
-                <img alt="logo" src={RandomCharacter2} />
-              </TitleImages>
-              <Title>
-                No <br />
-                Nameless <br />
-                Chefs
-              </Title>
+              {screenWidth > 800 ? (
+                <TitleImages>
+                  <img alt="logo" className={headerChefs} src={RandomCharacter1} />
+                  <img alt="logo" src={RandomCharacter2} />
+                </TitleImages>
+              ) : null}
+              <MiddleTitleSection>
+                <Title>
+                  No <br />
+                  Nameless <br />
+                  Chefs
+                </Title>
+                <div>
+                  {LAUCH_LIVE ? (
+                    <>
+                      <Button>Download iOS</Button>
+                      <Button>
+                        Download
+                        <img alt="android logo" src={android} />
+                      </Button>
+                    </>
+                  ) : (
+                    <AnchorTag href="#waitlist">
+                      <Button className={greenButton}>JOIN THE WAITLIST</Button>
+                    </AnchorTag>
+                  )}
+                </div>
+              </MiddleTitleSection>
               <TitleImages>
                 <img alt="logo" src={RandomCharacter3} />
                 <img alt="logo" src={RandomCharacter4} />
               </TitleImages>
             </TitleSection>
-            <div style={sStyles.downloadButtons}>
-              {LAUCH_LIVE ? (
-                <>
-                  <Button>Download iOS</Button>
-                  <Button>
-                    Download
-                    <img alt="android logo" src={android} />
-                  </Button>
-                </>
-              ) : (
-                <AnchorTag href="#waitlist">
-                  <Button className={greenButton}>JOIN THE WAITLIST</Button>
-                </AnchorTag>
-              )}
-            </div>
           </HeaderDiv>
         </>
       );
@@ -67,6 +75,12 @@ export default function Header({ page }) {
           <HeaderDiv className={GreenBackground}>
             <AboutTitleSection>
               <Title>Made by nameless chefs.</Title>
+              <TitleImages>
+                <img alt="logo" src={Paul} />
+                <img alt="logo" src={Andrew} />
+                <img alt="logo" src={Forest} />
+                <img alt="logo" src={Diana} />
+              </TitleImages>
             </AboutTitleSection>
           </HeaderDiv>
         </>
@@ -104,7 +118,6 @@ export default function Header({ page }) {
 const HeaderDiv = styled.header`
   color: ${WHITE};
   background-color: ${PINK};
-  padding-bottom: 4rem;
   padding-left: ${horizontalPadding};
   padding-right: ${horizontalPadding};
   width: 100%;
@@ -113,24 +126,43 @@ const HeaderDiv = styled.header`
   align-items: center;
   justify-items: center;
   justify-content: center;
-  min-height: 440px;
-  div {
-    button {
-      height: 2rem;
-    }
-  }
+  height: 100%;
   @media (max-width: 700px) {
-    height: min-content;
+    height: 100%;
   }
 `;
 
 const TitleSection = styled.div`
   display: flex;
   flex-direction: row;
-  padding-bottom: 2rem;
   padding-top: 2rem;
+  align-items: flex-end;
+  div {
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
   @media (max-width: 700px) {
     flex-direction: column;
+    align-items: center;
+  }
+  div {
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+`;
+
+const MiddleTitleSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+  @media (max-width: 700px) {
+    padding-bottom: 0;
   }
 `;
 
@@ -139,9 +171,23 @@ const AboutTitleSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
   padding-top: 4rem;
-  gap: 2vw;
+  div {
+    gap: 2vw;
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+  @media (max-width: 700px) {
+    div {
+      gap: 2vw;
+      img {
+        width: 80px;
+        height: auto;
+      }
+    }
+  }
 `;
 
 const TitleImages = styled.div`
@@ -151,46 +197,11 @@ const TitleImages = styled.div`
   justify-content: center;
   @media (max-width: 700px) {
     flex-direction: row;
-    gap: 15vw;
-  }
-  img {
-    height: 300px;
   }
 `;
 
-// const placeholderImageA = css`
-//   ${sStyles.rotatedPlaceholderImage}
-//   transform: rotate(10deg);
-//   margin-left: 50px;
-//   @media (max-width: 700px) {
-//     margin-left: 0px;
-//     transform: rotate(15deg);
-//   }
-// `;
-// const placeholderImageB = css`
-//   ${sStyles.rotatedPlaceholderImage}
-//   transform: rotate(-20deg);
-//   margin-right: 50px;
-//   @media (max-width: 700px) {
-//     margin-right: 0px;
-//     transform: rotate(-15deg);
-//   }
-// `;
-// const placeholderImageC = css`
-//   ${sStyles.rotatedPlaceholderImage}
-//   transform: rotate(-10deg);
-//   margin-right: 50px;
-//   @media (max-width: 700px) {
-//     margin-right: 0px;
-//     transform: rotate(15deg);
-//   }
-// `;
-// const placeholderImageD = css`
-//   ${sStyles.rotatedPlaceholderImage}
-//   transform: rotate(20deg);
-//   margin-left: 50px;
-//   @media (max-width: 700px) {
-//     margin-left: 0px;
-//     transform: rotate(-15deg);
-//   }
-// `;
+const headerChefs = css`
+  @media (max-width: 700px) {
+    margin-left: 0px;
+  }
+`;

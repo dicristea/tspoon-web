@@ -72,7 +72,7 @@ const fontColorBlack = css`
 `;
 
 const itemA = css`
-  text-align: right;
+  text-align: left;
   @media (max-width: 700px) {
     grid-row-start: 2;
     grid-row-end: 3;
