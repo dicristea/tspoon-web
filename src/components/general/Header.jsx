@@ -23,8 +23,7 @@ import Diana from '../../assets/artwork/Diana.svg';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
-  const { LAUCH_LIVE } = useContext(AppContext);
-  // screenWidth
+  const { LAUCH_LIVE, screenWidth } = useContext(AppContext);
   switch (page) {
     case 'Title': {
       return (
@@ -57,7 +56,7 @@ export default function Header({ page }) {
               </MiddleTitleSection>
               <TitleImages>
                 <img alt="logo" src={RandomCharacter1} />
-                <img alt="logo" src={RandomCharacter2} />
+                {screenWidth > 800 ? <img alt="logo" src={RandomCharacter2} /> : null}
                 <img alt="logo" src={RandomCharacter3} />
                 <img alt="logo" src={RandomCharacter4} />
               </TitleImages>
