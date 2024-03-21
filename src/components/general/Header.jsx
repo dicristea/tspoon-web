@@ -31,7 +31,13 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv>
             <TitleSection>
-              {/* {screenWidth > 800 ? <TitleImages /> : null} */}
+              {screenWidth > 800 ? (
+                <TitleImages>
+                  <img alt="logo" src={RandomCharacter1} />
+                  <img alt="logo" src={RandomCharacter2} />
+                </TitleImages>
+              ) : null}
+
               <MiddleTitleSection>
                 <Title>
                   No <br />
@@ -55,8 +61,7 @@ export default function Header({ page }) {
                 </div>
               </MiddleTitleSection>
               <TitleImages>
-                <img alt="logo" src={RandomCharacter1} />
-                {screenWidth > 800 ? <img alt="logo" src={RandomCharacter2} /> : null}
+                {screenWidth < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
                 <img alt="logo" src={RandomCharacter3} />
                 <img alt="logo" src={RandomCharacter4} />
               </TitleImages>
@@ -122,7 +127,7 @@ const HeaderDiv = styled.header`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   height: 90vh;
 `;
 
@@ -133,8 +138,9 @@ const ContactHeaderDiv = styled(HeaderDiv)`
 
 const TitleSection = styled.div`
   display: flex;
-  flex-direction: column;
-  padding-top: 2rem;
+  flex-direction: row;
+  height: 100%;
+  gap: 4vw;
   div {
     gap: 3vw;
     img {
@@ -145,9 +151,10 @@ const TitleSection = styled.div`
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    justify-content: space-between;
+    gap: 2vh;
     div {
-      gap: 1.2rem;
+      gap: 1rem;
       img {
         width: 100px;
         height: auto;
@@ -161,7 +168,14 @@ const MiddleTitleSection = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 4rem;
+  padding-bottom: 100px;
+  //use dynamic sizing
+  @media (max-width: 800px) {
+    padding-bottom: 3rem;
+  }
+  @media (max-width: 600px) {
+    padding-bottom: 2rem;
+  }
 `;
 
 const AboutTitleSection = styled.div`
@@ -169,17 +183,24 @@ const AboutTitleSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 4rem;
-  gap: 20vh;
+  padding-top: 5rem;
+  gap: 5vh;
+  height: 100%;
   div {
+    height: 100%;
     gap: 2vw;
+    h1 {
+      margin: 0;
+    }
     img {
       width: 150px;
       height: auto;
     }
   }
   @media (max-width: 700px) {
+    padding-top: 10rem;
     div {
+      gap: 2vw;
       img {
         width: 80px;
         height: auto;

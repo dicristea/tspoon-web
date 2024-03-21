@@ -9,6 +9,7 @@ export const PINK_HALF_OPAQUE = '#d96b6280';
 export const GRAY = '#D9D1D0';
 export const GRAY_LIGHT = '#E8E3E3';
 export const WHITE = '#FFF';
+export const OFF_WHITE = '#f0f2e9';
 export const BLACK = '#000';
 export const WHITE_HALF_OPAQUE = 'rgba(255, 255, 255, 0.5)';
 export const BLACK_HALF_OPAQUE = 'rgba(0, 0, 0, 0.5)';

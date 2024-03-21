@@ -8,7 +8,7 @@ import App from './App';
 import { AppContext } from './utils/context';
 
 const LAUCH_LIVE = false;
-const screenWidth = window.innerWidth;
+const screenWidth = window.innerWidth; // hook to update dynamically for useContext
 
 const AppValues = { LAUCH_LIVE, screenWidth };
 

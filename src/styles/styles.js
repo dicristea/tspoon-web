@@ -17,7 +17,7 @@ import {
   WHITE
 } from './colors';
 
-export const titleFontSize = `40pt`;
+export const titleFontSize = `80pt`;
 export const heading1FontSize = '32pt';
 export const heading2FontSize = `24pt`;
 export const heading3FontSize = `20pt`;
@@ -91,11 +91,17 @@ export const Title = styled.h1`
   font-weight: 700;
   font-size: ${titleFontSize};
   text-align: center;
-  line-height: 6rem;
+  line-height: 9rem;
   padding: 0;
+  /* margin: 0; */
   z-index: 1000;
+  @media (max-width: 1300px) {
+    font-size: 60pt;
+    line-height: 8rem;
+    margin-top: 0;
+  }
   @media (max-width: 600px) {
-    font-size: ${heading1FontSize};
+    font-size: 40pt;
     line-height: 4rem;
   }
 `;
