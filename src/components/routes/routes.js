@@ -30,5 +30,9 @@ export const routes = [
   {
     title: 'App Linking',
     href: '/public/.well-known/assetlinks.json'
+  },
+  {
+    title: 'Not Found',
+    href: '/*'
   }
 ];

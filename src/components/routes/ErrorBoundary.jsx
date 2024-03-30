@@ -39,9 +39,7 @@ export default function ErrorBoundary() {
         <Heading1>Slow down there Chef!</Heading1>
         <p>Sorry, this page doesn't exist.</p>
 
-        <p>
-          <i>{error.statusText || error.message}</i>
-        </p>
+        <p>{/* <i>{error.message}</i> */}</p>
       </ErrorSection>
       <DownloadSection />
       <Footer className={fontColorBlack} />

@@ -1,27 +1,64 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/global';
-import { BrowserRouter } from 'react-router-dom';
+import {
+  // BrowserRouter,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider
+} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import App from './App';
+// import App from './App';
 import { AppContext } from './utils/context';
+import Home from './components/routes/Home';
+import About from './components/routes/About';
+import Blog from './components/routes/Blog';
+import Contact from './components/routes/Contact';
+import Privacy from './components/routes/Privacy';
+import CommunityGuidelines from './components/routes/CommunityGuidelines';
+import Terms from './components/routes/Terms';
+import ErrorBoundary from './components/routes/ErrorBoundary';
 
 const LAUCH_LIVE = false;
-// const screenWidth = window.innerWidth;
 
 const AppValues = { LAUCH_LIVE };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route exact element={<Home />} errorElement={<ErrorBoundary />} path="/" />
+      <Route element={<About />} path="/about" />
+      <Route element={<Blog />} path="/blog" />
+      <Route element={<Contact />} path="/contact" />
+      <Route element={<Privacy />} path="/privacy" />
+      <Route element={<CommunityGuidelines />} path="/community-guidelines" />
+      <Route element={<Terms />} path="/terms" />
+      <Route path="../%PUBLIC_URL%/.well-known/assetlinks.json" />
+      <Route element={<ErrorBoundary />} path="/*" />
+    </Route>
+  )
+);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AppContext.Provider value={AppValues}>
-      <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
-        <App />
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </AppContext.Provider>
   </React.StrictMode>
 );
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <AppContext.Provider value={AppValues}>
+//       <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
+//         <App />
+//       </BrowserRouter>
+//     </AppContext.Provider>
+//   </React.StrictMode>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

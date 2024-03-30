@@ -22,8 +22,8 @@ export default function About() {
           <Heading2 className={h3PaddingBottom}>Why do we cook?</Heading2>
           <BodyText className={textPaddingBottom}>
             My mom used to have a magnet on our fridge, just a souvenir piece from her trip to
-            Hawaii. As novelty as the item is, every time I walked into Tracy’s Kitchen I knew that
-            I would be in for a treat, something always with a creative twist. So, my mom cooks
+            Hawaii. As novelty as the item is, every time I walked into Tracy&apos;s Kitchen I knew
+            that I would be in for a treat, something always with a creative twist. So, my mom cooks
             amazing food, but she does not go forth into the world as a Chef. Thus, she remains
             nameless.
           </BodyText>
@@ -49,7 +49,7 @@ const aboutContainer = css`
 
 const tracyskitchen = css`
   height: auto;
-  width: 350px;
+  width: 300px;
 `;
 
 const fontColorWhite = css`

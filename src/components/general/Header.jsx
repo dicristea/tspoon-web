@@ -34,7 +34,6 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv>
             <TitleSection>
-              {console.log(screenSize.width)}
               {screenSize.width > 800 ? (
                 <TitleImages>
                   <img alt="logo" src={RandomCharacter1} />

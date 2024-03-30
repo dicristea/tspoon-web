@@ -13,10 +13,12 @@ import {
 import Footer from '../general/Footer';
 import DownloadSection from '../general/DownloadSection';
 import NavBar from '../general/NavBar';
+import ScrollToTop from '../../utils/ScrollToTop';
 
 export default function Terms() {
   return (
     <>
+      <ScrollToTop />
       <NavBar greenColor />
       <TextSection>
         <Heading2 className={h2PaddingBottom}>Terms of Service</Heading2>

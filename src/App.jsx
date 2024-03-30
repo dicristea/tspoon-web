@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
 import { Routes, Route } from 'react-router-dom';
-import ScrollToTop from './utils/ScrollToTop';
 import { GRAY, WHITE } from './styles/colors';
 import About from './components/routes/About';
 import Home from './components/routes/Home';
@@ -11,20 +10,22 @@ import Privacy from './components/routes/Privacy';
 import Terms from './components/routes/Terms';
 import CommunityGuidelines from './components/routes/CommunityGuidelines';
 
+// temporarily not in use
+
 function App() {
   return (
     <AppContainer id="App">
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Routes>
-        <Route exact element={<Home />} path="" />
+        <Route exact element={<Home />} path="/" />
         <Route element={<About />} path="/about" />
         <Route element={<Blog />} path="/blog" />
         <Route element={<Contact />} path="/contact" />
         <Route element={<Privacy />} path="/privacy" />
         <Route element={<CommunityGuidelines />} path="/community-guidelines" />
         <Route element={<Terms />} path="/terms" />
-        <Route path="../public/.well-known/assetlinks.json" />
-        <Route element={<ErrorBoundary />} />
+        <Route path="../%PUBLIC_URL%/.well-known/assetlinks.json" />
+        <Route element={<ErrorBoundary />} path="*" />
       </Routes>
     </AppContainer>
   );
