@@ -29,6 +29,6 @@ export const routes = [
   },
   {
     title: 'App Linking',
-    href: '/%PUBLIC_URL%/.well-known/assetlinks.json'
+    href: '/public/.well-known/assetlinks.json'
   }
 ];
