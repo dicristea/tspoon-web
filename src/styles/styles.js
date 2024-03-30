@@ -95,11 +95,11 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   z-index: 1000;
-  @media (max-width: 1350px) {
+  @media (max-width: 1400px) {
     font-size: 60pt;
     line-height: 8rem;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     font-size: 50pt;
     line-height: 6rem;
   }

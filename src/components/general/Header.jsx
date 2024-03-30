@@ -109,9 +109,7 @@ export default function Header({ page }) {
         <>
           <NavBar />
           <ContactHeaderDiv>
-            <TitleSection>
-              <Title>Tell us what you think!</Title>
-            </TitleSection>
+            <Title>Tell us what you think!</Title>
           </ContactHeaderDiv>
         </>
       );
@@ -139,8 +137,11 @@ const HeaderDiv = styled.header`
 `;
 
 const ContactHeaderDiv = styled(HeaderDiv)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 45vh;
 `;
 
 const TitleSection = styled.div`
@@ -180,9 +181,9 @@ const MiddleTitleSection = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
-  //use dynamic sizing
   @media (max-width: 800px) {
     padding-bottom: 1rem;
+    padding-top: 1rem;
   }
 `;
 
@@ -190,12 +191,10 @@ const AboutTitleSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-top: 5rem;
-  gap: 5vh;
+  justify-content: flex-end;
+  gap: 20vh;
   height: 100%;
   div {
-    height: 100%;
     gap: 2vw;
     h1 {
       margin: 0;
@@ -205,8 +204,16 @@ const AboutTitleSection = styled.div`
       height: auto;
     }
   }
-  @media (max-width: 700px) {
-    padding-top: 10rem;
+  @media (max-width: 800px) {
+    div {
+      gap: 2vw;
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
+  @media (max-width: 550px) {
     div {
       gap: 2vw;
       img {
