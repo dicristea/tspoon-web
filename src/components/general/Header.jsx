@@ -20,10 +20,13 @@ import Paul from '../../assets/artwork/Paul.svg';
 import Andrew from '../../assets/artwork/Andrew.svg';
 import Forest from '../../assets/artwork/Forest.svg';
 import Diana from '../../assets/artwork/Diana.svg';
+import useScreenSize from '../../utils/useScreenSize';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
-  const { LAUCH_LIVE, screenWidth } = useContext(AppContext);
+  const { LAUCH_LIVE } = useContext(AppContext);
+  const screenSize = useScreenSize();
+
   switch (page) {
     case 'Title': {
       return (
@@ -31,7 +34,8 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv>
             <TitleSection>
-              {screenWidth > 800 ? (
+              {console.log(screenSize.width)}
+              {screenSize.width > 800 ? (
                 <TitleImages>
                   <img alt="logo" src={RandomCharacter1} />
                   <img alt="logo" src={RandomCharacter2} />
@@ -61,7 +65,7 @@ export default function Header({ page }) {
                 </div>
               </MiddleTitleSection>
               <TitleImages>
-                {screenWidth < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
+                {screenSize.width < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
                 <img alt="logo" src={RandomCharacter3} />
                 <img alt="logo" src={RandomCharacter4} />
               </TitleImages>
@@ -128,7 +132,10 @@ const HeaderDiv = styled.header`
   align-items: center;
   justify-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 86vh;
+  @media (max-width: 500px) {
+    height: 90vh;
+  }
 `;
 
 const ContactHeaderDiv = styled(HeaderDiv)`
@@ -142,17 +149,18 @@ const TitleSection = styled.div`
   height: 100%;
   gap: 4vw;
   div {
-    gap: 3vw;
+    gap: 2vw;
     img {
       width: 130px;
       height: auto;
     }
   }
+
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 2vh;
+    gap: 1vh;
     div {
       gap: 1rem;
       img {
@@ -160,6 +168,9 @@ const TitleSection = styled.div`
         height: auto;
       }
     }
+  }
+  @media (max-width: 950px) {
+    gap: 2vw;
   }
 `;
 
@@ -171,10 +182,7 @@ const MiddleTitleSection = styled.div`
   padding-bottom: 100px;
   //use dynamic sizing
   @media (max-width: 800px) {
-    padding-bottom: 3rem;
-  }
-  @media (max-width: 600px) {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 `;
 
@@ -218,9 +226,3 @@ const TitleImages = styled.div`
     flex-direction: row;
   }
 `;
-
-// const headerChefs = css`
-//   @media (max-width: 700px) {
-//     margin-left: 0px;
-//   }
-// `;

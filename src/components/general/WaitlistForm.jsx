@@ -52,8 +52,8 @@ export default function WaitlistForm({ location, sectionColor }) {
             <fieldset className={fieldset}>
               <label htmlFor={NAME_ID}>Name:</label>
               <input
-                autoComplete
                 required
+                autoComplete="true"
                 className={location === 'section' ? sectionInput : input}
                 id={NAME_ID}
                 name={NAME_ID}
@@ -65,8 +65,8 @@ export default function WaitlistForm({ location, sectionColor }) {
             <fieldset className={fieldset}>
               <label htmlFor={EMAIL_ID}>E-mail:</label>
               <input
-                autoComplete
                 required
+                autoComplete="true"
                 className={location === 'section' ? sectionInput : input}
                 id={EMAIL_ID}
                 name={EMAIL_ID}

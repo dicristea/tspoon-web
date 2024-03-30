@@ -8,9 +8,9 @@ import App from './App';
 import { AppContext } from './utils/context';
 
 const LAUCH_LIVE = false;
-const screenWidth = window.innerWidth; // hook to update dynamically for useContext
+// const screenWidth = window.innerWidth;
 
-const AppValues = { LAUCH_LIVE, screenWidth };
+const AppValues = { LAUCH_LIVE };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
