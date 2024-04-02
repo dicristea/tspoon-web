@@ -4,7 +4,7 @@ import sStyles, { Heading3, SmallHeading, SmallSection, SmallText } from '../../
 import android from '../../assets/android.png';
 import { GREEN, PINK, WHITE } from '../../styles/colors';
 import { AppContext } from '../../utils/context';
-import WaitlistForm from './WaitlistForm';
+import WaitlistForm from '../forms/WaitlistForm';
 
 export default function DownloadSection({ sectionColor }) {
   const { LAUCH_LIVE } = useContext(AppContext);

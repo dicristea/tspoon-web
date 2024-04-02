@@ -133,6 +133,9 @@ const HeaderDiv = styled.header`
   @media (max-width: 500px) {
     height: 90vh;
   }
+  @media (max-width: 400px) {
+    height: 85vh;
+  }
 `;
 
 const ContactHeaderDiv = styled(HeaderDiv)`
@@ -171,6 +174,16 @@ const TitleSection = styled.div`
   }
   @media (max-width: 950px) {
     gap: 2vw;
+  }
+
+  @media (max-width: 450px) {
+    div {
+      gap: 1rem;
+      img {
+        width: 80px;
+        height: auto;
+      }
+    }
   }
 `;
 

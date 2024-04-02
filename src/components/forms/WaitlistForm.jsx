@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { css } from '@linaria/atomic';
 import sStyles, { Button, Heading3, greenButton, pinkButton } from '../../styles/styles';
 import { BEIGE, GRAY, GREEN, WHITE } from '../../styles/colors';
@@ -37,6 +37,8 @@ export default function WaitlistForm({ location, sectionColor }) {
       }
     });
   }
+  const form = useRef();
+
   return (
     <div className={formWrapper}>
       <Heading3 className={formHeader} id="waitlist">
@@ -48,11 +50,13 @@ export default function WaitlistForm({ location, sectionColor }) {
             Thanks for the support! We&#39;ll get back to you soon.
           </div>
         ) : (
-          <form className={waitlistForm} target="_self" onSubmit={handleSubmit}>
+          <form className={waitlistForm} ref={form} target="_self" onSubmit={handleSubmit}>
             <fieldset className={fieldset}>
               <label htmlFor={NAME_ID}>Name:</label>
               <input
                 required
+                aria-label="Name"
+                aria-required="true"
                 autoComplete="true"
                 className={location === 'section' ? sectionInput : input}
                 id={NAME_ID}
@@ -66,6 +70,8 @@ export default function WaitlistForm({ location, sectionColor }) {
               <label htmlFor={EMAIL_ID}>E-mail:</label>
               <input
                 required
+                aria-label="Email"
+                aria-required="true"
                 autoComplete="true"
                 className={location === 'section' ? sectionInput : input}
                 id={EMAIL_ID}

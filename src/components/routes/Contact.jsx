@@ -1,24 +1,17 @@
 import { css, styled } from '@linaria/atomic';
-import { BodyText, Heading2, Section } from '../../styles/styles';
+import { Section } from '../../styles/styles';
 import { BLACK, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DownloadSection from '../general/DownloadSection';
-
-// Connect using EmailJS
+import ContactForm from '../forms/ContactForm';
 
 export default function Contact() {
   return (
     <div>
       <Header className={fontColorWhite} page="Contact" />
       <ContactSection className={fontColorBlack}>
-        <div>
-          <Heading2>Contact us</Heading2>
-          <BodyText>
-            If you&apos;d like to know more about us, have any questions, or would like to get
-            involved, please feel free to contact us at &quot;cookonspoon&quot; at gmail.
-          </BodyText>
-        </div>
+        <ContactForm />
       </ContactSection>
       <DownloadSection sectionColor="pink" />
       <Footer className={fontColorBlack} />
