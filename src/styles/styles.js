@@ -209,6 +209,13 @@ export const OrderedList = styled.ol`
   margin: 0;
 `;
 
+export const fieldset = css`
+  border: none;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+`;
+
 const sStyles = {
   zIndexLowest: { zIndex: -1000 },
   zIndexLower: { zIndex: -200 },

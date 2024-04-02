@@ -14,7 +14,7 @@ export default function DownloadSection({ sectionColor }) {
       style={{ backgroundColor: sectionColor === 'green' ? GREEN : PINK }}
     >
       {!LAUCH_LIVE ? (
-        <WaitlistForm location="section" sectionColor={sectionColor} />
+        <WaitlistForm sectionColor={sectionColor} />
       ) : (
         <>
           <Heading3 style={{ color: WHITE }}>Downloads</Heading3>

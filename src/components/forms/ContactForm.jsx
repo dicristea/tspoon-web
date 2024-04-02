@@ -8,6 +8,7 @@ import sStyles, {
   Button,
   Heading2,
   borderRadius,
+  fieldset,
   greenButton
 } from '../../styles/styles';
 import { BEIGE, BLACK, GRAY, GREEN } from '../../styles/colors';
@@ -56,7 +57,7 @@ export default function ContactForm() {
           </div>
         ) : (
           <form className={contactForm} ref={form} target="_self" onSubmit={sendEmail}>
-            <fieldset className={contactFieldset}>
+            <fieldset className={fieldset}>
               <input
                 required
                 aria-label="Name"
@@ -69,7 +70,7 @@ export default function ContactForm() {
                 type="text"
               />
             </fieldset>
-            <fieldset className={contactFieldset}>
+            <fieldset className={fieldset}>
               <input
                 required
                 aria-label="Email"
@@ -82,7 +83,7 @@ export default function ContactForm() {
                 type="email"
               />
             </fieldset>
-            <fieldset className={contactFieldset}>
+            <fieldset className={fieldset}>
               <textarea
                 required
                 aria-label="Message"
@@ -178,13 +179,6 @@ const textInput = css`
   &:hover {
     border: 1px solid ${BEIGE};
   }
-`;
-
-const contactFieldset = css`
-  border: none;
-  display: flex;
-  gap: 10px;
-  align-items: center;
 `;
 
 // Source: https://bootcamp.uxdesign.cc/custom-google-form-interface-with-reactjs-5d6762d8fa65

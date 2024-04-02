@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useRef, useState } from 'react';
 import { css } from '@linaria/atomic';
-import sStyles, { Button, Heading3, greenButton, pinkButton } from '../../styles/styles';
-import { BEIGE, GRAY, GREEN, WHITE } from '../../styles/colors';
+import sStyles, { Button, Heading3, fieldset, greenButton, pinkButton } from '../../styles/styles';
+import { BEIGE, GRAY, WHITE } from '../../styles/colors';
 
-export default function WaitlistForm({ location, sectionColor }) {
+export default function WaitlistForm({ sectionColor }) {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     'entry.1549536226': '',
@@ -58,9 +58,10 @@ export default function WaitlistForm({ location, sectionColor }) {
                 aria-label="Name"
                 aria-required="true"
                 autoComplete="true"
-                className={location === 'section' ? sectionInput : input}
+                className={sectionInput}
                 id={NAME_ID}
                 name={NAME_ID}
+                style={{ borderBottom: `2px solid ${WHITE}` }}
                 type="text"
                 value={formData[NAME_ID]}
                 onChange={handleInputData(NAME_ID)}
@@ -73,9 +74,10 @@ export default function WaitlistForm({ location, sectionColor }) {
                 aria-label="Email"
                 aria-required="true"
                 autoComplete="true"
-                className={location === 'section' ? sectionInput : input}
+                className={sectionInput}
                 id={EMAIL_ID}
                 name={EMAIL_ID}
+                style={{ borderBottom: `2px solid ${WHITE}` }}
                 type="email"
                 value={formData[EMAIL_ID]}
                 onChange={handleInputData(EMAIL_ID)}
@@ -109,9 +111,8 @@ const waitlistForm = css`
 `;
 
 const sectionInput = css`
-  outline: none;
   border: none;
-  border-bottom: 2px solid ${WHITE};
+  outline: none;
   background: transparent;
   display: flex;
   align-items: center;
@@ -129,36 +130,6 @@ const sectionInput = css`
   &:hover {
     border-bottom: 2px solid ${BEIGE};
   }
-`;
-
-const input = css`
-  outline: none;
-  border: none;
-  border-bottom: 2px solid ${GREEN};
-  background: transparent;
-  display: flex;
-  align-items: center;
-  padding: 4px 2px;
-  text-decoration: none;
-  &:-webkit-autofill
-    + &:-webkit-autofill:hover
-    + &:-webkit-autofill:focus
-    + &:-webkit-autofill:active {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: ${GRAY};
-    transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
-  }
-  &:hover {
-    border-bottom: 2px solid ${BEIGE};
-  }
-`;
-
-const fieldset = css`
-  border: none;
-  display: flex;
-  gap: 10px;
-  align-items: flex-end;
 `;
 
 // Source: https://bootcamp.uxdesign.cc/custom-google-form-interface-with-reactjs-5d6762d8fa65
