@@ -5,12 +5,16 @@ import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DownloadSection from '../general/DownloadSection';
 import ContactForm from '../forms/ContactForm';
+import ContactGraphic from '../../assets/artwork/Contact_Graphic.svg';
 
 export default function Contact() {
   return (
     <div>
       <Header className={fontColorWhite} page="Contact" />
       <ContactSection className={fontColorBlack}>
+        <div>
+          <img alt="Contact Us Graphic" className={contactArtwork} src={ContactGraphic} />
+        </div>
         <ContactForm />
       </ContactSection>
       <DownloadSection sectionColor="pink" />
@@ -31,6 +35,11 @@ const ContactSection = styled(Section)`
     padding: 3rem 3rem;
     display: grid;
   }
+`;
+
+const contactArtwork = css`
+  height: auto;
+  width: 300px;
 `;
 
 const fontColorWhite = css`

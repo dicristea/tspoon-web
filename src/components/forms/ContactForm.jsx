@@ -66,7 +66,7 @@ export default function ContactForm() {
                 className={textInput}
                 id="userName"
                 name="name"
-                placeholder="Your name"
+                placeholder="Name"
                 type="text"
               />
             </fieldset>

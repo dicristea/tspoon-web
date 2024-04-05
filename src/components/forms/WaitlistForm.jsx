@@ -1,8 +1,17 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useRef, useState } from 'react';
 import { css } from '@linaria/atomic';
-import sStyles, { Button, Heading3, fieldset, greenButton, pinkButton } from '../../styles/styles';
-import { BEIGE, GRAY, WHITE } from '../../styles/colors';
+import '@fontsource/source-sans-pro'; // Defaults to weight 400
+
+import sStyles, {
+  Button,
+  Heading3,
+  borderRadius,
+  fieldset,
+  greenButton,
+  pinkButton
+} from '../../styles/styles';
+import { BEIGE, PINK, WHITE } from '../../styles/colors';
 
 export default function WaitlistForm({ sectionColor }) {
   const [submit, setSubmit] = useState(false);
@@ -52,7 +61,6 @@ export default function WaitlistForm({ sectionColor }) {
         ) : (
           <form className={waitlistForm} ref={form} target="_self" onSubmit={handleSubmit}>
             <fieldset className={fieldset}>
-              <label htmlFor={NAME_ID}>Name:</label>
               <input
                 required
                 aria-label="Name"
@@ -61,14 +69,14 @@ export default function WaitlistForm({ sectionColor }) {
                 className={sectionInput}
                 id={NAME_ID}
                 name={NAME_ID}
-                style={{ borderBottom: `2px solid ${WHITE}` }}
+                placeholder="Name"
+                style={{ border: `1px solid ${WHITE}` }}
                 type="text"
                 value={formData[NAME_ID]}
                 onChange={handleInputData(NAME_ID)}
               />
             </fieldset>
             <fieldset className={fieldset}>
-              <label htmlFor={EMAIL_ID}>E-mail:</label>
               <input
                 required
                 aria-label="Email"
@@ -77,7 +85,8 @@ export default function WaitlistForm({ sectionColor }) {
                 className={sectionInput}
                 id={EMAIL_ID}
                 name={EMAIL_ID}
-                style={{ borderBottom: `2px solid ${WHITE}` }}
+                placeholder="Email"
+                style={{ border: `1px solid ${WHITE}` }}
                 type="email"
                 value={formData[EMAIL_ID]}
                 onChange={handleInputData(EMAIL_ID)}
@@ -111,24 +120,34 @@ const waitlistForm = css`
 `;
 
 const sectionInput = css`
-  border: none;
+  font-family: 'Source Sans Pro';
+  color: ${WHITE};
+  ::placeholder {
+    color: ${WHITE};
+  }
+  font-size: 0.8rem;
+  font-weight: 300;
   outline: none;
+  flex: auto;
+  border: none;
+  border: 1px solid ${WHITE};
+  border-radius: ${borderRadius};
   background: transparent;
   display: flex;
   align-items: center;
-  padding: 4px 2px;
+  padding: 0.8rem 0.6rem;
   text-decoration: none;
   &:-webkit-autofill
     + &:-webkit-autofill:hover
     + &:-webkit-autofill:focus
     + &:-webkit-autofill:active {
     -webkit-background-clip: text;
-    -webkit-text-fill-color: ${GRAY};
+    -webkit-text-fill-color: ${PINK};
     transition: background-color 5000s ease-in-out 0s;
     box-shadow: inset 0 0 20px 20px #23232329;
   }
   &:hover {
-    border-bottom: 2px solid ${BEIGE};
+    border: 1px solid ${BEIGE};
   }
 `;
 

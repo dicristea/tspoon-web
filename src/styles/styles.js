@@ -109,6 +109,14 @@ export const Title = styled.h1`
   }
 `;
 
+export const Heading1 = styled.h1`
+  margin: 0;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-size: ${heading1FontSize};
+  color: ${GREEN};
+`;
+
 export const Heading2 = styled.h2`
   margin: 0;
   font-family: 'Source Sans Pro';
@@ -216,6 +224,63 @@ export const fieldset = css`
   align-items: flex-end;
 `;
 
+export const Button = styled.button`
+  padding: 10pt 14pt;
+  display: flex;
+  border: none;
+  background-color: ${BEIGE};
+  color: WHITE;
+  gap: 0.2rem;
+  align-items: center;
+  align-self: center;
+  margin: 0;
+  justify-content: center;
+  border-radius: ${borderRadius};
+  text-decoration: none;
+  cursor: pointer;
+  img {
+    width: auto;
+    height: 1rem;
+  }
+  &:hover {
+    color: white;
+    background-color: ${GREEN_HALF_OPAQUE};
+  }
+`;
+
+export const greenButton = css`
+  background-color: ${GREEN};
+  border: 1px solid ${GREEN};
+  &:hover {
+    color: white;
+    background-color: ${GREEN_HALF_OPAQUE};
+  }
+`;
+
+export const pinkButton = css`
+  background-color: ${PINK};
+  border: 1px solid ${PINK};
+  &:hover {
+    color: white;
+    background-color: ${PINK_HALF_OPAQUE};
+  }
+`;
+
+export const ImgButton = styled.a`
+  display: flex;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+  img {
+    width: auto;
+    height: 2rem;
+  }
+`;
+
 const sStyles = {
   zIndexLowest: { zIndex: -1000 },
   zIndexLower: { zIndex: -200 },
@@ -251,16 +316,6 @@ const sStyles = {
   bodyFont: {
     fontFamily: 'Source Sans Pro',
     fontSize: bodyFontSize
-  },
-  button: {
-    alignItems: 'center',
-    alignSelf: 'center',
-    margin: '0',
-    justifyContent: 'center',
-    borderRadius,
-    padding: '10pt 14pt',
-    textDecoration: 'none',
-    cursor: 'pointer'
   },
   overrideFontColor: {
     color: WHITE
@@ -336,19 +391,6 @@ const sStyles = {
   },
   gapBetween: {
     gap: 4
-  },
-  heading1: {
-    fontFamily: 'Source Sans Pro',
-    fontWeight: '600',
-    fontSize: heading1FontSize
-  },
-  heading2: {
-    fontFamily: 'SourceSans3_600SemiBold',
-    fontSize: heading2FontSize
-  },
-  heading3: {
-    fontFamily: 'SourceSans3_400Regular',
-    fontSize: heading3FontSize
   },
   whiteSmallIcon: {
     color: WHITE,
@@ -434,57 +476,3 @@ const sStyles = {
 };
 
 export default sStyles;
-
-export const Button = styled.button`
-  display: flex;
-  border: none;
-  background-color: ${BEIGE};
-  color: WHITE;
-  ${sStyles.button}
-  gap: 0.2rem;
-  img {
-    width: auto;
-    height: 1rem;
-  }
-  &:hover {
-    color: white;
-    background-color: ${GREEN_HALF_OPAQUE};
-  }
-`;
-
-export const greenButton = css`
-  background-color: ${GREEN};
-  border: 1px solid ${GREEN};
-  &:hover {
-    color: white;
-    background-color: ${GREEN_HALF_OPAQUE};
-  }
-`;
-
-export const pinkButton = css`
-  background-color: ${PINK};
-  border: 1px solid ${PINK};
-  &:hover {
-    color: white;
-    background-color: ${PINK_HALF_OPAQUE};
-  }
-`;
-
-export const ImgButton = styled.a`
-  display: flex;
-  margin: 0;
-  border-radius: 0;
-  border: none;
-  background: none;
-  padding: 0;
-  text-decoration: none;
-  cursor: pointer;
-  img {
-    width: auto;
-    height: 2rem;
-  }
-`;
-
-export const Heading1 = styled.h1`
-  ${sStyles.heading1}
-`;
