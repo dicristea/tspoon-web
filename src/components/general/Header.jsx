@@ -11,7 +11,7 @@ import {
   horizontalPadding
 } from '../../styles/styles';
 import android from '../../assets/android.png';
-import { PINK, WHITE } from '../../styles/colors';
+import { WHITE } from '../../styles/colors';
 import { AppContext } from '../../utils/context';
 import RandomCharacter1 from '../../assets/artwork/RandomChar_1.svg';
 import RandomCharacter2 from '../../assets/artwork/RandomChar_2.svg';
@@ -121,7 +121,6 @@ export default function Header({ page }) {
 
 const HeaderDiv = styled.header`
   color: ${WHITE};
-  /* background-color: ${PINK}; */
   padding-left: ${horizontalPadding};
   padding-right: ${horizontalPadding};
   width: 100%;
@@ -135,7 +134,7 @@ const HeaderDiv = styled.header`
     height: 90vh;
   }
   @media (max-width: 400px) {
-    height: 85vh;
+    height: 82vh;
   }
 `;
 

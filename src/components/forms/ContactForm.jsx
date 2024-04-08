@@ -22,7 +22,7 @@ export default function ContactForm() {
 
   const SERVICE_ID = 'service_iuyucmg';
   const TEMPLATE_ID = 'contact_template_xpqbhrn';
-  const PUBLIC_KEY = 'mQiNHpDZ8FVYvMAMk';
+  // const PUBLIC_KEY = 'mQiNHpDZ8FVYvMAMk';
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-        publicKey: PUBLIC_KEY
+        publicKey: 'mQiNHpDZ8FVYvMAMk'
       })
       .then(
         () => {
@@ -110,7 +110,7 @@ export default function ContactForm() {
 
 const contactFormHeader = css`
   color: ${GREEN};
-  padding: 20px 0px;
+  padding: 10px 0px;
 `;
 
 const contactForm = css`
@@ -119,14 +119,19 @@ const contactForm = css`
   gap: 1rem;
   color: ${GREEN};
   font-family: 'Source Sans Pro';
-  font-size: 1rem;
   font-weight: 300;
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px ${GRAY} inset !important;
+  }
 `;
 
 const textareaInput = css`
   outline: none;
   font-family: 'Source Sans Pro';
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 300;
   flex: auto;
   border: none;
@@ -137,15 +142,6 @@ const textareaInput = css`
   align-items: center;
   padding: 0.8rem;
   text-decoration: none;
-  &:-webkit-autofill
-    + &:-webkit-autofill:hover
-    + &:-webkit-autofill:focus
-    + &:-webkit-autofill:active {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: ${GRAY};
-    transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
-  }
   &:hover {
     border: 1px solid ${BEIGE};
   }
@@ -153,7 +149,7 @@ const textareaInput = css`
 
 const textInput = css`
   font-family: 'Source Sans Pro';
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 300;
   outline: none;
   flex: auto;
@@ -165,15 +161,7 @@ const textInput = css`
   align-items: center;
   padding: 0.8rem 0.6rem;
   text-decoration: none;
-  &:-webkit-autofill
-    + &:-webkit-autofill:hover
-    + &:-webkit-autofill:focus
-    + &:-webkit-autofill:active {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: ${GRAY};
-    transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
-  }
+
   &:hover {
     border: 1px solid ${BEIGE};
   }

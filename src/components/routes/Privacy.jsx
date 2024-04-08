@@ -234,7 +234,7 @@ export default function Privacy() {
 
 const showDots = css`
   padding-left: 2rem;
-  padding-bottom: 1rem;
+  padding-top: 0.4rem;
   list-style-type: circle;
   font-size: ${bodyFontSize};
   font-weight: 200;

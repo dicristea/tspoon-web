@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useRef, useState } from 'react';
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import '@fontsource/source-sans-pro'; // Defaults to weight 400
 
 import {
@@ -12,7 +12,7 @@ import {
   greenButton,
   pinkButton
 } from '../../styles/styles';
-import { BEIGE, PINK, WHITE } from '../../styles/colors';
+import { BEIGE, GRAY, WHITE } from '../../styles/colors';
 
 export default function WaitlistForm({ sectionColor }) {
   const [submit, setSubmit] = useState(false);
@@ -72,7 +72,6 @@ export default function WaitlistForm({ sectionColor }) {
                 id={NAME_ID}
                 name={NAME_ID}
                 placeholder="Name"
-                style={{ border: `1px solid ${WHITE}` }}
                 type="text"
                 value={formData[NAME_ID]}
                 onChange={handleInputData(NAME_ID)}
@@ -88,7 +87,6 @@ export default function WaitlistForm({ sectionColor }) {
                 id={EMAIL_ID}
                 name={EMAIL_ID}
                 placeholder="Email"
-                style={{ border: `1px solid ${WHITE}` }}
                 type="email"
                 value={formData[EMAIL_ID]}
                 onChange={handleInputData(EMAIL_ID)}
@@ -116,17 +114,26 @@ const formHeader = css`
 const waitlistForm = css`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   color: ${WHITE};
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px ${GRAY} inset !important;
+  }
 `;
 
 const waitlistInput = css`
   font-family: 'Source Sans Pro';
   color: ${WHITE};
+  &:hover {
+    border: 1px solid ${BEIGE};
+  }
   ::placeholder {
     color: ${WHITE};
   }
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 300;
   outline: none;
   flex: auto;
@@ -138,18 +145,6 @@ const waitlistInput = css`
   align-items: center;
   padding: 0.8rem 0.6rem;
   text-decoration: none;
-  &:-webkit-autofill
-    + &:-webkit-autofill:hover
-    + &:-webkit-autofill:focus
-    + &:-webkit-autofill:active {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: ${PINK};
-    transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
-  }
-  &:hover {
-    border: 1px solid ${BEIGE};
-  }
 `;
 
 // Source: https://bootcamp.uxdesign.cc/custom-google-form-interface-with-reactjs-5d6762d8fa65

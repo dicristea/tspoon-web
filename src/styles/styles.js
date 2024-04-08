@@ -211,8 +211,12 @@ export const List = styled.ul`
   align-items: center;
   font-family: 'Source Sans Pro';
   font-weight: 200;
+  line-height: 1.5rem;
   margin: 0;
   font-size: ${bodyFontSize};
+  li {
+    padding-bottom: 0.2rem;
+  }
 `;
 
 export const OrderedList = styled.ol`
@@ -222,6 +226,10 @@ export const OrderedList = styled.ol`
   font-size: ${bodyFontSize};
   padding-left: 2rem;
   margin: 0;
+  line-height: 1.5rem;
+  li {
+    padding-bottom: 0.2rem;
+  }
 `;
 
 export const fieldset = css`

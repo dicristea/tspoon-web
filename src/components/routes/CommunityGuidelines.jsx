@@ -24,7 +24,7 @@ export default function CommunityGuidelines() {
             food enthusiasts. To ensure a positive and enjoyable experience for everyone, we have
             established these community guidelines. Please read and abide by them:
           </BodyText>
-          <OrderedList>
+          <OrderedList className={textPaddingBottom}>
             <li>
               <b>Respect and Kindness:</b> Treat all members with respect and kindness. Harassment,
               hate speech, bullying, or discrimination of any kind will not be tolerated.
