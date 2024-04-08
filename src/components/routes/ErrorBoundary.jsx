@@ -41,7 +41,7 @@ export default function ErrorBoundary() {
 
         <p>{/* <i>{error.message}</i> */}</p>
       </ErrorSection>
-      <DownloadSection />
+      <DownloadSection sectionColor="pink" />
       <Footer className={fontColorBlack} />
     </ErrorContainer>
   );
