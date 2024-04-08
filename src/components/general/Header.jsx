@@ -5,6 +5,7 @@ import {
   AnchorTag,
   Button,
   GreenBackground,
+  PinkBackground,
   Title,
   greenButton,
   horizontalPadding
@@ -32,7 +33,7 @@ export default function Header({ page }) {
       return (
         <>
           <NavBar />
-          <HeaderDiv>
+          <HeaderDiv className={PinkBackground}>
             <TitleSection>
               {screenSize.width > 800 ? (
                 <TitleImages>
@@ -107,7 +108,7 @@ export default function Header({ page }) {
       return (
         <>
           <NavBar />
-          <ContactHeaderDiv>
+          <ContactHeaderDiv className={PinkBackground}>
             <Title>Tell us what you think!</Title>
           </ContactHeaderDiv>
         </>
@@ -120,7 +121,7 @@ export default function Header({ page }) {
 
 const HeaderDiv = styled.header`
   color: ${WHITE};
-  background-color: ${PINK};
+  /* background-color: ${PINK}; */
   padding-left: ${horizontalPadding};
   padding-right: ${horizontalPadding};
   width: 100%;

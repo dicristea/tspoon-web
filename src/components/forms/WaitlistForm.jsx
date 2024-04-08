@@ -3,11 +3,12 @@ import React, { useRef, useState } from 'react';
 import { css } from '@linaria/atomic';
 import '@fontsource/source-sans-pro'; // Defaults to weight 400
 
-import sStyles, {
+import {
   Button,
   Heading3,
   borderRadius,
   fieldset,
+  formSubmitted,
   greenButton,
   pinkButton
 } from '../../styles/styles';
@@ -55,8 +56,9 @@ export default function WaitlistForm({ sectionColor }) {
       </Heading3>
       <div className="formcontact">
         {submit ? (
-          <div className={sStyles.alignItemsCenter}>
-            Thanks for the support! We&#39;ll get back to you soon.
+          <div className={formSubmitted}>
+            <div>Thanks for the support! </div>
+            <div>You&#39;ll hear from us very soon</div>
           </div>
         ) : (
           <form className={waitlistForm} ref={form} target="_self" onSubmit={handleSubmit}>
@@ -66,7 +68,7 @@ export default function WaitlistForm({ sectionColor }) {
                 aria-label="Name"
                 aria-required="true"
                 autoComplete="true"
-                className={sectionInput}
+                className={waitlistInput}
                 id={NAME_ID}
                 name={NAME_ID}
                 placeholder="Name"
@@ -82,7 +84,7 @@ export default function WaitlistForm({ sectionColor }) {
                 aria-label="Email"
                 aria-required="true"
                 autoComplete="true"
-                className={sectionInput}
+                className={waitlistInput}
                 id={EMAIL_ID}
                 name={EMAIL_ID}
                 placeholder="Email"
@@ -114,12 +116,11 @@ const formHeader = css`
 const waitlistForm = css`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
   color: ${WHITE};
 `;
 
-const sectionInput = css`
+const waitlistInput = css`
   font-family: 'Source Sans Pro';
   color: ${WHITE};
   ::placeholder {

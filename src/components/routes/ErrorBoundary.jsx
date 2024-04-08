@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { useRouteError } from 'react-router-dom';
 import { BLACK } from '../../styles/colors';

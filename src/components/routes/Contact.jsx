@@ -24,16 +24,17 @@ export default function Contact() {
 }
 
 const ContactSection = styled(Section)`
-  padding: 4rem 0;
+  padding: 4rem 3rem;
   div {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 450px;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 730px) {
     padding: 3rem 3rem;
-    display: grid;
+    flex-direction: row;
+    gap:;
   }
 `;
 

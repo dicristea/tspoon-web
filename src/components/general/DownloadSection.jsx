@@ -1,4 +1,5 @@
-import { css, styled } from '@linaria/atomic';
+import { styled } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import { useContext } from 'react';
 import sStyles, { Heading3, SmallHeading, SmallSection, SmallText } from '../../styles/styles';
 import android from '../../assets/android.png';

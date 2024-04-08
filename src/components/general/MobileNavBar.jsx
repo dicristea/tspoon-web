@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Twirl as Hamburger } from 'hamburger-react';

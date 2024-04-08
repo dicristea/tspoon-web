@@ -5,7 +5,7 @@ import '@fontsource/source-sans-pro/600.css'; // Specify weight and style
 import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import {
   BEIGE,
   BLACK,
@@ -81,9 +81,12 @@ export const bigImageSize = css`
   }
 `;
 
-// TEMPORARY screen width solution
 export const GreenBackground = css`
-  background-color: ${darkTransBackgroundColor};
+  background-color: ${GREEN};
+`;
+
+export const PinkBackground = css`
+  background-color: ${PINK};
 `;
 
 export const Title = styled.h1`
@@ -170,7 +173,7 @@ export const Section = styled.div`
   align-items: center;
   justify-content: center;
   justify-items: center;
-  gap: 6vw;
+  gap: 5vw;
   div {
     max-width: 300px;
   }
@@ -186,9 +189,13 @@ export const SmallSection = styled(Section)`
 `;
 
 export const TextSection = styled.div`
-  padding: 4rem;
-  flex-direction: column;
+  padding: 64px 80px;
+  text-align: left;
   color: ${BLACK};
+  max-width: 850px;
+  @media (max-width: 550px) {
+    padding: 64px 40px;
+  }
 `;
 
 export const AnchorTag = styled.a`
@@ -279,6 +286,13 @@ export const ImgButton = styled.a`
     width: auto;
     height: 2rem;
   }
+`;
+
+export const formSubmitted = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 `;
 
 const sStyles = {

@@ -1,4 +1,4 @@
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import logo from '../../assets/logo/App Icon_Trans.svg';
 
 import sStyles, { BodyText, Heading2, Section, placeholderImage } from '../../styles/styles';

@@ -1,4 +1,4 @@
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 
 import {
   BodyText,

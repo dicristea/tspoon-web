@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import sStyles, { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';

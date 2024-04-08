@@ -1,17 +1,18 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import '@fontsource/source-sans-pro'; // Defaults to weight 400
 import React, { useRef, useState } from 'react';
-import { css } from '@linaria/atomic';
+import { css } from '@linaria/core';
 import emailjs from 'emailjs-com';
-import sStyles, {
+import {
   BodyText,
   Button,
   Heading2,
   borderRadius,
   fieldset,
+  formSubmitted,
   greenButton
 } from '../../styles/styles';
-import { BEIGE, BLACK, GRAY, GREEN } from '../../styles/colors';
+import { BEIGE, GRAY, GREEN } from '../../styles/colors';
 
 export default function ContactForm() {
   const [submit, setSubmit] = useState(false);
@@ -44,16 +45,17 @@ export default function ContactForm() {
   const form = useRef();
 
   return (
-    <div className={contactFormWrapper}>
+    <div>
       <Heading2 className={contactFormHeader}>Contact us</Heading2>
       <BodyText>
         If you&apos;d like to know more about us, have any questions, or would like to get involved,
         please feel free to contact us!
       </BodyText>
-      <div className="formcontact">
+      <div>
         {submit ? (
-          <div className={sStyles.alignItemsCenter}>
-            Thanks for reaching out! We&#39;ll get back to you soon.
+          <div className={formSubmitted}>
+            <div>Thanks for reaching out! </div>
+            <div>We&#39;ll get back to you soon.</div>
           </div>
         ) : (
           <form className={contactForm} ref={form} target="_self" onSubmit={sendEmail}>
@@ -106,10 +108,6 @@ export default function ContactForm() {
   );
 }
 
-const contactFormWrapper = css`
-  color: ${BLACK};
-`;
-
 const contactFormHeader = css`
   color: ${GREEN};
   padding: 20px 0px;
@@ -118,7 +116,7 @@ const contactFormHeader = css`
 const contactForm = css`
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1rem;
   color: ${GREEN};
   font-family: 'Source Sans Pro';
   font-size: 1rem;
