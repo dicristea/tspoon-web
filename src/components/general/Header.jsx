@@ -130,11 +130,11 @@ const HeaderDiv = styled.header`
   justify-items: center;
   justify-content: center;
   height: 86vh;
-  @media (max-width: 500px) {
-    height: 90vh;
+  @media (max-width: 650px) {
+    height: 88vh;
   }
   @media (max-width: 400px) {
-    height: 82vh;
+    height: 84vh;
   }
 `;
 

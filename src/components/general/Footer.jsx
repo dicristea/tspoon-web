@@ -10,7 +10,7 @@ import { AppContext } from '../../utils/context';
 import SocialsFooter from './SocialsFooter';
 
 export default function Footer() {
-  const { LAUCH_LIVE } = useContext(AppContext);
+  const { LAUCH_LIVE, currentYear } = useContext(AppContext);
 
   return (
     <FooterSection>
@@ -39,7 +39,7 @@ export default function Footer() {
             Terms of Service
           </Link>
         </SmallText>
-        <SmallText className={incorporated}>© 2024 Tspoon, LLC.</SmallText>
+        <SmallText className={incorporated}>© {currentYear} Tspoon, LLC.</SmallText>
       </FooterBar>
     </FooterSection>
   );

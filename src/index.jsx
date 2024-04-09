@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/global';
 import {
-  // BrowserRouter,
   createBrowserRouter,
   createRoutesFromElements,
   Route,
@@ -10,7 +9,6 @@ import {
 } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-// import App from './App';
 import { AppContext } from './utils/context';
 import Home from './components/routes/Home';
 import About from './components/routes/About';
@@ -22,8 +20,10 @@ import Terms from './components/routes/Terms';
 import ErrorBoundary from './components/routes/ErrorBoundary';
 
 const LAUCH_LIVE = false;
+const date = new Date();
+const currentYear = date.getFullYear();
 
-const AppValues = { LAUCH_LIVE };
+const AppValues = { LAUCH_LIVE, currentYear };
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -49,6 +49,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 );
 
+// Old Usage of Browserrouter and App Component
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>

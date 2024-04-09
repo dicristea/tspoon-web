@@ -9,6 +9,7 @@ import WaitlistForm from '../forms/WaitlistForm';
 
 export default function DownloadSection({ sectionColor }) {
   const { LAUCH_LIVE } = useContext(AppContext);
+
   return (
     <SmallSection
       className={flexColumn}
