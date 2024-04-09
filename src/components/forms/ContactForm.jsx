@@ -2,7 +2,7 @@
 import '@fontsource/source-sans-pro'; // Defaults to weight 400
 import React, { useRef, useState } from 'react';
 import { css } from '@linaria/core';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import {
   BodyText,
   Button,
@@ -16,13 +16,10 @@ import { BEIGE, GRAY, GREEN } from '../../styles/colors';
 
 export default function ContactForm() {
   const [submit, setSubmit] = useState(false);
-  // const [userName, setUserName] = useState();
-  // const userEmail, setUserEmail = useState()
-  // const userMessage, setUserMessage = useState()
 
   const SERVICE_ID = 'service_iuyucmg';
   const TEMPLATE_ID = 'contact_template_xpqbhrn';
-  // const PUBLIC_KEY = 'mQiNHpDZ8FVYvMAMk';
+  const PUBLIC_KEY = 'mQiNHpDZ8FVYvMAMk';
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,7 +27,7 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-        publicKey: 'mQiNHpDZ8FVYvMAMk'
+        publicKey: PUBLIC_KEY
       })
       .then(
         () => {
