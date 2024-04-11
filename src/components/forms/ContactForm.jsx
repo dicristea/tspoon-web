@@ -50,7 +50,7 @@ export default function ContactForm() {
       </BodyText>
       <div>
         {submit ? (
-          <div className={formSubmitted}>
+          <div className={formSubmitted} style={{ alignItems: 'flex-start' }}>
             <div>Thanks for reaching out! </div>
             <div>We&#39;ll get back to you soon.</div>
           </div>
@@ -78,7 +78,7 @@ export default function ContactForm() {
                 className={textInput}
                 id="userEmail"
                 name="email"
-                placeholder="Email address"
+                placeholder="Email"
                 type="email"
               />
             </fieldset>
@@ -92,11 +92,12 @@ export default function ContactForm() {
                 id="userMessage"
                 name="message"
                 placeholder="Message"
+                rows="4"
                 type="textarea"
               />
             </fieldset>
             <Button className={greenButton} type="submit" value="Send">
-              Send
+              SEND
             </Button>
           </form>
         )}
@@ -126,6 +127,7 @@ const contactForm = css`
 `;
 
 const textareaInput = css`
+  resize: none;
   outline: none;
   font-family: 'Source Sans Pro';
   font-size: 0.9rem;

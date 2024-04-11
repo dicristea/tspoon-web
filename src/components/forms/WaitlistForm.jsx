@@ -58,7 +58,7 @@ export default function WaitlistForm({ sectionColor }) {
         {submit ? (
           <div className={formSubmitted}>
             <div>Thanks for the support! </div>
-            <div>You&#39;ll hear from us very soon</div>
+            <div>You&#39;ll hear from us very soon.</div>
           </div>
         ) : (
           <form className={waitlistForm} ref={form} target="_self" onSubmit={handleSubmit}>
