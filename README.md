@@ -1,8 +1,3 @@
-TODO:
-    - react-svg
-    - error page routing
-    - make css more efficient and organize
-
 React Libraries
 - [npm: react-svg](https://www.npmjs.com/package/react-svg)
 - [npm: react-router-dom](https://www.npmjs.com/package/react-router-dom)
@@ -12,7 +7,6 @@ React Libraries
 
 
 VSCode extensions:
-
 - Autocomplete for Linaria: https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components
 
 
