@@ -1,4 +1,3 @@
 https://www.tspoonapp.com/
 https://www.tspoonapp.com/?/about
-https://www.tspoonapp.com/?/blog
-https://www.tspoonapp.com/?/contact-us
+https://www.tspoonapp.com/?/contact
