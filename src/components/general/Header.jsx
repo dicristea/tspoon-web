@@ -53,7 +53,7 @@ export default function Header({ page }) {
                     <>
                       <Button>Download iOS</Button>
                       <Button>
-                        Download
+                        Downloads
                         <img alt="android logo" src={android} />
                       </Button>
                     </>

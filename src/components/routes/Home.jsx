@@ -20,7 +20,7 @@ export default function Home() {
       <Header className={fontColorWhite} page="Title" />
       <div className={sectionBody}>
         <Section>
-          <div className={itemA}>
+          <div className={[itemA, 'hidden']}>
             <Heading3 className={h3PaddingBottom}>Where your next dinner plans are found.</Heading3>
             <BodyText>Date night? Parents coming into town?</BodyText>
             <BodyText className={textPaddingBottom}>Housewarming party?</BodyText>
