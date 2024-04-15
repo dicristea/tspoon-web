@@ -126,6 +126,9 @@ const fullPage = css`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  @media (max-width: 500px) {
+    height: 92vh;
+  }
 `;
 
 const HeaderDiv = styled.header`
@@ -191,7 +194,6 @@ const TitleSection = styled.div`
   }
 
   @media (max-width: 450px) {
-    gap: 1rem;
     div {
       gap: 1rem;
       img {
