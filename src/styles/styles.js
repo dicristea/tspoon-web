@@ -182,12 +182,6 @@ export const Section = styled.div`
   }
 `;
 
-export const SmallSection = styled(Section)`
-  padding: 4rem 0;
-  flex-direction: column;
-  color: ${WHITE};
-`;
-
 export const TextSection = styled.div`
   padding: 64px 80px;
   text-align: left;
@@ -283,12 +277,13 @@ export const pinkButton = css`
 
 export const ImgButton = styled.a`
   display: flex;
+  flex-direction: column;
   margin: 0;
-  border-radius: 0;
   border: none;
   background: none;
-  padding: 0;
+  padding: 6px;
   text-decoration: none;
+  border-radius: 16px;
   cursor: pointer;
   img {
     width: auto;
@@ -472,12 +467,6 @@ const sStyles = {
     display: 'flex',
     height: '15px',
     width: 'auto'
-  },
-  socialButtons: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: '8vw'
   },
   textAlignCenter: {
     textAlign: 'center'

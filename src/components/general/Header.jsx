@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { useContext } from 'react';
-// import { css } from '@linaria/core';
+import { css } from '@linaria/core';
 import {
   AnchorTag,
   Button,
@@ -31,18 +31,21 @@ export default function Header({ page }) {
   switch (page) {
     case 'Title': {
       return (
-        <>
+        <div className={fullPage}>
           <NavBar />
           <HeaderDiv className={PinkBackground}>
             <TitleSection>
-              {screenSize.width > 800 ? (
+              {screenSize.width > 850 ? (
                 <TitleImages>
                   <img alt="logo" src={RandomCharacter1} />
                   <img alt="logo" src={RandomCharacter2} />
                 </TitleImages>
               ) : null}
-
-              <MiddleTitleSection>
+              <MiddleTitleSection
+                style={
+                  screenSize.width < 850 && screenSize.height > 750 ? { paddingTop: '15vh' } : null
+                }
+              >
                 <Title>
                   No <br />
                   Nameless <br />
@@ -65,18 +68,18 @@ export default function Header({ page }) {
                 </div>
               </MiddleTitleSection>
               <TitleImages>
-                {screenSize.width < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
+                {screenSize.width < 850 ? <img alt="logo" src={RandomCharacter1} /> : null}
                 <img alt="logo" src={RandomCharacter3} />
                 <img alt="logo" src={RandomCharacter4} />
               </TitleImages>
             </TitleSection>
           </HeaderDiv>
-        </>
+        </div>
       );
     }
     case 'About': {
       return (
-        <>
+        <div className={fullPage}>
           <NavBar greenColor />
           <HeaderDiv className={GreenBackground}>
             <AboutTitleSection>
@@ -89,19 +92,19 @@ export default function Header({ page }) {
               </TitleImages>
             </AboutTitleSection>
           </HeaderDiv>
-        </>
+        </div>
       );
     }
     case 'Blog': {
       return (
-        <>
+        <div className={fullPage}>
           <NavBar />
           <HeaderDiv>
             <TitleSection>
               <Title>Blog.</Title>
             </TitleSection>
           </HeaderDiv>
-        </>
+        </div>
       );
     }
     case 'Contact': {
@@ -109,7 +112,7 @@ export default function Header({ page }) {
         <>
           <NavBar />
           <ContactHeaderDiv className={PinkBackground}>
-            <Title>Tell us what you think!</Title>
+            <Title className={contactTitle}>What&apos;s cookin&apos; Chef?</Title>
           </ContactHeaderDiv>
         </>
       );
@@ -119,22 +122,37 @@ export default function Header({ page }) {
   }
 }
 
+const fullPage = css`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+
 const HeaderDiv = styled.header`
   color: ${WHITE};
   padding-left: ${horizontalPadding};
   padding-right: ${horizontalPadding};
   width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   justify-content: center;
-  height: 86vh;
-  @media (max-width: 650px) {
-    height: 88vh;
+`;
+
+const contactTitle = css`
+  @media (max-width: 1400px) {
+    font-size: 50pt;
+    line-height: 6rem;
   }
-  @media (max-width: 400px) {
-    height: 84vh;
+  @media (max-width: 1200px) {
+    font-size: 40pt;
+    line-height: 6rem;
+  }
+  @media (max-width: 800px) {
+    font-size: 35pt;
+    line-height: 5rem;
   }
 `;
 
@@ -149,34 +167,31 @@ const ContactHeaderDiv = styled(HeaderDiv)`
 const TitleSection = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 100%;
   gap: 4vw;
   div {
-    gap: 2vw;
+    gap: 4vw;
     img {
       width: 130px;
       height: auto;
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 1vh;
     div {
-      gap: 1rem;
+      gap: 2rem;
       img {
         width: 100px;
         height: auto;
       }
     }
   }
-  @media (max-width: 950px) {
-    gap: 2vw;
-  }
 
   @media (max-width: 450px) {
+    gap: 1rem;
     div {
       gap: 1rem;
       img {
@@ -241,7 +256,5 @@ const TitleImages = styled.div`
   align-items: flex-end;
   flex-direction: row;
   justify-content: center;
-  @media (max-width: 700px) {
-    flex-direction: row;
-  }
+  gap: 2rem;
 `;

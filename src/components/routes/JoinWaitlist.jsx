@@ -3,8 +3,8 @@ import { css } from '@linaria/core';
 import { Section, Title, bigImageSize, normalImageSize } from '../../styles/styles';
 import { BLACK, PINK } from '../../styles/colors';
 import loadingAnimation from '../../assets/Loading_Animation_color.gif';
-import SocialsFooter from '../general/SocialsFooter';
-import WaitlistForm from '../general/WaitlistForm';
+// import SocialsFooter from '../general/SocialsFooter';
+// import WaitlistForm from '../general/WaitlistForm';
 
 // TEMPORARILY NOT IN USE
 
@@ -28,9 +28,9 @@ export default function JoinWaitlist() {
             Loading…
           </iframe>
         </section> */}
-        <WaitlistForm />
+        {/* <WaitlistForm /> */}
       </Section>
-      <SocialsFooter className={socialsFooter} />
+      {/* <SocialsFooter className={socialsFooter} /> */}
     </div>
   );
 }

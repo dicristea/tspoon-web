@@ -10,7 +10,6 @@ import {
 import { WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
-import DownloadSection from '../general/DownloadSection';
 import TracysKitchen from '../../assets/artwork/AboutUs_Block.svg';
 
 export default function About() {
@@ -37,8 +36,7 @@ export default function About() {
           <img alt="Tracy's Kitchen" className={tracyskitchen} src={TracysKitchen} />
         </div>
       </Section>
-      <DownloadSection sectionColor="green" />
-      <Footer />
+      <Footer sectionColor="green" />
     </>
   );
 }

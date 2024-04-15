@@ -29,7 +29,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route exact element={<Home />} errorElement={<ErrorBoundary />} path="/" />
-      <Route element={<About />} path="/about" />
+      <Route element={<About />} errorElement={<ErrorBoundary />} path="/about" />
       <Route element={<Blog />} path="/blog" />
       <Route element={<Contact />} path="/contact" />
       <Route element={<Privacy />} path="/privacy" />

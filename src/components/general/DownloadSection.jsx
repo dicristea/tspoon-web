@@ -1,48 +1,34 @@
-import { styled } from '@linaria/atomic';
+import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
-import { useContext } from 'react';
-import sStyles, { Heading3, SmallHeading, SmallSection, SmallText } from '../../styles/styles';
+import { Heading3, SmallHeading, SmallText } from '../../styles/styles';
 import android from '../../assets/android.png';
 import { GREEN, PINK, WHITE } from '../../styles/colors';
-import { AppContext } from '../../utils/context';
-import WaitlistForm from '../forms/WaitlistForm';
 
 export default function DownloadSection({ sectionColor }) {
-  const { LAUCH_LIVE } = useContext(AppContext);
-
   return (
-    <SmallSection
-      className={flexColumn}
-      style={{ backgroundColor: sectionColor === 'green' ? GREEN : PINK }}
-    >
-      {!LAUCH_LIVE ? (
-        <WaitlistForm sectionColor={sectionColor} />
-      ) : (
-        <>
-          <Heading3 style={{ color: WHITE }}>Downloads</Heading3>
-          <ButtonContainer className={mobile}>
-            {/* Will need iOS card later */}
-            {/* <DownloadCard>
+    <div>
+      <Heading3 style={{ color: WHITE }}>Downloads</Heading3>
+      <ButtonContainer className={mobile}>
+        {/* Will need iOS card later */}
+        {/* <DownloadCard>
             <img alt="QR Code for iOS download" src={android} />
             <div>
               <SmallHeading>Download Tspoon Now!</SmallHeading>
               <SmallText>Scan to Download on iOS</SmallText>
             </div>
           </DownloadCard> */}
-            <div
-              className={downloadCard}
-              style={{ backgroundColor: sectionColor === 'green' ? GREEN : PINK }}
-            >
-              <img alt="QR Code for Google Play download" src={android} />
-              <div>
-                <SmallHeading>Download Tspoon Now!</SmallHeading>
-                <SmallText>Scan to Download on Google Play</SmallText>
-              </div>
-            </div>
-          </ButtonContainer>
-        </>
-      )}
-    </SmallSection>
+        <div
+          className={downloadCard}
+          style={{ backgroundColor: sectionColor === 'green' ? GREEN : PINK }}
+        >
+          <img alt="QR Code for Google Play download" src={android} />
+          <div>
+            <SmallHeading>Download Tspoon Now!</SmallHeading>
+            <SmallText>Scan to Download on Google Play</SmallText>
+          </div>
+        </div>
+      </ButtonContainer>
+    </div>
   );
 }
 
@@ -88,12 +74,6 @@ export const downloadCard = css`
     padding: 1rem;
     flex-direction: column;
   }
-`;
-
-export const flexColumn = css`
-  ${sStyles.flexColumn}
-  align-items: center;
-  gap: 2vw;
 `;
 
 export const mobile = css`

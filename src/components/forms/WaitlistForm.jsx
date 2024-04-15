@@ -12,7 +12,7 @@ import {
   greenButton,
   pinkButton
 } from '../../styles/styles';
-import { BEIGE, GRAY, WHITE } from '../../styles/colors';
+import { BEIGE, GRAY, GREEN, PINK, WHITE } from '../../styles/colors';
 
 export default function WaitlistForm({ sectionColor }) {
   const [submit, setSubmit] = useState(false);
@@ -50,7 +50,10 @@ export default function WaitlistForm({ sectionColor }) {
   const form = useRef();
 
   return (
-    <div className={formWrapper}>
+    <div
+      className={formWrapper}
+      style={{ backgroundColor: sectionColor === 'green' ? GREEN : PINK }}
+    >
       <Heading3 className={formHeader} id="waitlist">
         Something&apos;s cooking!
       </Heading3>

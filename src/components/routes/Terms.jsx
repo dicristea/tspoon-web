@@ -11,7 +11,6 @@ import sStyles, {
   textPaddingBottom
 } from '../../styles/styles';
 import Footer from '../general/Footer';
-import DownloadSection from '../general/DownloadSection';
 import NavBar from '../general/NavBar';
 import ScrollToTop from '../../utils/ScrollToTop';
 
@@ -175,8 +174,7 @@ export default function Terms() {
           </BodyText>
         </TextSection>
       </div>
-      <DownloadSection sectionColor="green" />
-      <Footer />
+      <Footer sectionColor="green" />
     </>
   );
 }

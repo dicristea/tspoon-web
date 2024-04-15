@@ -59,7 +59,7 @@ const navBar = css`
     align-items: center;
   }
   .right {
-    gap: 1rem;
+    gap: 4vw;
   }
 `;
 

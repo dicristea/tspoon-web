@@ -5,7 +5,6 @@ import sStyles, { BodyText, Heading2, Section, placeholderImage } from '../../st
 import { BLACK, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
-import DownloadSection from '../general/DownloadSection';
 
 export default function Blog() {
   return (
@@ -35,8 +34,7 @@ export default function Blog() {
           </BodyText>
         </div>
       </Section>
-      <DownloadSection sectionColor="pink" />
-      <Footer className={fontColorBlack} />
+      <Footer sectionColor="pink" />
     </div>
   );
 }

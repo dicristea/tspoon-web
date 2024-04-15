@@ -3,7 +3,6 @@ import { Section } from '../../styles/styles';
 import { BLACK, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
-import DownloadSection from '../general/DownloadSection';
 import ContactForm from '../forms/ContactForm';
 import ContactGraphic from '../../assets/artwork/Contact_Graphic.svg';
 
@@ -17,8 +16,7 @@ export default function Contact() {
         </div>
         <ContactForm />
       </ContactSection>
-      <DownloadSection sectionColor="pink" />
-      <Footer className={fontColorBlack} />
+      <Footer className={fontColorBlack} sectionColor="pink" />
     </div>
   );
 }
@@ -34,7 +32,6 @@ const ContactSection = styled(Section)`
   @media (max-width: 730px) {
     padding: 3rem 3rem;
     flex-direction: row;
-    gap:;
   }
 `;
 

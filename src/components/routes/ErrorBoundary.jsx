@@ -5,7 +5,6 @@ import { useRouteError } from 'react-router-dom';
 import { BLACK } from '../../styles/colors';
 import NavBar from '../general/NavBar';
 import Footer from '../general/Footer';
-import DownloadSection from '../general/DownloadSection';
 import { Heading1 } from '../../styles/styles';
 
 export const ErrorPage = css`
@@ -41,8 +40,7 @@ export default function ErrorBoundary() {
 
         <p>{/* <i>{error.message}</i> */}</p>
       </ErrorSection>
-      <DownloadSection sectionColor="pink" />
-      <Footer className={fontColorBlack} />
+      <Footer className={fontColorBlack} sectionColor="pink" />
     </ErrorContainer>
   );
 }

@@ -10,7 +10,6 @@ import {
 import { BLACK, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
-import DownloadSection from '../general/DownloadSection';
 import DinnerArtwork from '../../assets/artwork/Homepage_dinner.svg';
 import ChefArtwork from '../../assets/artwork/Homepage_Block.svg';
 
@@ -20,7 +19,7 @@ export default function Home() {
       <Header className={fontColorWhite} page="Title" />
       <div className={sectionBody}>
         <Section>
-          <div className={[itemA, 'hidden']}>
+          <div className={itemA}>
             <Heading3 className={h3PaddingBottom}>Where your next dinner plans are found.</Heading3>
             <BodyText>Date night? Parents coming into town?</BodyText>
             <BodyText className={textPaddingBottom}>Housewarming party?</BodyText>
@@ -50,8 +49,7 @@ export default function Home() {
           </div>
         </Section>
       </div>
-      <DownloadSection sectionColor="pink" />
-      <Footer className={fontColorBlack} />
+      <Footer className={fontColorBlack} sectionColor="pink" />
     </div>
   );
 }
