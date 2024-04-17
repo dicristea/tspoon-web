@@ -112,7 +112,7 @@ export default function Header({ page }) {
         <>
           <NavBar />
           <ContactHeaderDiv className={PinkBackground}>
-            <Title className={contactTitle}>What&apos;s cookin&apos; Chef?</Title>
+            <Title className={contactTitle}>What&apos;s cooking Chef?</Title>
           </ContactHeaderDiv>
         </>
       );
@@ -144,29 +144,6 @@ const HeaderDiv = styled.header`
   justify-content: center;
 `;
 
-const contactTitle = css`
-  @media (max-width: 1400px) {
-    font-size: 50pt;
-    line-height: 6rem;
-  }
-  @media (max-width: 1200px) {
-    font-size: 40pt;
-    line-height: 6rem;
-  }
-  @media (max-width: 800px) {
-    font-size: 35pt;
-    line-height: 5rem;
-  }
-`;
-
-const ContactHeaderDiv = styled(HeaderDiv)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 45vh;
-`;
-
 const TitleSection = styled.div`
   display: flex;
   flex-direction: row;
@@ -180,7 +157,9 @@ const TitleSection = styled.div`
       height: auto;
     }
   }
-
+  @media (max-width: 1100) {
+    gap: 0vw;
+  }
   @media (max-width: 850px) {
     flex-direction: column;
     align-items: center;
@@ -213,6 +192,36 @@ const MiddleTitleSection = styled.div`
   @media (max-width: 800px) {
     padding-bottom: 1rem;
     padding-top: 1rem;
+  }
+`;
+
+const TitleImages = styled.div`
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  /* img {
+    width: 130px;
+    height: auto;
+  } */
+  @media (max-width: 1000px) {
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+  @media (max-width: 850px) {
+    img {
+      width: 90px;
+      height: auto;
+    }
+  }
+  @media (max-width: 450px) {
+    img {
+      width: 80px;
+      height: auto;
+    }
   }
 `;
 
@@ -253,10 +262,25 @@ const AboutTitleSection = styled.div`
   }
 `;
 
-const TitleImages = styled.div`
+const contactTitle = css`
+  @media (max-width: 1400px) {
+    font-size: 50pt;
+    line-height: 6rem;
+  }
+  @media (max-width: 1200px) {
+    font-size: 40pt;
+    line-height: 6rem;
+  }
+  @media (max-width: 800px) {
+    font-size: 35pt;
+    line-height: 5rem;
+  }
+`;
+
+const ContactHeaderDiv = styled(HeaderDiv)`
   display: flex;
-  align-items: flex-end;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 2rem;
+  height: 45vh;
 `;

@@ -2,6 +2,7 @@ import { css } from '@linaria/core';
 import InstagramIcon from '../../assets/social-icons/IG_Icon';
 import { ImgButton } from '../../styles/styles';
 import TiktokIcon from '../../assets/social-icons/TikTok_Icon';
+import FacebookIcon from '../../assets/social-icons/FB_Icon';
 
 export default function SocialIcon({ sectionColor, type }) {
   switch (type) {
@@ -29,6 +30,19 @@ export default function SocialIcon({ sectionColor, type }) {
         </ImgButton>
       );
     }
+    case 'facebook': {
+      return (
+        <ImgButton
+          alt="Connect with us on Facebook."
+          className={sectionColor === 'green' ? hoverIconGreen : hoverIconPink}
+          href="https://www.tiktok.com/@tspoon.app"
+          style={{ padding: '0' }}
+          target="_blank"
+        >
+          <FacebookIcon />
+        </ImgButton>
+      );
+    }
     default:
       return null;
   }
@@ -36,12 +50,12 @@ export default function SocialIcon({ sectionColor, type }) {
 
 export const hoverIconPink = css`
   &:hover {
-    background: #877a7a;
+    background: #ae564e;
   }
 `;
 
 export const hoverIconGreen = css`
   &:hover {
-    background: #67676782;
+    background: #3f5953;
   }
 `;

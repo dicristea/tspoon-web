@@ -24,6 +24,7 @@ export default function Footer({ sectionColor }) {
       <IconsContainer>
         <SocialIcon sectionColor={sectionColor} type="instagram" />
         <SocialIcon sectionColor={sectionColor} type="tiktok" />
+        {/* <SocialIcon sectionColor={sectionColor} type="facebook" /> */}
       </IconsContainer>
       {LAUCH_LIVE ? (
         <IconsContainer>
