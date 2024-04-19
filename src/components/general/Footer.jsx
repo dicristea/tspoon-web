@@ -3,7 +3,7 @@ import { css } from '@linaria/core';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
-import { GREEN, PINK, WHITE } from '../../styles/colors';
+import { GREEN, WHITE } from '../../styles/colors';
 import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
 import GooglePlayBadge from '../../assets/appstore-badges/Play_Store_Badge.svg';
 import { AppContext } from '../../utils/context';
@@ -15,16 +15,12 @@ export default function Footer({ sectionColor }) {
   const { LAUCH_LIVE, currentYear } = useContext(AppContext);
 
   return (
-    <FooterSection style={{ backgroundColor: sectionColor === 'green' ? GREEN : PINK }}>
-      {LAUCH_LIVE ? (
-        <DownloadSection sectionColor={sectionColor} />
-      ) : (
-        <WaitlistForm sectionColor={sectionColor} />
-      )}
+    <FooterSection>
+      {LAUCH_LIVE ? <DownloadSection sectionColor={sectionColor} /> : <WaitlistForm />}
       <IconsContainer>
-        <SocialIcon sectionColor={sectionColor} type="instagram" />
-        <SocialIcon sectionColor={sectionColor} type="tiktok" />
-        {/* <SocialIcon sectionColor={sectionColor} type="facebook" /> */}
+        <SocialIcon type="instagram" />
+        <SocialIcon type="tiktok" />
+        {/* <SocialIcon type="facebook" /> */}
       </IconsContainer>
       {LAUCH_LIVE ? (
         <IconsContainer>
@@ -91,6 +87,7 @@ const company = css`
 
 export const FooterSection = styled.div`
   color: white;
+  background-color: ${GREEN};
   padding: ${horizontalPadding} ${horizontalPadding};
   width: 100%;
   display: flex;

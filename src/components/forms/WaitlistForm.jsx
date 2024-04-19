@@ -9,12 +9,11 @@ import {
   borderRadius,
   fieldset,
   formSubmitted,
-  greenButton,
   pinkButton
 } from '../../styles/styles';
-import { BEIGE, GRAY, GREEN, PINK, WHITE } from '../../styles/colors';
+import { BEIGE, GRAY, GREEN, WHITE } from '../../styles/colors';
 
-export default function WaitlistForm({ sectionColor }) {
+export default function WaitlistForm() {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     'entry.1549536226': '',
@@ -50,10 +49,7 @@ export default function WaitlistForm({ sectionColor }) {
   const form = useRef();
 
   return (
-    <div
-      className={formWrapper}
-      style={{ backgroundColor: sectionColor === 'green' ? GREEN : PINK }}
-    >
+    <div className={formWrapper}>
       <Heading3 className={formHeader} id="waitlist">
         Something&apos;s cooking!
       </Heading3>
@@ -95,7 +91,7 @@ export default function WaitlistForm({ sectionColor }) {
                 onChange={handleInputData(EMAIL_ID)}
               />
             </fieldset>
-            <Button className={sectionColor === 'pink' ? greenButton : pinkButton} type="submit">
+            <Button className={pinkButton} type="submit">
               JOIN THE WAITLIST
             </Button>
           </form>
@@ -107,6 +103,7 @@ export default function WaitlistForm({ sectionColor }) {
 
 const formWrapper = css`
   color: white;
+  background-color: ${GREEN};
 `;
 
 const formHeader = css`

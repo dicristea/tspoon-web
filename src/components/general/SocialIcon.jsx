@@ -4,13 +4,13 @@ import { ImgButton } from '../../styles/styles';
 import TiktokIcon from '../../assets/social-icons/TikTok_Icon';
 import FacebookIcon from '../../assets/social-icons/FB_Icon';
 
-export default function SocialIcon({ sectionColor, type }) {
+export default function SocialIcon({ type }) {
   switch (type) {
     case 'instagram': {
       return (
         <ImgButton
           alt="Connect with us on Instagram."
-          className={sectionColor === 'green' ? hoverIconGreen : hoverIconPink}
+          className={hoverIconGreen}
           href="https://www.instagram.com/tspoonapp/"
           target="_blank"
         >
@@ -22,7 +22,7 @@ export default function SocialIcon({ sectionColor, type }) {
       return (
         <ImgButton
           alt="Connect with us on TikTok."
-          className={sectionColor === 'green' ? hoverIconGreen : hoverIconPink}
+          className={hoverIconGreen}
           href="https://www.tiktok.com/@tspoon.app"
           target="_blank"
         >
@@ -34,7 +34,7 @@ export default function SocialIcon({ sectionColor, type }) {
       return (
         <ImgButton
           alt="Connect with us on Facebook."
-          className={sectionColor === 'green' ? hoverIconGreen : hoverIconPink}
+          className={hoverIconGreen}
           href="https://www.tiktok.com/@tspoon.app"
           style={{ padding: '0' }}
           target="_blank"
@@ -48,14 +48,14 @@ export default function SocialIcon({ sectionColor, type }) {
   }
 }
 
-export const hoverIconPink = css`
-  &:hover {
-    background: #ae564e;
-  }
-`;
-
 export const hoverIconGreen = css`
   &:hover {
     background: #3f5953;
   }
 `;
+
+// export const hoverIconPink = css`
+//   &:hover {
+//     background: #ae564e;
+//   }
+// `;

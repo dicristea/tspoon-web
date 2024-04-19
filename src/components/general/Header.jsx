@@ -5,10 +5,9 @@ import {
   AnchorTag,
   Button,
   GreenBackground,
-  PinkBackground,
   Title,
-  greenButton,
-  horizontalPadding
+  horizontalPadding,
+  pinkButton
 } from '../../styles/styles';
 import android from '../../assets/android.png';
 import { WHITE } from '../../styles/colors';
@@ -33,7 +32,7 @@ export default function Header({ page }) {
       return (
         <div className={fullPage}>
           <NavBar />
-          <HeaderDiv className={PinkBackground}>
+          <HeaderDiv className={GreenBackground}>
             <TitleSection>
               {screenSize.width > 850 ? (
                 <TitleImages>
@@ -62,7 +61,7 @@ export default function Header({ page }) {
                     </>
                   ) : (
                     <AnchorTag href="#waitlist">
-                      <Button className={greenButton}>JOIN THE WAITLIST</Button>
+                      <Button className={pinkButton}>JOIN THE WAITLIST</Button>
                     </AnchorTag>
                   )}
                 </div>
@@ -80,7 +79,7 @@ export default function Header({ page }) {
     case 'About': {
       return (
         <div className={fullPage}>
-          <NavBar greenColor />
+          <NavBar />
           <HeaderDiv className={GreenBackground}>
             <AboutTitleSection>
               <Title>Made by nameless chefs.</Title>
@@ -99,7 +98,7 @@ export default function Header({ page }) {
       return (
         <div className={fullPage}>
           <NavBar />
-          <HeaderDiv>
+          <HeaderDiv className={GreenBackground}>
             <TitleSection>
               <Title>Blog.</Title>
             </TitleSection>
@@ -111,7 +110,7 @@ export default function Header({ page }) {
       return (
         <>
           <NavBar />
-          <ContactHeaderDiv className={PinkBackground}>
+          <ContactHeaderDiv className={GreenBackground}>
             <Title className={contactTitle}>What&apos;s cooking Chef?</Title>
           </ContactHeaderDiv>
         </>

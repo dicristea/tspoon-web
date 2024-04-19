@@ -1,16 +1,15 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 import { Link } from 'react-router-dom';
-import { PINK, WHITE } from '../../styles/colors';
+import { GREEN, WHITE } from '../../styles/colors';
 import pinkStemLogo from '../../assets/logo/White_Trans.svg';
-import greenStemLogo from '../../assets/logo/White_Green_Stem_Trans.svg';
-import sStyles, { darkBackgroundColor } from '../../styles/styles';
+import sStyles from '../../styles/styles';
 
-export default function NavBar({ greenColor }) {
+export default function NavBar() {
   return (
-    <nav className={navBar} style={{ backgroundColor: greenColor ? darkBackgroundColor : PINK }}>
+    <nav className={navBar}>
       <Link to="/">
-        <Img alt="Tspoon logo" src={greenColor ? pinkStemLogo : greenStemLogo} />
+        <Img alt="Tspoon logo" src={pinkStemLogo} />
       </Link>
       <div className="right">
         <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
@@ -41,6 +40,7 @@ const hoverChange = css`
 `;
 
 const navBar = css`
+  background-color: ${GREEN};
   padding: 2rem 3rem;
   @media (max-width: 650px) {
     padding: 4vw;
@@ -53,7 +53,6 @@ const navBar = css`
   justify-items: center;
   ${sStyles.justifyContentSpaceBetween}
   z-index: 1000;
-  background-color: ${PINK};
   div {
     display: flex;
     align-items: center;

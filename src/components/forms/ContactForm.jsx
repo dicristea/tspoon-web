@@ -10,9 +10,9 @@ import {
   borderRadius,
   fieldset,
   formSubmitted,
-  greenButton
+  pinkButton
 } from '../../styles/styles';
-import { BEIGE, GRAY, GREEN } from '../../styles/colors';
+import { BEIGE, GRAY, GREEN, PINK } from '../../styles/colors';
 
 export default function ContactForm() {
   const [submit, setSubmit] = useState(false);
@@ -96,7 +96,7 @@ export default function ContactForm() {
                 type="textarea"
               />
             </fieldset>
-            <Button className={greenButton} type="submit" value="Send">
+            <Button className={pinkButton} type="submit" value="Send">
               SEND
             </Button>
           </form>
@@ -134,7 +134,7 @@ const textareaInput = css`
   font-weight: 300;
   flex: auto;
   border: none;
-  border: 1px solid ${GREEN};
+  border: 1px solid ${BEIGE};
   border-radius: ${borderRadius};
   background: transparent;
   display: flex;
@@ -142,7 +142,7 @@ const textareaInput = css`
   padding: 0.8rem;
   text-decoration: none;
   &:hover {
-    border: 1px solid ${BEIGE};
+    border: 1px solid ${PINK};
   }
 `;
 
@@ -153,7 +153,7 @@ const textInput = css`
   outline: none;
   flex: auto;
   border: none;
-  border: 1px solid ${GREEN};
+  border: 1px solid ${BEIGE};
   border-radius: ${borderRadius};
   background: transparent;
   display: flex;
@@ -162,7 +162,7 @@ const textInput = css`
   text-decoration: none;
 
   &:hover {
-    border: 1px solid ${BEIGE};
+    border: 1px solid ${PINK};
   }
 `;
 
