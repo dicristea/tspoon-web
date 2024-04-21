@@ -13,23 +13,21 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
     <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="120" height="auto">
+        <img src="./src/assets/logo/App Icon_Trans.png" alt="Tspoon Logo" width="150" height="150">
     </a>
-
-<h3 align="center">Tspoon, LLC.</h3>
+    <h2 align="center">Tspoon, LLC.</h2>
     <p align="center">
         <a href="https://www.instagram.com/tspoonapp/" target="blank">
-        <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="50" height="50">
-          </a>
-          <a href="https://www.tiktok.com/@tspoon.app" target="blank">
-        <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="50" height="50">
-          </a>
+            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="50" height="50">
+        </a>
+        <a href="https://www.tiktok.com/@tspoon.app" target="blank">
+            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="50" height="50">
+        </a>
     </p>
     <p align="center">
-        <a href="https://tspoonapp.com/#waitlist" target="blank">Join the Waitlist</a>
+        <a href="https://tspoonapp.com/" target="blank">View Project</a>
         ·
         <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=bug&template=bug-report---.md" target="blank">Report Bug</a>
         ·
@@ -77,9 +75,12 @@
 <p align='left'>
     Tspoon will be a free app that offers an array of recipes that cater to different dietary needs and preferences. Users can set filters for their preferences such as cuisine type, cooking time, and diet. Our mission is to provide an enjoyable and effortless cooking experience for anyone using our platform. 
 </p>
-<p align='center'>
+<p align='left'>
     Tspoon Chefs will never need to find a recipe again. Instead, the recipes they love will find them.
 </p>
+
+<p align='center'>Join the <a href="https://tspoonapp.com/#waitlist" target="blank">Waitlist</a> to stay updated!</p>
+
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -92,10 +93,11 @@
     - [npm: react-router-dom](https://www.npmjs.com/package/react-router-dom)
     - [npm: @fontsource/source-sans-pro](https://www.npmjs.com/package/@fontsource/source-sans-pro)
     - [npm: @linaria/react](https://www.npmjs.com/package/@linaria/react)
-    - [emailjs.com](https://www.emailjs.com/)
     - Eslint+Prettier
-    - Autocomplete for Linaria: https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components
-Other Sources:
+
+
+- [emailjs.com](https://www.emailjs.com/)
+- [Autocomplete for Linaria](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components)
 - [Simple Icons](https://simpleicons.org/)
 - <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Freepik - Flaticon</a>
 
