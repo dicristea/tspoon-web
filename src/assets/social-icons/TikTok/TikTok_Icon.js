@@ -1,4 +1,4 @@
-import { WHITE } from '../../styles/colors';
+import { WHITE } from '../../../styles/colors';
 
 function TiktokIcon(props) {
   return (

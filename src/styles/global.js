@@ -13,7 +13,7 @@ import '@fontsource/source-sans-pro/600-italic.css';
 import '@fontsource/source-sans-pro/700-italic.css';
 import '@fontsource/source-sans-pro/900-italic.css';
 
-import { GRAY } from './colors';
+import { GREEN } from './colors';
 
 export const globals = css`
   :global() {
@@ -29,9 +29,20 @@ export const globals = css`
     }
 
     body {
-      background-color: ${GRAY};
+      background-color: ${GREEN};
       margin: 0;
       min-height: 100vh;
+      animation: fadeInAnimation ease 2s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 `;

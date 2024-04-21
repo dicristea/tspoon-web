@@ -7,7 +7,7 @@ import {
   normalImageSize,
   textPaddingBottom
 } from '../../styles/styles';
-import { BLACK, WHITE } from '../../styles/colors';
+import { BLACK, GRAY, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DinnerArtwork from '../../assets/artwork/Homepage_dinner.svg';
@@ -55,6 +55,7 @@ export default function Home() {
 }
 
 const sectionBody = css`
+  background-color: ${GRAY};
   padding: 4rem 0;
   display: flex;
   flex-direction: column;

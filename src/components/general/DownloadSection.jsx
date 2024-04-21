@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 import { Heading3, SmallHeading, SmallText } from '../../styles/styles';
-import android from '../../assets/android.png';
+import android from '../../assets/icons/android.png';
 import { GREEN, PINK, WHITE } from '../../styles/colors';
 
 export default function DownloadSection({ sectionColor }) {

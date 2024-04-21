@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
-import InstagramIcon from '../../assets/social-icons/IG_Icon';
+import InstagramIcon from '../../assets/social-icons/Instagram/IG_Icon';
 import { ImgButton } from '../../styles/styles';
-import TiktokIcon from '../../assets/social-icons/TikTok_Icon';
+import TiktokIcon from '../../assets/social-icons/TikTok/TikTok_Icon';
 import FacebookIcon from '../../assets/social-icons/FB_Icon';
 
 export default function SocialIcon({ type }) {
