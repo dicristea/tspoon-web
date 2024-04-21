@@ -19,20 +19,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/dicristea/tspoon-web">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://tspoonapp.com">
+    <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Tspoon, LLC.</h3>
 
-  <p align="center">
-    Tspoon is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. Tspoon’s mission is to provide a platform for all Chefs to share their culinary journeys! 
-    <br />
-    Tspoon will be a free app that offers an array of recipes that cater to different dietary needs and preferences. Users can set filters for their preferences such as cuisine type, cooking time, and diet. Our mission is to provide an enjoyable and effortless cooking experience for anyone using our platform. 
-     <br />
-    Tspoon Chefs will never need to find a recipe again. Instead, the recipes they love will find them.
-    <br />
-    <a href="https://tspoonapp.com">View Project</a>
+  <p align="left">
+    <a href="https://tspoonapp.com/#waitlist">Sign up for our Waitlist!</a>
     ·
     <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -72,8 +66,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://tspoonapp.com)
 
+<p align="left">
+    Tspoon is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. Tspoon’s mission is to provide a platform for all Chefs to share their culinary journeys! 
+    <br />
+    Tspoon will be a free app that offers an array of recipes that cater to different dietary needs and preferences. Users can set filters for their preferences such as cuisine type, cooking time, and diet. Our mission is to provide an enjoyable and effortless cooking experience for anyone using our platform. 
+    <br />
+    Tspoon Chefs will never need to find a recipe again. Instead, the recipes they love will find them.
+    <br />
+</p>
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -81,7 +83,7 @@
 
 ### Built With
 
-* [![React][React.js]][React-url]
+[![React][React.js]][React-url]
     - [npm: react-svg](https://www.npmjs.com/package/react-svg)
     - [npm: react-router-dom](https://www.npmjs.com/package/react-router-dom)
     - [npm: @fontsource/source-sans-pro](https://www.npmjs.com/package/@fontsource/source-sans-pro)
