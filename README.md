@@ -16,17 +16,19 @@
 <div align="center">
     <h1 align="center">
         <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/App Icon_Trans.png" alt="Tspoon Logo" width="100" height="100">
+        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="150" height="150">
     </a>
-    Tspoon
     </h1>
-    <p align="center" padding='12px'>
+    <p align="center" padding={12px}>
         <a href="https://www.instagram.com/tspoonapp/" target="blank">
-            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="40" height="40">
+            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="40" height="40" style='max-width: 70%'>
         </a>
         <a href="https://www.tiktok.com/@tspoon.app" target="blank">
-            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="40" height="40">
+            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="40" height="40" style='max-width: 70%'>
         </a>
+    </p>
+    <p align="center">
+        © 2024 Tspoon, LLC.
     </p>
     <p align="center">
         <a href="https://tspoonapp.com/" target="blank">View Project</a>
@@ -72,7 +74,7 @@
 [![Product Name Screen Shot][product-screenshot]](https://tspoonapp.com)
 
 <p align="left">
-    Tspoon is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. Tspoon’s mission is to provide a platform for all Chefs to share their culinary journeys! 
+    **Tspoon** is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. Tspoon’s mission is to provide a platform for all Chefs to share their culinary journeys! 
 </p>
 <p align='left'>
     Tspoon will be a free app that offers an array of recipes that cater to different dietary needs and preferences. Users can set filters for their preferences such as cuisine type, cooking time, and diet. Our mission is to provide an enjoyable and effortless cooking experience for anyone using our platform. 
