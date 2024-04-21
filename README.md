@@ -7,27 +7,25 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
+[![MIT License][license-shield]][license-url] -->
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
     <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="120" height="120">
+        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="120" height="auto">
     </a>
 
 <h3 align="center">Tspoon, LLC.</h3>
     <p align="center">
         <a href="https://www.instagram.com/tspoonapp/" target="blank">
-        <img src="./src/assets/social-icons/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="80" height="80">
+        <img src="./src/assets/social-icons/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="50" height="50">
           </a>
           <a href="https://www.tiktok.com/@tspoon.app" target="blank">
-        <img src="./src/assets/social-icons/tiktok.pdf" alt="Tspoon Logo" width="80" height="80">
+        <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="50" height="50">
           </a>
     </p>
     <p align="center">
@@ -75,11 +73,12 @@
 
 <p align="left">
     Tspoon is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. Tspoon’s mission is to provide a platform for all Chefs to share their culinary journeys! 
-    <br />
+</p>
+<p align='left'>
     Tspoon will be a free app that offers an array of recipes that cater to different dietary needs and preferences. Users can set filters for their preferences such as cuisine type, cooking time, and diet. Our mission is to provide an enjoyable and effortless cooking experience for anyone using our platform. 
-    <br />
+</p>
+<p align='center'>
     Tspoon Chefs will never need to find a recipe again. Instead, the recipes they love will find them.
-    <br />
 </p>
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -98,6 +97,7 @@
     - Autocomplete for Linaria: https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components
 Other Sources:
 - [Simple Icons](https://simpleicons.org/)
+- <a href="https://www.flaticon.com/free-icons/tiktok" title="tiktok icons">Tiktok icons created by Freepik - Flaticon</a>
 
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -176,6 +176,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Diana Cristea - dicristea111@gmail.com
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 Project Link: [Tspoon](https://tspoonapp.com)
 
@@ -197,12 +199,12 @@ Project Link: [Tspoon](https://tspoonapp.com)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/dicristea/tspoon-web.svg?style=for-the-badge
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/dicristea/tspoon-web.svg?style=for-the-badge
 [contributors-url]: https://github.com/dicristea/tspoon-web/graphs/contributors
 [issues-shield]: https://img.shields.io/github/issues/dicristea/tspoon-web.svg?style=for-the-badge
-[issues-url]: https://github.com/dicristea/tspoon-web/issues
-[license-shield]: https://img.shields.io/github/license/dicristea/tspoon-web.svg?style=for-the-badge
-[license-url]: https://github.com/dicristea/tspoon-web/blob/master/LICENSE.txt
+[issues-url]: https://github.com/dicristea/tspoon-web/issues -->
+<!-- [license-shield]: https://img.shields.io/github/license/dicristea/tspoon-web.svg?style=for-the-badge
+[license-url]: https://github.com/dicristea/tspoon-web/blob/master/LICENSE.txt -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/dicristea
 [product-screenshot]: ./src/assets/Tspoon_Site_Preview.png
