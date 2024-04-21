@@ -14,16 +14,18 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-    <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/App Icon_Trans.png" alt="Tspoon Logo" width="150" height="150">
+    <h1 align="center">
+        <a href="https://tspoonapp.com" target="blank">
+        <img src="./src/assets/logo/App Icon_Trans.png" alt="Tspoon Logo" width="100" height="100">
     </a>
-    <h2 align="center">Tspoon, LLC.</h2>
-    <p align="center">
+    Tspoon
+    </h1>
+    <p align="center" padding='12px'>
         <a href="https://www.instagram.com/tspoonapp/" target="blank">
-            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="50" height="50">
+            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="40" height="40">
         </a>
         <a href="https://www.tiktok.com/@tspoon.app" target="blank">
-            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="50" height="50">
+            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="40" height="40">
         </a>
     </p>
     <p align="center">
@@ -166,22 +168,19 @@ See the [open issues](https://github.com/dicristea/tspoon-web/issues) for a full
 
 
 <!-- LICENSE -->
-## License
+<!-- ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right"><a href="#readme-top">back to top</a></p>
+<p align="right"><a href="#readme-top">back to top</a></p> -->
 
 
 
 <!-- CONTACT -->
 ## Contact
-
-Diana Cristea - dicristea111@gmail.com
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-Project Link: [Tspoon](https://tspoonapp.com)
+<p align="left">Diana Cristea - dicristea111@gmail.com</p>
+<p align="left">[![LinkedIn][linkedin-shield]][linkedin-url]</p>
+[Contact Tspoon](https://tspoonapp.com/contact)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
