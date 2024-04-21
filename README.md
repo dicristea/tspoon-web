@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
     <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="175" height="175">
+        <img src="./src/assets/logo/Full_Logo_Trans_Text.png" alt="Tspoon Logo" width="175" height="175">
     </a>
     <p align="center">
         <a href="https://tspoonapp.com/" target="blank">View Project</a>
@@ -60,12 +60,6 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://tspoonapp.com)
 
-| Month    | Savings |
-| -------- | ------- |
-| January  | $250    |
-| February | $80     |
-| March    | $420    |
-
 <p align="left">
     <b>Tspoon</b> is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. <b>Tspoon’s</b> mission is to provide a platform for all Chefs to share their culinary journeys! 
 </p>
@@ -81,12 +75,13 @@
     <a href="https://www.instagram.com/tspoonapp/" target="blank">
         <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="35" height="35">
     </a>
+     | 
     <a href="https://www.tiktok.com/@tspoon.app" target="blank">
-        <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="35" height="35">
+        <img src="./src/assets/social-icons/TikTok/tiktok.png" alt="Tspoon's Tiktok" width="35" height="35">
     </a>
 </p>
 <p align="center">
-    © 2024 Tspoon, LLC.
+    © 2024 <a href="https://tspoonapp.com/" target="blank">Tspoon, LLC.</a>
 </p>
 
 
@@ -184,7 +179,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 <p align="left">Diana Cristea - dicristea111@gmail.com</p>
-<p align="left">[![LinkedIn][linkedin-shield]][linkedin-url]</p>
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 [Contact Tspoon](https://tspoonapp.com/contact)
 
 <p align="right"><a href="#readme-top">back to top</a></p>

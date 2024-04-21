@@ -9,7 +9,7 @@ import {
   horizontalPadding,
   pinkButton
 } from '../../styles/styles';
-import android from '../../assets/android.png';
+import android from '../../assets/icons/android.png';
 import { WHITE } from '../../styles/colors';
 import { AppContext } from '../../utils/context';
 import RandomCharacter1 from '../../assets/artwork/RandomChar_1.svg';
