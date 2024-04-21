@@ -18,17 +18,6 @@
         <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="175" height="175">
     </a>
     <p align="center">
-        <a href="https://www.instagram.com/tspoonapp/" target="blank">
-            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="40" height="35">
-        </a>
-        <a href="https://www.tiktok.com/@tspoon.app" target="blank">
-            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="40" height="35">
-        </a>
-    </p>
-    <p align="center">
-        © 2024 Tspoon, LLC.
-    </p>
-    <p align="center">
         <a href="https://tspoonapp.com/" target="blank">View Project</a>
         ·
         <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=bug&template=bug-report---.md" target="blank">Report Bug</a>
@@ -71,17 +60,34 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://tspoonapp.com)
 
+| Month    | Savings |
+| -------- | ------- |
+| January  | $250    |
+| February | $80     |
+| March    | $420    |
+
 <p align="left">
-    **Tspoon** is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. Tspoon’s mission is to provide a platform for all Chefs to share their culinary journeys! 
+    <b>Tspoon</b> is a recipe sharing social media platform aimed at Chefs of all levels from amateur to professional who are creating their own personal brands as Chefs. <b>Tspoon’s</b> mission is to provide a platform for all Chefs to share their culinary journeys! 
 </p>
 <p align='left'>
-    Tspoon will be a free app that offers an array of recipes that cater to different dietary needs and preferences. Users can set filters for their preferences such as cuisine type, cooking time, and diet. Our mission is to provide an enjoyable and effortless cooking experience for anyone using our platform. 
+    <b>Tspoon</b> will be a free app that offers an array of recipes that cater to different dietary needs and preferences. Users can set filters for their preferences such as cuisine type, cooking time, and diet. Our mission is to provide an enjoyable and effortless cooking experience for anyone using our platform. 
 </p>
 <p align='left'>
-    Tspoon Chefs will never need to find a recipe again. Instead, the recipes they love will find them.
+    <b>Tspoon Chefs</b> will never need to find a recipe again. Instead, the recipes they love will find them.
 </p>
 
 <p align='center'>Join the <a href="https://tspoonapp.com/#waitlist" target="blank">Waitlist</a> to stay updated!</p>
+<p align="center">
+    <a href="https://www.instagram.com/tspoonapp/" target="blank">
+        <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="35" height="35">
+    </a>
+    <a href="https://www.tiktok.com/@tspoon.app" target="blank">
+        <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="35" height="35">
+    </a>
+</p>
+<p align="center">
+    © 2024 Tspoon, LLC.
+</p>
 
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -91,7 +97,6 @@
 ### Built With
 
 * [![React][React.js]][React-url]
-    - [npm: react-svg](https://www.npmjs.com/package/react-svg)
     - [npm: react-router-dom](https://www.npmjs.com/package/react-router-dom)
     - [npm: @fontsource/source-sans-pro](https://www.npmjs.com/package/@fontsource/source-sans-pro)
     - [npm: @linaria/react](https://www.npmjs.com/package/@linaria/react)
