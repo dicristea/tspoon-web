@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
     <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/Full_Logo_Trans_Text.png" alt="Tspoon Logo" width="175" height="175">
+        <img src="./src/assets/logo/Full_Logo_Trans_Text.png" alt="Tspoon Logo" width="250" height="250">
     </a>
     <p align="center">
         <a href="https://tspoonapp.com/" target="blank">View Project</a>
@@ -75,7 +75,6 @@
     <a href="https://www.instagram.com/tspoonapp/" target="blank">
         <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="35" height="35">
     </a>
-     | 
     <a href="https://www.tiktok.com/@tspoon.app" target="blank">
         <img src="./src/assets/social-icons/TikTok/tiktok.png" alt="Tspoon's Tiktok" width="35" height="35">
     </a>
