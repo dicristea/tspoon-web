@@ -22,7 +22,7 @@
 <h3 align="center">Tspoon, LLC.</h3>
     <p align="center">
         <a href="https://www.instagram.com/tspoonapp/" target="blank">
-        <img src="./src/assets/social-icons/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="50" height="50">
+        <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="50" height="50">
           </a>
           <a href="https://www.tiktok.com/@tspoon.app" target="blank">
         <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="50" height="50">
