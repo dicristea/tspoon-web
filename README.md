@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
     <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/Full_Logo_Trans_Text.png" alt="Tspoon Logo" width="716" height="296">
+        <img src="./src/assets/logo/Full_Logo_Trans_Text.png" alt="Tspoon Logo" width="1000" height="568">
     </a>
     <p align="center">
         <a href="https://tspoonapp.com/" target="blank">View Project</a>
