@@ -8,8 +8,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -19,19 +17,26 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://tspoonapp.com">
-    <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="80" height="80">
-  </a>
+    <a href="https://tspoonapp.com" target="blank">
+        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="120" height="120">
+    </a>
 
 <h3 align="center">Tspoon, LLC.</h3>
-
-  <p align="left">
-    <a href="https://tspoonapp.com/#waitlist">Sign up for our Waitlist!</a>
-    ·
-    <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+    <p align="center">
+        <a href="https://www.instagram.com/tspoonapp/" target="blank">
+        <img src="./src/assets/social-icons/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="80" height="80">
+          </a>
+          <a href="https://www.tiktok.com/@tspoon.app" target="blank">
+        <img src="./src/assets/social-icons/tiktok.pdf" alt="Tspoon Logo" width="80" height="80">
+          </a>
+    </p>
+    <p align="center">
+        <a href="https://tspoonapp.com/#waitlist" target="blank">Join the Waitlist</a>
+        ·
+        <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=bug&template=bug-report---.md" target="blank">Report Bug</a>
+        ·
+        <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=enhancement&template=feature-request---.md" target="blank">Request Feature</a>
+    </p>
 </div>
 
 
@@ -83,13 +88,16 @@
 
 ### Built With
 
-[![React][React.js]][React-url]
+* [![React][React.js]][React-url]
     - [npm: react-svg](https://www.npmjs.com/package/react-svg)
     - [npm: react-router-dom](https://www.npmjs.com/package/react-router-dom)
     - [npm: @fontsource/source-sans-pro](https://www.npmjs.com/package/@fontsource/source-sans-pro)
     - [npm: @linaria/react](https://www.npmjs.com/package/@linaria/react)
+    - [emailjs.com](https://www.emailjs.com/)
     - Eslint+Prettier
     - Autocomplete for Linaria: https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components
+Other Sources:
+- [Simple Icons](https://simpleicons.org/)
 
 
 <p align="right"><a href="#readme-top">back to top</a></p>
@@ -188,12 +196,9 @@ Project Link: [Tspoon](https://tspoonapp.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/dicristea/tspoon-web.svg?style=for-the-badge
 [contributors-url]: https://github.com/dicristea/tspoon-web/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/dicristea/tspoon-web.svg?style=for-the-badge
-[forks-url]: https://github.com/dicristea/tspoon-web/network/members
-[stars-shield]: https://img.shields.io/github/stars/dicristea/tspoon-web.svg?style=for-the-badge
-[stars-url]: https://github.com/dicristea/tspoon-web/stargazers
 [issues-shield]: https://img.shields.io/github/issues/dicristea/tspoon-web.svg?style=for-the-badge
 [issues-url]: https://github.com/dicristea/tspoon-web/issues
 [license-shield]: https://img.shields.io/github/license/dicristea/tspoon-web.svg?style=for-the-badge
