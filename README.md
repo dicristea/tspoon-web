@@ -14,17 +14,15 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-    <h1 align="center">
-        <a href="https://tspoonapp.com" target="blank">
-        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="150" height="150">
+    <a href="https://tspoonapp.com" target="blank">
+        <img src="./src/assets/logo/Full_Pink_Logo_Trans.png" alt="Tspoon Logo" width="175" height="175">
     </a>
-    </h1>
-    <p align="center" padding={12px}>
+    <p align="center">
         <a href="https://www.instagram.com/tspoonapp/" target="blank">
-            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="40" height="40" style='max-width: 70%'>
+            <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="40" height="35">
         </a>
         <a href="https://www.tiktok.com/@tspoon.app" target="blank">
-            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="40" height="40" style='max-width: 70%'>
+            <img src="./src/assets/social-icons/TikTok Logo Pack/tiktok.png" alt="Tspoon's Tiktok" width="40" height="35">
         </a>
     </p>
     <p align="center">
