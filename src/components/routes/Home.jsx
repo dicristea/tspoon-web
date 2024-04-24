@@ -40,7 +40,7 @@ export default function Home() {
             <Heading3 className={h3PaddingBottom}>Chef, build your name.</Heading3>
             <BodyText className={textPaddingBottom}>
               No nameless Chefs means we want to give the power to every Chef whose cooking
-              masterpieces go unnoticed and consumed too fast.
+              masterpieces go unnoticed and are consumed too fast.
             </BodyText>
             <BodyText className={textPaddingBottom}>
               Tspoon is where Chefs can build their brand and share their creations with loved ones
