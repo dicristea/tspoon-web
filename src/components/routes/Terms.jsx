@@ -1,8 +1,9 @@
 import { css } from '@linaria/core';
-import sStyles, {
+import {
   BodyText,
   Heading2,
   Heading3,
+  LegalPageBody,
   OrderedList,
   SmallHeading,
   TextSection,
@@ -19,7 +20,7 @@ export default function Terms() {
     <>
       <ScrollToTop />
       <NavBar greenColor />
-      <div style={sStyles.flexColumnCenter}>
+      <LegalPageBody>
         <TextSection>
           <Heading2 className={h2PaddingBottom}>Terms of Service</Heading2>
           <Heading3 className={h3PaddingBottom}>1. Introduction</Heading3>
@@ -173,7 +174,7 @@ export default function Terms() {
             regulations.
           </BodyText>
         </TextSection>
-      </div>
+      </LegalPageBody>
       <Footer sectionColor="green" />
     </>
   );

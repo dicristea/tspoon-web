@@ -1,6 +1,7 @@
-import sStyles, {
+import {
   BodyText,
   Heading2,
+  LegalPageBody,
   OrderedList,
   TextSection,
   h2PaddingBottom,
@@ -15,7 +16,7 @@ export default function CommunityGuidelines() {
     <>
       <ScrollToTop />
       <NavBar greenColor />
-      <div style={sStyles.flexColumnCenter}>
+      <LegalPageBody>
         <TextSection>
           <Heading2 className={h2PaddingBottom}>Community Guidelines</Heading2>
           <BodyText className={textPaddingBottom}>
@@ -99,7 +100,7 @@ export default function CommunityGuidelines() {
             where everyone can share their love for cooking and food in a safe and enjoyable way!
           </BodyText>
         </TextSection>
-      </div>
+      </LegalPageBody>
       <Footer sectionColor="green" />
     </>
   );

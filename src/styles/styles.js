@@ -296,6 +296,13 @@ export const formSubmitted = css`
   gap: 0.5rem;
 `;
 
+export const LegalPageBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ${GRAY};
+`;
+
 const sStyles = {
   zIndexLowest: { zIndex: -1000 },
   zIndexLower: { zIndex: -200 },

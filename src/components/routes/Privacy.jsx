@@ -1,9 +1,10 @@
 import { css } from '@linaria/core';
-import sStyles, {
+import {
   BodyText,
   Heading2,
   Heading3,
   Heading4,
+  LegalPageBody,
   List,
   SmallHeading,
   TextSection,
@@ -22,7 +23,7 @@ export default function Privacy() {
     <>
       <ScrollToTop />
       <NavBar greenColor />
-      <div style={sStyles.flexColumnCenter}>
+      <LegalPageBody>
         <TextSection>
           <Heading2 className={h2PaddingBottom}>Privacy Policy</Heading2>
           <Heading3 className={h3PaddingBottom}>General</Heading3>
@@ -224,7 +225,7 @@ export default function Privacy() {
           </BodyText>
           <BodyText className={textPaddingBottom}>Date Revised: 03/12/24</BodyText>
         </TextSection>
-      </div>
+      </LegalPageBody>
       <Footer sectionColor="green" />
     </>
   );

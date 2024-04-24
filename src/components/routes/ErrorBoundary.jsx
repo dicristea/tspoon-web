@@ -2,7 +2,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { useRouteError } from 'react-router-dom';
-import { BLACK } from '../../styles/colors';
+import { BLACK, GRAY } from '../../styles/colors';
 import NavBar from '../general/NavBar';
 import Footer from '../general/Footer';
 import { Heading1 } from '../../styles/styles';
@@ -19,6 +19,7 @@ const ErrorContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: ${GRAY};
 `;
 
 const ErrorSection = styled.div`
