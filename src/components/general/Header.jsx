@@ -195,10 +195,6 @@ const TitleSection = styled.div`
     }
   }
 
-  @media (min-width: 1000) {
-    gap: 4vw;
-  }
-
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
@@ -219,6 +215,10 @@ const TitleSection = styled.div`
         height: auto;
       }
     }
+  }
+
+  @media (min-width: 1000px) {
+    gap: 4vw;
   }
 `;
 
