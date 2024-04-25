@@ -80,7 +80,7 @@ export default function Header({ page }) {
     }
     case 'About': {
       return (
-        <div className={fullPage}>
+        <div className={fullPage} style={{ height: screenSize.height }}>
           <NavBar />
           <HeaderDiv>
             <AboutTitleSection>
@@ -243,24 +243,6 @@ const TitleImages = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  /* @media (max-width: 1000px) {
-    img {
-      width: 100px;
-      height: auto;
-    }
-  }
-  @media (max-width: 900px) {
-    img {
-      width: 0px;
-      height: auto;
-    }
-  }
-  @media (max-width: 450px) {
-    img {
-      width: 80px;
-      height: auto;
-    }
-  } */
 `;
 
 const AboutTitleSection = styled.div`
