@@ -2,7 +2,7 @@
     {
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
-        "namespace": "tspoon",
+        "namespace": "android_app",
         "package_name": "com.foresthu2006.Spoon",
         "sha256_cert_fingerprints": [
           "67:DF:B4:9B:19:DF:EE:37:72:82:9E:24:AE:6B:18:6C:01:43:21:8D:E1:BC:48:96:93:0F:6E:30:2C:FF:EB:AD"
