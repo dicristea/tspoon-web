@@ -96,7 +96,7 @@ export const Title = styled.h1`
   padding: 0;
   margin: 0;
   z-index: 1000;
-  @media (max-width: 1400px) {
+  @media (min-width: 1200px) {
     font-size: 60pt;
     line-height: 8rem;
   }
@@ -107,6 +107,10 @@ export const Title = styled.h1`
   @media (max-width: 800px) {
     font-size: 40pt;
     line-height: 5rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 35pt;
+    line-height: 4rem;
   }
 `;
 

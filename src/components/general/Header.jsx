@@ -30,7 +30,7 @@ export default function Header({ page }) {
   switch (page) {
     case 'Title': {
       return (
-        <div className={fullPage}>
+        <div className={fullPage} style={{ height: screenSize.height }}>
           <NavBar />
           <HeaderDiv className={GreenBackground}>
             <TitleSection>
@@ -44,7 +44,7 @@ export default function Header({ page }) {
               )}
               <MiddleTitleSection
                 style={
-                  screenSize.width < 800 && screenSize.height > 750 ? { paddingTop: '15vh' } : null
+                  screenSize.width < 800 && screenSize.height > 890 ? { paddingTop: '15vh' } : null
                 }
               >
                 <Title>
@@ -122,11 +122,9 @@ export default function Header({ page }) {
       return null;
   }
 }
-
 const fullPage = css`
   display: flex;
   flex-direction: column;
-  height: 100vh;
 `;
 
 const HeaderDiv = styled.header`
@@ -135,11 +133,6 @@ const HeaderDiv = styled.header`
   padding-right: ${horizontalPadding};
   width: 100%;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
   z-index: -1000;
   div:nth-child(2) {
     opacity: 0;
@@ -195,13 +188,23 @@ const TitleSection = styled.div`
     }
   }
 
+  @media (max-width: 1000px) {
+    div {
+      gap: 2rem;
+      img {
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
     div {
       gap: 2rem;
       img {
-        width: 100px;
+        width: 90px;
         height: auto;
       }
     }
@@ -240,15 +243,15 @@ const TitleImages = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  @media (max-width: 1000px) {
+  /* @media (max-width: 1000px) {
     img {
       width: 100px;
       height: auto;
     }
   }
-  @media (max-width: 850px) {
+  @media (max-width: 900px) {
     img {
-      width: 90px;
+      width: 0px;
       height: auto;
     }
   }
@@ -257,7 +260,7 @@ const TitleImages = styled.div`
       width: 80px;
       height: auto;
     }
-  }
+  } */
 `;
 
 const AboutTitleSection = styled.div`
@@ -277,7 +280,7 @@ const AboutTitleSection = styled.div`
       height: auto;
     }
   }
-  @media (max-width: 800px) {
+  @media (min-width: 550px) {
     div {
       gap: 2vw;
       img {
