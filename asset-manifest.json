@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.deefc543.css",
-    "main.js": "/static/js/main.a531f4f0.js",
-    "static/js/529.ac56d81b.chunk.js": "/static/js/529.ac56d81b.chunk.js",
+    "main.css": "/static/css/main.c8d6e247.css",
+    "main.js": "/static/js/main.deb62c5b.js",
+    "static/js/529.885b13e3.chunk.js": "/static/js/529.885b13e3.chunk.js",
     "static/media/Homepage_dinner.svg": "/static/media/Homepage_dinner.58bd9023aca95583f505f59e811d7d15.svg",
     "static/media/AboutUs_Block.svg": "/static/media/AboutUs_Block.d60c106c72c2de0adc8b84a98c505906.svg",
     "static/media/App_Store_Badge.svg": "/static/media/App_Store_Badge.b97a4108e5955e8b914cc16fffc2bdd3.svg",
@@ -188,12 +188,12 @@
     "static/media/source-sans-pro-greek-ext-900-italic.woff2": "/static/media/source-sans-pro-greek-ext-900-italic.cb2c3b74cd6928fe1b02.woff2",
     "static/media/source-sans-pro-greek-ext-600-italic.woff2": "/static/media/source-sans-pro-greek-ext-600-italic.6d7636e72f6e17812af7.woff2",
     "static/media/source-sans-pro-greek-ext-700-italic.woff2": "/static/media/source-sans-pro-greek-ext-700-italic.34d65dd8d8d035797afc.woff2",
-    "main.deefc543.css.map": "/static/css/main.deefc543.css.map",
-    "main.a531f4f0.js.map": "/static/js/main.a531f4f0.js.map",
-    "529.ac56d81b.chunk.js.map": "/static/js/529.ac56d81b.chunk.js.map"
+    "main.c8d6e247.css.map": "/static/css/main.c8d6e247.css.map",
+    "main.deb62c5b.js.map": "/static/js/main.deb62c5b.js.map",
+    "529.885b13e3.chunk.js.map": "/static/js/529.885b13e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.deefc543.css",
-    "static/js/main.a531f4f0.js"
+    "static/css/main.c8d6e247.css",
+    "static/js/main.deb62c5b.js"
   ]
 }
