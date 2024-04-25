@@ -236,6 +236,7 @@ export const fieldset = css`
 `;
 
 export const Button = styled.button`
+  cursor: pointer;
   padding: 10pt 14pt;
   display: flex;
   border: none;
@@ -248,7 +249,6 @@ export const Button = styled.button`
   justify-content: center;
   border-radius: ${borderRadius};
   text-decoration: none;
-  cursor: pointer;
   img {
     width: auto;
     height: 1rem;

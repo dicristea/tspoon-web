@@ -56,6 +56,7 @@ const navBar = css`
   div {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   .right {
     gap: 4vw;

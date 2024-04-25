@@ -133,7 +133,7 @@ const HeaderDiv = styled.header`
   padding-right: ${horizontalPadding};
   width: 100%;
   flex: 1;
-  z-index: -1000;
+  /* z-index: 1000; */
   div:nth-child(2) {
     opacity: 0;
     animation: fadeInAnimation ease 0.5s;
