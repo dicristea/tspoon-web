@@ -32,17 +32,6 @@ export const globals = css`
       background-color: ${GREEN};
       margin: 0;
       min-height: 100vh;
-      animation: fadeInAnimation ease 2s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-    }
-    @keyframes fadeInAnimation {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
     }
   }
 `;

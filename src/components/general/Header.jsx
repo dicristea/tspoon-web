@@ -34,15 +34,17 @@ export default function Header({ page }) {
           <NavBar />
           <HeaderDiv className={GreenBackground}>
             <TitleSection>
-              {screenSize.width > 850 ? (
+              {screenSize.width > 800 ? (
                 <TitleImages>
                   <img alt="logo" src={RandomCharacter1} />
                   <img alt="logo" src={RandomCharacter2} />
                 </TitleImages>
-              ) : null}
+              ) : (
+                <div />
+              )}
               <MiddleTitleSection
                 style={
-                  screenSize.width < 850 && screenSize.height > 750 ? { paddingTop: '15vh' } : null
+                  screenSize.width < 800 && screenSize.height > 750 ? { paddingTop: '15vh' } : null
                 }
               >
                 <Title>
@@ -67,7 +69,7 @@ export default function Header({ page }) {
                 </div>
               </MiddleTitleSection>
               <TitleImages>
-                {screenSize.width < 850 ? <img alt="logo" src={RandomCharacter1} /> : null}
+                {screenSize.width < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
                 <img alt="logo" src={RandomCharacter3} />
                 <img alt="logo" src={RandomCharacter4} />
               </TitleImages>
@@ -80,7 +82,7 @@ export default function Header({ page }) {
       return (
         <div className={fullPage}>
           <NavBar />
-          <HeaderDiv className={GreenBackground}>
+          <HeaderDiv>
             <AboutTitleSection>
               <Title>Made by nameless chefs.</Title>
               <TitleImages>
@@ -98,7 +100,7 @@ export default function Header({ page }) {
       return (
         <div className={fullPage}>
           <NavBar />
-          <HeaderDiv className={GreenBackground}>
+          <HeaderDiv>
             <TitleSection>
               <Title>Blog.</Title>
             </TitleSection>
@@ -110,7 +112,7 @@ export default function Header({ page }) {
       return (
         <>
           <NavBar />
-          <ContactHeaderDiv className={GreenBackground}>
+          <ContactHeaderDiv>
             <Title className={contactTitle}>What&apos;s cooking Chef?</Title>
           </ContactHeaderDiv>
         </>
@@ -122,12 +124,9 @@ export default function Header({ page }) {
 }
 
 const fullPage = css`
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  @media (max-width: 500px) {
-    height: 92vh;
-  }
+  height: 100vh;
 `;
 
 const HeaderDiv = styled.header`
@@ -141,6 +140,45 @@ const HeaderDiv = styled.header`
   align-items: center;
   justify-items: center;
   justify-content: center;
+  z-index: -1000;
+  div:nth-child(2) {
+    opacity: 0;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-delay: 250ms;
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(50%);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
+  }
+  div:nth-child(1),
+  div:nth-child(3) {
+    opacity: 0;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(50%);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
+  }
 `;
 
 const TitleSection = styled.div`
@@ -148,7 +186,7 @@ const TitleSection = styled.div`
   flex-direction: row;
   justify-content: space-between;
   height: 100%;
-  gap: 4vw;
+  gap: 0;
   div {
     gap: 4vw;
     img {
@@ -156,10 +194,12 @@ const TitleSection = styled.div`
       height: auto;
     }
   }
-  @media (max-width: 1100) {
-    gap: 0vw;
+
+  @media (min-width: 1000) {
+    gap: 4vw;
   }
-  @media (max-width: 850px) {
+
+  @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
     div {
@@ -200,10 +240,6 @@ const TitleImages = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-  /* img {
-    width: 130px;
-    height: auto;
-  } */
   @media (max-width: 1000px) {
     img {
       width: 100px;
@@ -262,11 +298,11 @@ const AboutTitleSection = styled.div`
 `;
 
 const contactTitle = css`
-  @media (max-width: 1400px) {
+  @media (min-width: 1200px) {
     font-size: 50pt;
     line-height: 6rem;
   }
-  @media (max-width: 1200px) {
+  @media (min-width: 800px) {
     font-size: 40pt;
     line-height: 6rem;
   }
@@ -282,4 +318,22 @@ const ContactHeaderDiv = styled(HeaderDiv)`
   align-items: center;
   justify-content: center;
   height: 45vh;
+  h1 {
+    opacity: 0;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(50%);
+        filter: blur(5px);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+      }
+    }
+  }
 `;
