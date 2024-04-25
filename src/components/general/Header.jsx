@@ -133,7 +133,7 @@ const HeaderDiv = styled.header`
   padding-right: ${horizontalPadding};
   width: 100%;
   flex: 1;
-  /* z-index: 1000; */
+  z-index: 0;
   div:nth-child(2) {
     opacity: 0;
     animation: fadeInAnimation ease 0.5s;
@@ -149,7 +149,7 @@ const HeaderDiv = styled.header`
       100% {
         opacity: 1;
         filter: blur(0);
-        transform: translateY(0);
+        transform: translateY(0%);
       }
     }
   }
@@ -163,12 +163,16 @@ const HeaderDiv = styled.header`
       0% {
         opacity: 0;
         filter: blur(5px);
-        transform: translateY(50%);
+        transform: translateY(100%);
+      }
+      75% {
+        opacity: 0;
+        filter: blur(5px);
       }
       100% {
         opacity: 1;
         filter: blur(0);
-        transform: translateY(0);
+        transform: translateY(0%);
       }
     }
   }

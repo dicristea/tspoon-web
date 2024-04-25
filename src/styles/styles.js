@@ -237,6 +237,7 @@ export const fieldset = css`
 
 export const Button = styled.button`
   cursor: pointer;
+  z-index: 1000;
   padding: 10pt 14pt;
   display: flex;
   border: none;
