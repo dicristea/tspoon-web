@@ -135,6 +135,7 @@ const HeaderDiv = styled.header`
   flex: 1;
   z-index: 0;
   div:nth-child(2) {
+    cursor: pointer;
     opacity: 0;
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
@@ -144,35 +145,35 @@ const HeaderDiv = styled.header`
       0% {
         opacity: 0;
         filter: blur(5px);
-        transform: translateY(50%);
+        /* transform: translateY(200%); */
       }
       100% {
         opacity: 1;
         filter: blur(0);
-        transform: translateY(0%);
+        transform: translateY(20%);
       }
     }
   }
   div:nth-child(1),
   div:nth-child(3) {
     opacity: 0;
-    animation: fadeInAnimation ease 1s;
+    animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     @keyframes fadeInAnimation {
       0% {
         opacity: 0;
         filter: blur(5px);
-        transform: translateY(100%);
+        /* transform: translateY(100%); */
       }
-      75% {
+      99% {
         opacity: 0;
-        filter: blur(5px);
+        /* filter: blur(5px); */
       }
       100% {
         opacity: 1;
         filter: blur(0);
-        transform: translateY(0%);
+        /* transform: translateY(50%); */
       }
     }
   }
@@ -315,7 +316,7 @@ const ContactHeaderDiv = styled(HeaderDiv)`
     @keyframes fadeInAnimation {
       0% {
         opacity: 0;
-        transform: translateY(50%);
+        transform: translateY(70%);
         filter: blur(5px);
       }
       100% {
