@@ -20,6 +20,7 @@ export const globals = css`
     html {
       box-sizing: border-box;
       font-family: 'Source Sans Pro';
+      scroll-behavior: smooth;
     }
 
     *,

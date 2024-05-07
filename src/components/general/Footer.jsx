@@ -2,8 +2,8 @@ import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ImgButton, SmallText, horizontalPadding } from '../../styles/styles';
-import { GREEN, WHITE } from '../../styles/colors';
+import { ImgButton, SmallText, horizontalPadding, hoverUnderline } from '../../styles/styles';
+import { GREEN } from '../../styles/colors';
 import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
 import GooglePlayBadge from '../../assets/appstore-badges/Play_Store_Badge.svg';
 import { AppContext } from '../../utils/context';
@@ -50,23 +50,12 @@ export default function Footer({ sectionColor }) {
   );
 }
 
-export const IconsContainer = styled.div`
+const IconsContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4vw;
   padding: 20px 0;
-`;
-
-const hoverUnderline = css`
-  color: white;
-  text-decoration: none;
-  background: linear-gradient(${WHITE}, ${WHITE}) bottom / 0 0.1em no-repeat;
-  transition: 200ms background-size;
-  &:hover {
-    color: white;
-    background-size: 100% 0.1em;
-  }
 `;
 
 const terms = css`
@@ -85,7 +74,7 @@ const company = css`
   margin-right: auto;
 `;
 
-export const FooterSection = styled.div`
+const FooterSection = styled.div`
   color: white;
   background-color: ${GREEN};
   padding: ${horizontalPadding} ${horizontalPadding};
@@ -96,7 +85,7 @@ export const FooterSection = styled.div`
   gap: 50px;
 `;
 
-export const FooterBar = styled.footer`
+const FooterBar = styled.footer`
   font-size: small;
   top: 0;
   left: 0;

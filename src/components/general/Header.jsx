@@ -140,17 +140,17 @@ const HeaderDiv = styled.header`
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-    animation-delay: 250ms;
+    animation-delay: 200ms;
     @keyframes fadeInAnimation {
       0% {
         opacity: 0;
         filter: blur(5px);
-        /* transform: translateY(200%); */
+        transform: translateY(15%);
       }
       100% {
         opacity: 1;
         filter: blur(0);
-        transform: translateY(20%);
+        transform: translateY(0);
       }
     }
   }
@@ -164,16 +164,12 @@ const HeaderDiv = styled.header`
       0% {
         opacity: 0;
         filter: blur(5px);
-        /* transform: translateY(100%); */
-      }
-      99% {
-        opacity: 0;
-        /* filter: blur(5px); */
+        transform: translateY(15%);
       }
       100% {
         opacity: 1;
         filter: blur(0);
-        /* transform: translateY(50%); */
+        transform: translateY(0);
       }
     }
   }

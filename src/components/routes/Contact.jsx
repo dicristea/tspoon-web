@@ -45,7 +45,7 @@ const contactArtwork = css`
   @keyframes fadeInAnimation {
     0% {
       opacity: 0;
-      transform: translateY(70%);
+      transform: translateY(15%);
       filter: blur(5px);
     }
     100% {

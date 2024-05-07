@@ -8,7 +8,7 @@ import loadingAnimation from '../../assets/Loading_Animation_color.gif';
 
 // TEMPORARILY NOT IN USE
 
-export default function JoinWaitlist() {
+export default function WaitlistPage() {
   return (
     <div className={waitlistContainer}>
       <Section className={noPadding}>

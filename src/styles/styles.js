@@ -198,6 +198,17 @@ export const AnchorTag = styled.a`
   text-decoration: none;
 `;
 
+export const hoverUnderline = css`
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(${WHITE}, ${WHITE}) bottom / 0 0.1em no-repeat;
+  transition: 200ms background-size;
+  &:hover {
+    color: white;
+    background-size: 100% 0.1em;
+  }
+`;
+
 export const List = styled.ul`
   text-decoration: none;
   list-style-type: none;
@@ -233,12 +244,14 @@ export const fieldset = css`
   display: flex;
   gap: 10px;
   align-items: flex-end;
+  /* position: relative; */
 `;
 
 export const Button = styled.button`
   cursor: pointer;
   z-index: 1000;
   padding: 10pt 14pt;
+  position: relative;
   display: flex;
   border: none;
   background-color: ${BEIGE};
@@ -298,6 +311,7 @@ export const formSubmitted = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1rem;
   gap: 0.5rem;
 `;
 
