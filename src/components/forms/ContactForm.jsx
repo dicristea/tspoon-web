@@ -42,7 +42,7 @@ export default function ContactForm() {
   const form = useRef();
 
   return (
-    <div>
+    <div className={loadAnimation}>
       <Heading2 className={contactFormHeader}>Contact us</Heading2>
       <BodyText>
         If you&apos;d like to know more about us, have any questions, or would like to get involved,
@@ -59,9 +59,9 @@ export default function ContactForm() {
             <fieldset className={fieldset}>
               <input
                 aria-required
-                autoComplete="true"
                 required
                 aria-label="Name"
+                autoComplete="true"
                 className={textInput}
                 id="userName"
                 name="name"
@@ -72,9 +72,9 @@ export default function ContactForm() {
             <fieldset className={fieldset}>
               <input
                 aria-required
-                autoComplete="true"
                 required
                 aria-label="Email"
+                autoComplete="true"
                 className={textInput}
                 id="userEmail"
                 name="email"
@@ -85,9 +85,9 @@ export default function ContactForm() {
             <fieldset className={fieldset}>
               <textarea
                 aria-required
-                autoComplete="true"
                 required
                 aria-label="Message"
+                autoComplete="true"
                 className={textareaInput}
                 id="userMessage"
                 name="message"
@@ -105,6 +105,25 @@ export default function ContactForm() {
     </div>
   );
 }
+
+const loadAnimation = css`
+  opacity: 0;
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(15%);
+      filter: blur(5px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+`;
 
 const contactFormHeader = css`
   color: ${GREEN};
