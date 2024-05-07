@@ -20,16 +20,15 @@ export default function WaitlistForm() {
   const [formData, setFormData] = useState({
     'entry.1549536226': '',
     'entry.239868667': '',
-    'entry.1514036274': ''
+    'entry.1356397291': ''
   });
   const NAME_ID = 'entry.1549536226';
   const EMAIL_ID = 'entry.239868667';
-  const CHECKBOX_ID = 'entry.1514036274';
+  const CHECKBOX_ID = 'entry.1356397291';
 
   const handleInputData = (input) => (e) => {
     const { value } = e.target;
 
-    console.log(value);
     setFormData((prevState) => ({
       ...prevState,
       [input]: value
@@ -69,9 +68,9 @@ export default function WaitlistForm() {
             <fieldset className={fieldset}>
               <input
                 aria-required
-                autoComplete
                 required
                 aria-label="Name"
+                autoComplete="true"
                 className={waitlistInput}
                 id={NAME_ID}
                 name={NAME_ID}
@@ -84,9 +83,9 @@ export default function WaitlistForm() {
             <fieldset className={fieldset}>
               <input
                 aria-required
-                autoComplete
                 required
                 aria-label="Email"
+                autoComplete="true"
                 className={waitlistInput}
                 id={EMAIL_ID}
                 name={EMAIL_ID}
@@ -99,9 +98,9 @@ export default function WaitlistForm() {
             <fieldset className={fieldset}>
               <input
                 aria-required
-                autoComplete
                 required
                 aria-label="I agree to the Terms of Service."
+                autoComplete="true"
                 className={checkbox}
                 id={CHECKBOX_ID}
                 name={CHECKBOX_ID}

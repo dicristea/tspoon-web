@@ -48,22 +48,6 @@ const aboutContainer = css`
 const tracyskitchen = css`
   height: auto;
   width: 300px;
-  opacity: 0;
-  animation: fadeInAnimation ease 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  @keyframes fadeInAnimation {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-      filter: blur(5px);
-    }
-    100% {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateY(0);
-    }
-  }
 `;
 
 const fontColorWhite = css`

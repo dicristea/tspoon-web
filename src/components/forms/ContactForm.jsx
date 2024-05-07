@@ -58,10 +58,10 @@ export default function ContactForm() {
           <form className={contactForm} ref={form} target="_self" onSubmit={sendEmail}>
             <fieldset className={fieldset}>
               <input
+                aria-required
+                autoComplete="true"
                 required
                 aria-label="Name"
-                aria-required="true"
-                autoComplete="true"
                 className={textInput}
                 id="userName"
                 name="name"
@@ -71,10 +71,10 @@ export default function ContactForm() {
             </fieldset>
             <fieldset className={fieldset}>
               <input
+                aria-required
+                autoComplete="true"
                 required
                 aria-label="Email"
-                aria-required="true"
-                autoComplete="true"
                 className={textInput}
                 id="userEmail"
                 name="email"
@@ -84,10 +84,10 @@ export default function ContactForm() {
             </fieldset>
             <fieldset className={fieldset}>
               <textarea
+                aria-required
+                autoComplete="true"
                 required
                 aria-label="Message"
-                aria-required="true"
-                autoComplete="true"
                 className={textareaInput}
                 id="userMessage"
                 name="message"
