@@ -1,3 +1,5 @@
+// temp not in use
+
 export const observer = new IntersectionObserver((entries) =>
   entries.forEach((entry) => {
     console.log(entry);

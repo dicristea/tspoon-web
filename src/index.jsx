@@ -18,6 +18,7 @@ import Privacy from './components/routes/Privacy';
 import CommunityGuidelines from './components/routes/CommunityGuidelines';
 import Terms from './components/routes/Terms';
 import ErrorBoundary from './components/routes/ErrorBoundary';
+import Download from './components/routes/Download';
 
 const LAUCH_LIVE = false;
 const date = new Date();
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
       <Route element={<Privacy />} path="/privacy" />
       <Route element={<CommunityGuidelines />} path="/community-guidelines" />
       <Route element={<Terms />} path="/terms" />
+      <Route element={<Download />} path="/download" />
       <Route path="../%PUBLIC_URL%/.well-known/assetlinks.json" />
       <Route element={<ErrorBoundary />} path="/*" />
     </Route>
