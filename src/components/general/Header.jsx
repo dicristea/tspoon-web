@@ -33,47 +33,47 @@ export default function Header({ page }) {
         <div className={fullPage} style={{ height: screenSize.height }}>
           <NavBar />
           <HeaderDiv className={GreenBackground}>
-            <TitleSection>
-              {screenSize.width > 800 ? (
-                <TitleImages>
-                  <img alt="logo" src={RandomCharacter1} />
-                  <img alt="logo" src={RandomCharacter2} />
-                </TitleImages>
-              ) : (
-                <div />
-              )}
-              <MiddleTitleSection
-                style={
-                  screenSize.width < 800 && screenSize.height > 890 ? { paddingTop: '15vh' } : null
-                }
-              >
-                <Title>
-                  No <br />
-                  Nameless <br />
-                  Chefs
-                </Title>
-                <div>
-                  {LAUCH_LIVE ? (
-                    <>
-                      <Button>Download iOS</Button>
-                      <Button>
-                        Downloads
-                        <img alt="android logo" src={android} />
-                      </Button>
-                    </>
-                  ) : (
-                    <AnchorTag href="#waitlist">
-                      <Button className={pinkButton}>JOIN THE WAITLIST</Button>
-                    </AnchorTag>
-                  )}
-                </div>
-              </MiddleTitleSection>
+            {/* <TitleSection> */}
+            {screenSize.width > 800 ? (
               <TitleImages>
-                {screenSize.width < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
-                <img alt="logo" src={RandomCharacter3} />
-                <img alt="logo" src={RandomCharacter4} />
+                <img alt="logo" src={RandomCharacter1} />
+                <img alt="logo" src={RandomCharacter2} />
               </TitleImages>
-            </TitleSection>
+            ) : (
+              <div />
+            )}
+            <MiddleTitleSection
+              style={
+                screenSize.width < 800 && screenSize.height > 890 ? { paddingTop: '15vh' } : null
+              }
+            >
+              <Title>
+                No <br />
+                Nameless <br />
+                Chefs
+              </Title>
+              <div>
+                {LAUCH_LIVE ? (
+                  <>
+                    <Button>Download iOS</Button>
+                    <Button>
+                      Downloads
+                      <img alt="android logo" src={android} />
+                    </Button>
+                  </>
+                ) : (
+                  <AnchorTag href="#waitlist">
+                    <Button className={pinkButton}>JOIN THE WAITLIST</Button>
+                  </AnchorTag>
+                )}
+              </div>
+            </MiddleTitleSection>
+            <TitleImages>
+              {screenSize.width < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
+              <img alt="logo" src={RandomCharacter3} />
+              <img alt="logo" src={RandomCharacter4} />
+            </TitleImages>
+            {/* </TitleSection> */}
           </HeaderDiv>
         </div>
       );
@@ -101,9 +101,9 @@ export default function Header({ page }) {
         <div className={fullPage}>
           <NavBar />
           <HeaderDiv>
-            <TitleSection>
-              <Title>Blog.</Title>
-            </TitleSection>
+            {/* <TitleSection> */}
+            <Title>Blog.</Title>
+            {/* </TitleSection> */}
           </HeaderDiv>
         </div>
       );
@@ -173,9 +173,6 @@ const HeaderDiv = styled.header`
       }
     }
   }
-`;
-
-const TitleSection = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -226,12 +223,67 @@ const TitleSection = styled.div`
   }
 `;
 
+// const TitleSection = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   height: 100%;
+//   gap: 0;
+//   div {
+//     gap: 4vw;
+//     img {
+//       width: 130px;
+//       height: auto;
+//     }
+//   }
+
+//   @media (max-width: 1000px) {
+//     div {
+//       gap: 2rem;
+//       img {
+//         width: 100px;
+//         height: auto;
+//       }
+//     }
+//   }
+
+//   @media (max-width: 800px) {
+//     flex-direction: column;
+//     align-items: center;
+//     div {
+//       gap: 2rem;
+//       img {
+//         width: 90px;
+//         height: auto;
+//       }
+//     }
+//   }
+
+//   @media (max-width: 450px) {
+//     div {
+//       gap: 1rem;
+//       img {
+//         width: 80px;
+//         height: auto;
+//       }
+//     }
+//   }
+
+//   @media (min-width: 1000px) {
+//     gap: 4vw;
+//   }
+// `;
+
 const MiddleTitleSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
+  @media (max-width: 800px) {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
   @media (max-width: 800px) {
     padding-bottom: 1rem;
     padding-top: 1rem;

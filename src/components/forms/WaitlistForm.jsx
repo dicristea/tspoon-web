@@ -133,8 +133,8 @@ const checkbox = css`
     content: '';
     display: block;
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 1.2rem;
+    height: 1.2rem;
     border: 2px solid ${BEIGE};
     border-radius: 3px;
     background-color: ${WHITE};

@@ -10,6 +10,7 @@ export default function SocialIcon({ type }) {
       return (
         <ImgButton
           alt="Connect with us on Instagram."
+          aria-label="Connect with us on Instagram."
           className={hoverIconGreen}
           href="https://www.instagram.com/tspoonapp/"
           target="_blank"
@@ -22,6 +23,7 @@ export default function SocialIcon({ type }) {
       return (
         <ImgButton
           alt="Connect with us on TikTok."
+          aria-label="Connect with us on TikTok."
           className={hoverIconGreen}
           href="https://www.tiktok.com/@tspoon.app"
           target="_blank"

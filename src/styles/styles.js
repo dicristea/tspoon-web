@@ -95,20 +95,11 @@ export const Title = styled.h1`
   line-height: 9rem;
   padding: 0;
   margin: 0;
-  z-index: 1000;
-  @media (min-width: 1200px) {
-    font-size: 60pt;
-    line-height: 8rem;
-  }
   @media (max-width: 1200px) {
     font-size: 50pt;
     line-height: 6rem;
   }
   @media (max-width: 800px) {
-    font-size: 40pt;
-    line-height: 5rem;
-  }
-  @media (max-width: 450px) {
     font-size: 35pt;
     line-height: 4rem;
   }
@@ -196,6 +187,7 @@ export const TextSection = styled.div`
 
 export const AnchorTag = styled.a`
   text-decoration: none;
+  position: relative;
 `;
 
 export const hoverUnderline = css`
@@ -244,14 +236,16 @@ export const fieldset = css`
   display: flex;
   gap: 10px;
   align-items: flex-end;
-  /* position: relative; */
+  justify-content: center;
 `;
 
 export const Button = styled.button`
   cursor: pointer;
   z-index: 1000;
   padding: 10pt 14pt;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   border: none;
   background-color: ${BEIGE};
