@@ -82,29 +82,15 @@ export default function Header({ page }) {
       return (
         <div className={fullPage} style={{ height: screenSize.height }}>
           <NavBar />
-          <HeaderDiv>
-            <AboutTitleSection>
-              <Title>Made by nameless chefs.</Title>
-              <TitleImages>
-                <img alt="logo" src={Paul} />
-                <img alt="logo" src={Andrew} />
-                <img alt="logo" src={Forest} />
-                <img alt="logo" src={Diana} />
-              </TitleImages>
-            </AboutTitleSection>
-          </HeaderDiv>
-        </div>
-      );
-    }
-    case 'Blog': {
-      return (
-        <div className={fullPage}>
-          <NavBar />
-          <HeaderDiv>
-            {/* <TitleSection> */}
-            <Title>Blog.</Title>
-            {/* </TitleSection> */}
-          </HeaderDiv>
+          <AboutHeader>
+            <Title>Made by nameless chefs.</Title>
+            <TitleImages>
+              <img alt="logo" src={Paul} />
+              <img alt="logo" src={Andrew} />
+              <img alt="logo" src={Forest} />
+              <img alt="logo" src={Diana} />
+            </TitleImages>
+          </AboutHeader>
         </div>
       );
     }
@@ -133,7 +119,18 @@ const HeaderDiv = styled.header`
   padding-right: ${horizontalPadding};
   width: 100%;
   flex: 1;
-  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  gap: 0;
+  div {
+    gap: 4vw;
+    img {
+      width: 130px;
+      height: auto;
+    }
+  }
   div:nth-child(2) {
     cursor: pointer;
     opacity: 0;
@@ -173,18 +170,6 @@ const HeaderDiv = styled.header`
       }
     }
   }
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 100%;
-  gap: 0;
-  div {
-    gap: 4vw;
-    img {
-      width: 130px;
-      height: auto;
-    }
-  }
 
   @media (max-width: 1000px) {
     div {
@@ -216,10 +201,6 @@ const HeaderDiv = styled.header`
         height: auto;
       }
     }
-  }
-
-  @media (min-width: 1000px) {
-    gap: 4vw;
   }
 `;
 
@@ -298,11 +279,12 @@ const TitleImages = styled.div`
   gap: 2rem;
 `;
 
-const AboutTitleSection = styled.div`
+const AboutHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  color: ${WHITE};
   gap: 20vh;
   height: 100%;
   div {

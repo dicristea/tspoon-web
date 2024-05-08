@@ -126,38 +126,12 @@ export default function WaitlistForm() {
   );
 }
 
-const checkbox = css`
-  position: relative;
-  cursor: pointer;
-  :before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1.2rem;
-    height: 1.2rem;
-    border: 2px solid ${BEIGE};
-    border-radius: 3px;
-    background-color: ${WHITE};
-  }
-  :checked:after {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 11px;
-    border: solid ${PINK};
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 3px;
-    left: 7px;
-  }
-`;
-
 const formWrapper = css`
   color: white;
   background-color: ${GREEN};
+  @media (min-width: 450px) {
+    padding: 8vw 0;
+  }
 `;
 
 const formHeader = css`
@@ -199,6 +173,35 @@ const waitlistInput = css`
   align-items: center;
   padding: 0.8rem 0.6rem;
   text-decoration: none;
+`;
+
+const checkbox = css`
+  position: relative;
+  cursor: pointer;
+  :before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid ${BEIGE};
+    border-radius: 3px;
+    background-color: ${WHITE};
+  }
+  :checked:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 11px;
+    border: solid ${PINK};
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 3px;
+    left: 7px;
+  }
 `;
 
 // Source: https://bootcamp.uxdesign.cc/custom-google-form-interface-with-reactjs-5d6762d8fa65

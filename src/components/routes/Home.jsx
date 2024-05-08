@@ -55,7 +55,6 @@ export default function Home() {
 }
 
 const sectionBody = css`
-  z-index: 1000;
   background-color: ${GRAY};
   padding: 4rem 0;
   display: flex;

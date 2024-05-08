@@ -187,7 +187,6 @@ export const TextSection = styled.div`
 
 export const AnchorTag = styled.a`
   text-decoration: none;
-  position: relative;
 `;
 
 export const hoverUnderline = css`
@@ -243,9 +242,6 @@ export const Button = styled.button`
   cursor: pointer;
   z-index: 1000;
   padding: 10pt 14pt;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   border: none;
   background-color: ${BEIGE};
