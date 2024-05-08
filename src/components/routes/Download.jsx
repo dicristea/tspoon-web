@@ -21,3 +21,5 @@ export default function Download() {
     </>
   );
 }
+
+// If we want them to sign in to google play, we might need to use this https://reactrouter.com/en/main/fetch/redirect

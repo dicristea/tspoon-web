@@ -95,7 +95,7 @@ export const Title = styled.h1`
   line-height: 9rem;
   padding: 0;
   margin: 0;
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     font-size: 50pt;
     line-height: 6rem;
   }

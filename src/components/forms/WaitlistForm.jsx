@@ -5,7 +5,7 @@ import '@fontsource/source-sans-pro'; // Defaults to weight 400
 import { Link } from 'react-router-dom';
 import {
   Button,
-  Heading3,
+  Heading2,
   SmallText,
   borderRadius,
   fieldset,
@@ -54,9 +54,9 @@ export default function WaitlistForm() {
 
   return (
     <div className={formWrapper}>
-      <Heading3 className={formHeader} id="waitlist">
+      <Heading2 className={formHeader} id="waitlist">
         Something&apos;s cooking!
-      </Heading3>
+      </Heading2>
       <div className="formcontact">
         {submit ? (
           <div className={formSubmitted}>
@@ -129,14 +129,17 @@ export default function WaitlistForm() {
 const formWrapper = css`
   color: white;
   background-color: ${GREEN};
-  @media (min-width: 450px) {
-    padding: 8vw 0;
+  @media (min-width: 500px) {
+    padding: 4vw 0 2vw 0;
   }
 `;
 
 const formHeader = css`
   color: white;
-  padding: 20px 0px;
+  padding: 2rem 0 !important;
+  @media (min-width: 550px) {
+    padding: 0 0 4vw 0 !important;
+  }
 `;
 
 const waitlistForm = css`

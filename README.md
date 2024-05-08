@@ -14,11 +14,11 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-    <a href="https://tspoonapp.com" target="blank">
+    <a href="https://www.tspoonapp.com" target="blank">
         <img src="./src/assets/logo/Full_Logo_Trans_Text.png" alt="Tspoon Logo" width="333" height="189">
     </a>
     <p align="center">
-        <a href="https://tspoonapp.com/" target="blank">View Project</a>
+        <a href="https://www.tspoonapp.com/" target="blank">View Project</a>
         ·
         <a href="https://github.com/dicristea/tspoon-web/issues/new?labels=bug&template=bug-report---.md" target="blank">Report Bug</a>
         ·
@@ -70,7 +70,7 @@
     <b>Tspoon Chefs</b> will never need to find a recipe again. Instead, the recipes they love will find them.
 </p>
 
-<p align='center'>Join the <a href="https://tspoonapp.com/#waitlist" target="blank">Waitlist</a> to stay updated!</p>
+<p align='center'>Join the <a href="https://www.tspoonapp.com/#waitlist" target="blank">Waitlist</a> to stay updated!</p>
 <p align="center">
     <a href="https://www.instagram.com/tspoonapp/" target="blank">
         <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="35" height="35">
@@ -80,7 +80,7 @@
     </a>
 </p>
 <p align="center">
-    © 2024 <a href="https://tspoonapp.com/" target="blank">Tspoon, LLC.</a>
+    © 2024 <a href="https://www.tspoonapp.com/" target="blank">Tspoon, LLC.</a>
 </p>
 
 
@@ -181,7 +181,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-[Contact Tspoon](https://tspoonapp.com/contact)
+[Contact Tspoon](https://www.tspoonapp.com/contact)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 

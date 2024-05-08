@@ -11,9 +11,7 @@ export default function Contact() {
     <div>
       <Header className={fontColorWhite} page="Contact" />
       <ContactSection className={fontColorBlack}>
-        <div>
-          <img alt="Contact Us Graphic" className={contactArtwork} src={ContactGraphic} />
-        </div>
+        <img alt="Contact Us Graphic" className={contactArtwork} src={ContactGraphic} />
         <ContactForm />
       </ContactSection>
       <Footer className={fontColorBlack} sectionColor="pink" />
@@ -24,14 +22,12 @@ export default function Contact() {
 const ContactSection = styled(Section)`
   padding: 4rem 3rem;
   div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 20px;
     max-width: 450px;
   }
   @media (max-width: 730px) {
     padding: 3rem 3rem;
-    flex-direction: row;
   }
 `;
 
@@ -53,6 +49,9 @@ const contactArtwork = css`
       filter: blur(0);
       transform: translateY(0);
     }
+  }
+  @media (max-width: 730px) {
+    grid-row-start: 2;
   }
 `;
 

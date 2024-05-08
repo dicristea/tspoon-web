@@ -32,8 +32,7 @@ export default function Header({ page }) {
       return (
         <div className={fullPage} style={{ height: screenSize.height }}>
           <NavBar />
-          <HeaderDiv className={GreenBackground}>
-            {/* <TitleSection> */}
+          <TitleHeader className={GreenBackground}>
             {screenSize.width > 800 ? (
               <TitleImages>
                 <img alt="logo" src={RandomCharacter1} />
@@ -73,8 +72,7 @@ export default function Header({ page }) {
               <img alt="logo" src={RandomCharacter3} />
               <img alt="logo" src={RandomCharacter4} />
             </TitleImages>
-            {/* </TitleSection> */}
-          </HeaderDiv>
+          </TitleHeader>
         </div>
       );
     }
@@ -113,7 +111,7 @@ const fullPage = css`
   flex-direction: column;
 `;
 
-const HeaderDiv = styled.header`
+const TitleHeader = styled.header`
   color: ${WHITE};
   padding-left: ${horizontalPadding};
   padding-right: ${horizontalPadding};
@@ -349,7 +347,7 @@ const contactTitle = css`
   }
 `;
 
-const ContactHeaderDiv = styled(HeaderDiv)`
+const ContactHeaderDiv = styled(TitleHeader)`
   display: flex;
   flex-direction: column;
   align-items: center;
