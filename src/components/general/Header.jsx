@@ -119,9 +119,9 @@ const TitleHeader = styled.header`
   flex: 1;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
-  gap: 0;
+  gap: 2rem;
   div {
     gap: 4vw;
     img {
@@ -182,6 +182,7 @@ const TitleHeader = styled.header`
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     div {
       gap: 2rem;
       img {
