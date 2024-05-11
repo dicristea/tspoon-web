@@ -139,7 +139,7 @@ export const Heading4 = styled.h4`
 
 export const BodyText = styled.p`
   font-family: 'Source Sans Pro';
-  font-weight: 200;
+  font-weight: 300;
   margin: 0;
   font-size: ${bodyFontSize};
 `;
@@ -195,7 +195,6 @@ export const hoverUnderline = css`
   background: linear-gradient(${WHITE}, ${WHITE}) bottom / 0 0.1em no-repeat;
   transition: 200ms background-size;
   &:hover {
-    color: white;
     background-size: 100% 0.1em;
   }
 `;
@@ -207,8 +206,6 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Source Sans Pro';
-  font-weight: 200;
   line-height: 1.5rem;
   margin: 0;
   font-size: ${bodyFontSize};
@@ -218,8 +215,6 @@ export const List = styled.ul`
 `;
 
 export const OrderedList = styled.ol`
-  font-family: 'Source Sans Pro';
-  font-weight: 200;
   margin: 0;
   font-size: ${bodyFontSize};
   padding-left: 2rem;

@@ -21,6 +21,8 @@ export const globals = css`
       box-sizing: border-box;
       font-family: 'Source Sans Pro';
       scroll-behavior: smooth;
+      font-family: 'Source Sans Pro';
+      font-weight: 300;
     }
 
     *,

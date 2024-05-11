@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 import { Link } from 'react-router-dom';
-import { GREEN, WHITE } from '../../styles/colors';
+import { GREEN } from '../../styles/colors';
 import pinkStemLogo from '../../assets/logo/White_Trans.svg';
-import sStyles from '../../styles/styles';
+import { hoverUnderline } from '../../styles/styles';
 
 export default function NavBar() {
   return (
@@ -12,10 +12,10 @@ export default function NavBar() {
         <Img alt="Tspoon logo" src={pinkStemLogo} />
       </Link>
       <div className="right">
-        <Link className={hoverChange} style={sStyles.linkStyle} to="/about">
+        <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/about">
           About
         </Link>
-        <Link className={hoverChange} style={sStyles.linkStyle} to="/contact">
+        <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/contact">
           Contact
         </Link>
       </div>
@@ -28,18 +28,8 @@ const Img = styled.img`
   height: 2rem;
 `;
 
-const hoverChange = css`
-  color: ${WHITE};
-  text-decoration: none;
-  padding-bottom: 0.2em;
-  background: linear-gradient(${WHITE}, ${WHITE}) bottom / 0 0.1em no-repeat;
-  transition: 200ms background-size;
-  &:hover {
-    background-size: 100% 0.1em;
-  }
-`;
-
 const navBar = css`
+  font-weight: 400;
   background-color: ${GREEN};
   padding: 2rem 3rem;
   @media (max-width: 650px) {
@@ -51,7 +41,7 @@ const navBar = css`
   display: flex;
   align-items: center;
   justify-items: center;
-  ${sStyles.justifyContentSpaceBetween}
+  justify-content: space-between;
   z-index: 1000;
   div {
     display: flex;
@@ -62,27 +52,6 @@ const navBar = css`
     gap: 4vw;
   }
 `;
-
-// const hoverUnderlineAnimation = css`
-//   cursor: pointer;
-//   display: inline-block;
-//   position: relative;
-
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     width: 100%;
-//     transform: scaleX(0);
-//     height: 1px;
-//     bottom: 0;
-//     left: 0;
-//     background-color: var(--accent);
-//     transition: transform 0.2s ease-out;
-//   }
-
-//   &:hover::after {
-//     transform: scaleX(1);
-//   }
 
 //   /* Only way to show underline animation on mobile (no hover); however, line stays active until clicking off the button */
 //   @media only screen and (max-width: 400px) {
