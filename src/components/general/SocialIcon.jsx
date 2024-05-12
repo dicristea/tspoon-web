@@ -37,7 +37,7 @@ export default function SocialIcon({ type }) {
         <ImgButton
           alt="Connect with us on Facebook."
           className={hoverIconGreen}
-          href="https://www.tiktok.com/@tspoon.app"
+          href="https://www.facebook.com/profile.php?id=61557218636637"
           style={{ padding: '0' }}
           target="_blank"
         >
