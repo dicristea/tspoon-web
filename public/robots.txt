@@ -1,3 +1,4 @@
-Sitemap: https://www.tspoonapp.com/sitemap.txt
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
+
+Sitemap: https://tspoonapp.com/sitemap.txt
