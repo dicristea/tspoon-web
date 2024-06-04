@@ -63,7 +63,7 @@ export const textPaddingBottom = css`
 
 export const normalImageSize = css`
   width: auto;
-  height: 350px;
+  height: 300px;
   @media (max-width: 500px) {
     width: auto;
     height: 300px;

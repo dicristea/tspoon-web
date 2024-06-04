@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { useContext } from 'react';
 import { css } from '@linaria/core';
 import {
-  AnchorTag,
+  // AnchorTag,
   Button,
   GreenBackground,
   Title,
@@ -24,8 +24,11 @@ import useScreenSize from '../../utils/useScreenSize';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
+  // waitlistRef as param
   const { LAUCH_LIVE } = useContext(AppContext);
   const screenSize = useScreenSize();
+
+  // const scrollTo = () => waitlistRef.scrollIntoView({ behavior: 'smooth' });
 
   switch (page) {
     case 'Title': {
@@ -61,9 +64,12 @@ export default function Header({ page }) {
                     </Button>
                   </>
                 ) : (
-                  <AnchorTag href="#waitlist">
-                    <Button className={pinkButton}>JOIN THE WAITLIST</Button>
-                  </AnchorTag>
+                  // <AnchorTag href="#waitlist ">
+                  <Button className={pinkButton}>
+                    {/* onclick={scrollTo()} */}
+                    JOIN THE WAITLIST
+                  </Button>
+                  // </AnchorTag>
                 )}
               </div>
             </MiddleTitleSection>
@@ -121,11 +127,11 @@ const TitleHeader = styled.header`
   flex-direction: row;
   justify-content: center;
   height: 100%;
-  gap: 2rem;
+  gap: 6vw;
   div {
     gap: 4vw;
     img {
-      width: 130px;
+      width: 140px;
       height: auto;
     }
   }

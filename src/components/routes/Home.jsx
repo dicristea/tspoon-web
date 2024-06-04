@@ -1,25 +1,29 @@
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import { useRef } from 'react';
 import {
   BodyText,
   Heading3,
-  Section,
   h3PaddingBottom,
   normalImageSize,
   textPaddingBottom
 } from '../../styles/styles';
-import { BLACK, GRAY, WHITE } from '../../styles/colors';
+import { GRAY, WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DinnerArtwork from '../../assets/artwork/Homepage_dinner.svg';
 import ChefArtwork from '../../assets/artwork/Homepage_Block.svg';
+import HomeAnimation from '../../assets/artwork/HomeFeedAnimation.gif';
 
 export default function Home() {
+  const WaitlistFooter = useRef();
+
   return (
     <div>
-      <Header className={fontColorWhite} page="Title" />
+      <Header className={fontColorWhite} page="Title" waitlistRef={WaitlistFooter} />
       <div className={sectionBody}>
-        <Section>
-          <div className={itemA}>
+        <HomeSection>
+          <div className={leftAlign}>
             <Heading3 className={h3PaddingBottom}>Where your next dinner plans are found.</Heading3>
             <BodyText>Date night? Parents coming into town?</BodyText>
             <BodyText className={textPaddingBottom}>Housewarming party?</BodyText>
@@ -31,12 +35,10 @@ export default function Home() {
           <div>
             <img alt="Artwork of chef" className={normalImageSize} src={DinnerArtwork} />
           </div>
-        </Section>
-        <Section>
-          <div>
+          <div className={item4}>
             <img alt="Artwork of dinner" className={normalImageSize} src={ChefArtwork} />
           </div>
-          <div>
+          <div className={item3}>
             <Heading3 className={h3PaddingBottom}>Chef, build your name.</Heading3>
             <BodyText className={textPaddingBottom}>
               No nameless Chefs means we want to give the power to every Chef whose cooking
@@ -47,9 +49,22 @@ export default function Home() {
               near and far.
             </BodyText>
           </div>
-        </Section>
+          <div className={leftAlign}>
+            <Heading3 className={h3PaddingBottom}>Share your journey.</Heading3>
+            <BodyText className={textPaddingBottom}>
+              Share recipes, find dinner plans, and start cooking in as few swipes as possible on
+              Tspoon! Our app is designed for home chefs of any skill level to share their
+              creations, grow as Chefs, and discover new, horizon-expanding recipes.
+            </BodyText>
+          </div>
+          <div>
+            <img alt="App Animation" className={normalImageSize} src={HomeAnimation} />
+          </div>
+        </HomeSection>
       </div>
-      <Footer className={fontColorBlack} sectionColor="pink" />
+      <div ref={WaitlistFooter}>
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -59,21 +74,41 @@ const sectionBody = css`
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
+`;
+
+const HomeSection = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
   gap: 4rem;
+  padding: 0 20vw;
+  @media (max-width: 700px) {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+`;
+
+const item4 = css`
+  @media (max-width: 700px) {
+    grid-row: 4;
+  }
+`;
+
+const item3 = css`
+  @media (max-width: 700px) {
+    grid-row: 3;
+  }
 `;
 
 const fontColorWhite = css`
   color: ${WHITE};
 `;
 
-const fontColorBlack = css`
-  color: ${BLACK};
-`;
-
-const itemA = css`
-  @media (max-width: 700px) {
-    grid-row-start: 2;
-    grid-row-end: 3;
-    text-align: left;
-  }
+const leftAlign = css`
+  align-items: right;
+  align-self: right;
 `;

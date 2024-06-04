@@ -53,7 +53,7 @@ export default function WaitlistForm() {
   const form = useRef();
 
   return (
-    <div className={formWrapper}>
+    <div className={formWrapper} id="waitlist">
       <Heading2 className={formHeader} id="waitlist">
         Something&apos;s cooking!
       </Heading2>
@@ -135,6 +135,7 @@ const formWrapper = css`
 `;
 
 const formHeader = css`
+  text-align: center;
   color: white;
   padding: 2rem 0 !important;
   @media (min-width: 550px) {
