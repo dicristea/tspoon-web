@@ -1,8 +1,8 @@
 https://tspoonapp.com/
 https://tspoonapp.com/#waitlist
-https://tspoonapp.com/about
-https://tspoonapp.com/contact
-https://tspoonapp.com/terms
-https://tspoonapp.com/privacy
-https://tspoonapp.com/community-guidelines
-https://tspoonapp.com/download
+https://tspoonapp.com/#/about
+https://tspoonapp.com/#/contact
+https://tspoonapp.com/#/terms
+https://tspoonapp.com/#/privacy
+https://tspoonapp.com/#/community-guidelines
+https://tspoonapp.com/#/download
