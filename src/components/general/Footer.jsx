@@ -4,34 +4,34 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ImgButton, SmallText, horizontalPadding, hoverUnderline } from '../../styles/styles';
 import { GREEN } from '../../styles/colors';
-import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
+// import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
 import GooglePlayBadge from '../../assets/appstore-badges/Play_Store_Badge.svg';
 import { AppContext } from '../../utils/context';
-import WaitlistForm from '../forms/WaitlistForm';
-import DownloadSection from './DownloadSection';
+import MailinglistForm from '../forms/MailinglistForm';
 import SocialIcon from './SocialIcon';
 
-export default function Footer({ sectionColor }) {
-  const { LAUCH_LIVE, currentYear } = useContext(AppContext);
+export default function Footer() {
+  const { currentYear } = useContext(AppContext);
 
   return (
     <FooterSection>
-      {LAUCH_LIVE ? <DownloadSection sectionColor={sectionColor} /> : <WaitlistForm />}
+      <MailinglistForm />
+      <IconsContainer>
+        <ImgButton
+          href="https://play.google.com/store/apps/details?id=com.foresthu2006.Spoon"
+          target="_blank"
+        >
+          <img alt="Download on Google Play." src={GooglePlayBadge} />
+        </ImgButton>
+        {/* <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
+          <img alt="Download on the Apple Store." src={AppleStoreBadge} />
+        </ImgButton> */}
+      </IconsContainer>
       <IconsContainer>
         <SocialIcon type="instagram" />
         <SocialIcon type="tiktok" />
         <SocialIcon type="facebook" />
       </IconsContainer>
-      {LAUCH_LIVE ? (
-        <IconsContainer>
-          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-            <img alt="Download on Google Play." src={GooglePlayBadge} />
-          </ImgButton>
-          <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-            <img alt="Download on the Apple Store." src={AppleStoreBadge} />
-          </ImgButton>
-        </IconsContainer>
-      ) : null}
       <FooterBar>
         <SmallText className={company}>© {currentYear} Tspoon, LLC.</SmallText>
         <SmallText className={terms}>
@@ -55,7 +55,7 @@ const IconsContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 4vw;
-  padding: 20px 0;
+  padding: 15px 0;
 `;
 
 const terms = css`
@@ -82,7 +82,7 @@ const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 2rem;
 `;
 
 const FooterBar = styled.footer`

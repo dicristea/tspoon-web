@@ -258,8 +258,19 @@ export const Button = styled.button`
   }
 `;
 
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem !important;
+  button {
+    overflow: none;
+  }
+`;
+
 export const greenButton = css`
   background-color: ${GREEN};
+  font-size: ${smallFontSize};
   border: 1px solid ${GREEN};
   &:hover {
     color: white;
@@ -269,6 +280,7 @@ export const greenButton = css`
 
 export const pinkButton = css`
   background-color: ${PINK};
+  font-size: ${smallFontSize};
   border: 1px solid ${PINK};
   &:hover {
     color: white;
@@ -288,7 +300,7 @@ export const ImgButton = styled.a`
   cursor: pointer;
   img {
     width: auto;
-    height: 2rem;
+    height: 2.5rem;
   }
 `;
 

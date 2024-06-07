@@ -70,7 +70,7 @@
     <b>Tspoon Chefs</b> will never need to find a recipe again. Instead, the recipes they love will find them.
 </p>
 
-<p align='center'>Join the <a href="https://www.tspoonapp.com/#waitlist" target="blank">Waitlist</a> to stay updated!</p>
+<p align='center'>Join our <a href="https://www.tspoonapp.com/" target="blank">Mailing List</a> to stay updated!</p>
 <p align="center">
     <a href="https://www.instagram.com/tspoonapp/" target="blank">
         <img src="./src/assets/social-icons/Instagram/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="Tspoon's Instagram" width="35" height="35">

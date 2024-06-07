@@ -1,17 +1,15 @@
 import { styled } from '@linaria/react';
-import { useContext } from 'react';
 import { css } from '@linaria/core';
 import {
   // AnchorTag,
   Button,
+  ButtonContainer,
   GreenBackground,
   Title,
   horizontalPadding,
   pinkButton
 } from '../../styles/styles';
-import android from '../../assets/icons/android.png';
 import { WHITE } from '../../styles/colors';
-import { AppContext } from '../../utils/context';
 import RandomCharacter1 from '../../assets/artwork/RandomChar_1.svg';
 import RandomCharacter2 from '../../assets/artwork/RandomChar_2.svg';
 import RandomCharacter3 from '../../assets/artwork/RandomChar_3.svg';
@@ -21,13 +19,12 @@ import Andrew from '../../assets/artwork/Andrew.svg';
 import Forest from '../../assets/artwork/Forest.svg';
 import Diana from '../../assets/artwork/Diana.svg';
 import useScreenSize from '../../utils/useScreenSize';
+import { redirectGooglePlay } from '../../utils/redirectUtils';
 import NavBar from './NavBar';
 
 export default function Header({ page }) {
-  // waitlistRef as param
-  const { LAUCH_LIVE } = useContext(AppContext);
+  // waitlistRef as param -- need to scroll to footer
   const screenSize = useScreenSize();
-
   // const scrollTo = () => waitlistRef.scrollIntoView({ behavior: 'smooth' });
 
   switch (page) {
@@ -54,24 +51,17 @@ export default function Header({ page }) {
                 Nameless <br />
                 Chefs
               </Title>
-              <div>
-                {LAUCH_LIVE ? (
-                  <>
-                    <Button>Download iOS</Button>
-                    <Button>
-                      Downloads
-                      <img alt="android logo" src={android} />
-                    </Button>
-                  </>
-                ) : (
-                  // <AnchorTag href="#waitlist ">
-                  <Button className={pinkButton}>
-                    {/* onclick={scrollTo()} */}
-                    JOIN THE WAITLIST
-                  </Button>
-                  // </AnchorTag>
-                )}
-              </div>
+              <ButtonContainer>
+                <Button className={pinkButton} onClick={() => redirectGooglePlay()}>
+                  GOOGLE PLAY
+                </Button>
+                {/* <AnchorTag href="#mailinglist "> */}
+                <Button className={pinkButton}>
+                  {/* onclick={scrollTo()} */}
+                  JOIN OUR KITCHEN
+                </Button>
+                {/* </AnchorTag> */}
+              </ButtonContainer>
             </MiddleTitleSection>
             <TitleImages>
               {screenSize.width < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}

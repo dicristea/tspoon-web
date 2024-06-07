@@ -15,7 +15,7 @@ import {
 } from '../../styles/styles';
 import { BEIGE, GRAY, GREEN, PINK, WHITE } from '../../styles/colors';
 
-export default function WaitlistForm() {
+export default function MailinglistForm() {
   const [submit, setSubmit] = useState(false);
   const [formData, setFormData] = useState({
     'entry.1549536226': '',
@@ -53,9 +53,9 @@ export default function WaitlistForm() {
   const form = useRef();
 
   return (
-    <div className={formWrapper} id="waitlist">
-      <Heading2 className={formHeader} id="waitlist">
-        Something&apos;s cooking!
+    <div className={formWrapper} id="mailinglist">
+      <Heading2 className={formHeader} id="mailinglist">
+        Let&apos;s cook!
       </Heading2>
       <div className="formcontact">
         {submit ? (
@@ -64,14 +64,14 @@ export default function WaitlistForm() {
             <div>You&#39;ll hear from us very soon.</div>
           </div>
         ) : (
-          <form className={waitlistForm} ref={form} target="_self" onSubmit={handleSubmit}>
+          <form className={mailinglistForm} ref={form} target="_self" onSubmit={handleSubmit}>
             <fieldset className={fieldset}>
               <input
                 aria-required
                 required
                 aria-label="Name"
                 autoComplete="true"
-                className={waitlistInput}
+                className={mailinglistInput}
                 id={NAME_ID}
                 name={NAME_ID}
                 placeholder="Name"
@@ -86,7 +86,7 @@ export default function WaitlistForm() {
                 required
                 aria-label="Email"
                 autoComplete="true"
-                className={waitlistInput}
+                className={mailinglistInput}
                 id={EMAIL_ID}
                 name={EMAIL_ID}
                 placeholder="Email"
@@ -117,7 +117,7 @@ export default function WaitlistForm() {
               </SmallText>
             </fieldset>
             <Button className={pinkButton} type="submit">
-              JOIN THE WAITLIST
+              JOIN OUR KITCHEN
             </Button>
           </form>
         )}
@@ -143,7 +143,7 @@ const formHeader = css`
   }
 `;
 
-const waitlistForm = css`
+const mailinglistForm = css`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -156,7 +156,7 @@ const waitlistForm = css`
   }
 `;
 
-const waitlistInput = css`
+const mailinglistInput = css`
   font-family: 'Source Sans Pro';
   color: ${WHITE};
   &:hover {

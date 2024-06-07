@@ -55,9 +55,3 @@ export const hoverIconGreen = css`
     background: #3f5953;
   }
 `;
-
-// export const hoverIconPink = css`
-//   &:hover {
-//     background: #ae564e;
-//   }
-// `;

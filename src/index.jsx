@@ -19,11 +19,11 @@ import Terms from './components/routes/Terms';
 import ErrorBoundary from './components/routes/ErrorBoundary';
 import Download from './components/routes/Download';
 
-const LAUCH_LIVE = false;
+const LAUNCH_LIVE = true;
 const date = new Date();
 const currentYear = date.getFullYear();
 
-const AppValues = { LAUCH_LIVE, currentYear };
+const AppValues = { LAUNCH_LIVE, currentYear };
 
 const router = createHashRouter([
   {
