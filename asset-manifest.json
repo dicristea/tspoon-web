@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.3e877fc0.css",
-    "main.js": "/static/js/main.5cd07075.js",
+    "main.css": "/static/css/main.c2924239.css",
+    "main.js": "/static/js/main.d3e2bbf9.js",
     "static/js/529.885b13e3.chunk.js": "/static/js/529.885b13e3.chunk.js",
     "static/media/HomeFeedAnimation.gif": "/static/media/HomeFeedAnimation.40e66a34bbdc201a67c3.gif",
     "static/media/Homepage_dinner.svg": "/static/media/Homepage_dinner.58bd9023aca95583f505f59e811d7d15.svg",
     "static/media/AboutUs_Block.svg": "/static/media/AboutUs_Block.d60c106c72c2de0adc8b84a98c505906.svg",
-    "static/media/App_Store_Badge.svg": "/static/media/App_Store_Badge.b97a4108e5955e8b914cc16fffc2bdd3.svg",
     "static/media/source-sans-pro-latin-ext-400-normal.woff": "/static/media/source-sans-pro-latin-ext-400-normal.185cedfb4e64a9a8801a.woff",
     "static/media/source-sans-pro-latin-ext-300-normal.woff": "/static/media/source-sans-pro-latin-ext-300-normal.bbc0d99b92b599ee74ed.woff",
     "static/media/source-sans-pro-latin-ext-700-normal.woff": "/static/media/source-sans-pro-latin-ext-700-normal.a72613fd5e96ed9e41cd.woff",
@@ -188,12 +187,12 @@
     "static/media/source-sans-pro-greek-ext-900-italic.woff2": "/static/media/source-sans-pro-greek-ext-900-italic.cb2c3b74cd6928fe1b02.woff2",
     "static/media/source-sans-pro-greek-ext-600-italic.woff2": "/static/media/source-sans-pro-greek-ext-600-italic.6d7636e72f6e17812af7.woff2",
     "static/media/source-sans-pro-greek-ext-700-italic.woff2": "/static/media/source-sans-pro-greek-ext-700-italic.34d65dd8d8d035797afc.woff2",
-    "main.3e877fc0.css.map": "/static/css/main.3e877fc0.css.map",
-    "main.5cd07075.js.map": "/static/js/main.5cd07075.js.map",
+    "main.c2924239.css.map": "/static/css/main.c2924239.css.map",
+    "main.d3e2bbf9.js.map": "/static/js/main.d3e2bbf9.js.map",
     "529.885b13e3.chunk.js.map": "/static/js/529.885b13e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e877fc0.css",
-    "static/js/main.5cd07075.js"
+    "static/css/main.c2924239.css",
+    "static/js/main.d3e2bbf9.js"
   ]
 }
