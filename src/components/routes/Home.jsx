@@ -17,14 +17,14 @@ import Footer from '../general/Footer';
 import DinnerArtwork from '../../assets/artwork/Homepage_dinner.svg';
 import ChefArtwork from '../../assets/artwork/Homepage_Block.svg';
 import HomeAnimation from '../../assets/artwork/HomeFeedAnimation.gif';
-import { redirectGooglePlay } from '../../utils/redirectUtils';
+import { redirectGooglePlay } from '../../utils/utils';
 
 export default function Home() {
-  const WaitlistFooter = useRef();
+  const signUpRef = useRef();
 
   return (
     <div>
-      <Header className={fontColorWhite} page="Title" waitlistRef={WaitlistFooter} />
+      <Header className={fontColorWhite} page="Title" signUpRef={signUpRef} />
       <div className={sectionBody}>
         <HomeSection>
           <div className={leftAlign}>
@@ -62,7 +62,7 @@ export default function Home() {
             </BodyText>
             <ButtonContainer>
               <Button className={greenButton} onClick={() => redirectGooglePlay()}>
-                GOOGLE PLAY
+                Start cooking on Google Play!
               </Button>
             </ButtonContainer>
           </div>
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </HomeSection>
       </div>
-      <div ref={WaitlistFooter}>
+      <div ref={signUpRef}>
         <Footer />
       </div>
     </div>

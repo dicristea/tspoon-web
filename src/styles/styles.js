@@ -263,18 +263,17 @@ export const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5rem !important;
-  button {
-    overflow: none;
-  }
 `;
 
 export const greenButton = css`
-  background-color: ${GREEN};
+  background-color: ${GRAY};
+  color: ${GREEN};
   font-size: ${smallFontSize};
+  font-weight: 500;
   border: 1px solid ${GREEN};
   &:hover {
-    color: white;
-    background-color: ${GREEN_HALF_OPAQUE};
+    color: ${GREEN};
+    font-weight: 600;
   }
 `;
 

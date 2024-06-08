@@ -19,13 +19,12 @@ import Andrew from '../../assets/artwork/Andrew.svg';
 import Forest from '../../assets/artwork/Forest.svg';
 import Diana from '../../assets/artwork/Diana.svg';
 import useScreenSize from '../../utils/useScreenSize';
-import { redirectGooglePlay } from '../../utils/redirectUtils';
+import { redirectGooglePlay } from '../../utils/utils';
 import NavBar from './NavBar';
 
-export default function Header({ page }) {
-  // waitlistRef as param -- need to scroll to footer
+export default function Header({ page, signUpRef }) {
   const screenSize = useScreenSize();
-  // const scrollTo = () => waitlistRef.scrollIntoView({ behavior: 'smooth' });
+  const handleSignUpScroll = () => signUpRef.current.scrollIntoView({ behavior: 'smooth' });
 
   switch (page) {
     case 'Title': {
@@ -55,12 +54,9 @@ export default function Header({ page }) {
                 <Button className={pinkButton} onClick={() => redirectGooglePlay()}>
                   GOOGLE PLAY
                 </Button>
-                {/* <AnchorTag href="#mailinglist "> */}
-                <Button className={pinkButton}>
-                  {/* onclick={scrollTo()} */}
+                <Button className={pinkButton} onClick={() => handleSignUpScroll()}>
                   JOIN OUR KITCHEN
                 </Button>
-                {/* </AnchorTag> */}
               </ButtonContainer>
             </MiddleTitleSection>
             <TitleImages>
