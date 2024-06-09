@@ -3,10 +3,7 @@ import { styled } from '@linaria/react';
 import { useRef } from 'react';
 import {
   BodyText,
-  Button,
-  ButtonContainer,
   Heading3,
-  greenButton,
   h3PaddingBottom,
   normalImageSize,
   textPaddingBottom
@@ -17,7 +14,7 @@ import Footer from '../general/Footer';
 import DinnerArtwork from '../../assets/artwork/Homepage_dinner.svg';
 import ChefArtwork from '../../assets/artwork/Homepage_Block.svg';
 import HomeAnimation from '../../assets/artwork/HomeFeedAnimation.gif';
-import { redirectGooglePlay } from '../../utils/utils';
+import GreenButton from '../general/GreenButton';
 
 export default function Home() {
   const signUpRef = useRef();
@@ -60,11 +57,7 @@ export default function Home() {
               Tspoon! Our app is designed for home chefs of any skill level to share their
               creations, grow as Chefs, and discover new, horizon-expanding recipes.
             </BodyText>
-            <ButtonContainer>
-              <Button className={greenButton} onClick={() => redirectGooglePlay()}>
-                Start cooking on Google Play!
-              </Button>
-            </ButtonContainer>
+            <GreenButton />
           </div>
           <div>
             <img alt="App Animation" className={normalImageSize} src={HomeAnimation} />

@@ -226,7 +226,6 @@ export const List = styled.ul`
 
 export const OrderedList = styled.ol`
   margin: 0;
-  font-size: ${bodyFontSize};
   padding-left: 2rem;
   margin: 0;
   line-height: 1.5rem;
@@ -268,19 +267,6 @@ export const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1.5rem !important;
-`;
-
-export const greenButton = css`
-  background-color: ${GRAY};
-  color: ${GREEN};
-  font-size: ${smallFontSize};
-  font-weight: 500;
-  border: 1px solid ${GREEN};
-  &:hover {
-    color: ${GREEN};
-    background-color: ${GRAY};
-    border: 2px solid ${GREEN};
-  }
 `;
 
 export const pinkButton = css`
