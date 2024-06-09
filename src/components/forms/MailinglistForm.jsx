@@ -188,7 +188,7 @@ const checkbox = css`
     position: absolute;
     width: 1.2rem;
     height: 1.2rem;
-    border: 2px solid ${BEIGE};
+    border: 2px solid ${GRAY};
     border-radius: 3px;
     background-color: ${WHITE};
   }

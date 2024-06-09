@@ -6,16 +6,7 @@ import '@fontsource/source-sans-pro/200.css'; // Specify weight
 
 import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
-import {
-  BEIGE,
-  BLACK,
-  GRAY,
-  GREEN,
-  GREEN_HALF_OPAQUE,
-  PINK,
-  PINK_HALF_OPAQUE,
-  WHITE
-} from './colors';
+import { BLACK, GRAY, GREEN, PINK, PINK_HALF_OPAQUE, WHITE } from './colors';
 
 export const titleFontSize = `70pt`;
 export const heading1FontSize = '32pt';
@@ -31,6 +22,7 @@ export const darkFontColor = WHITE;
 export const lightFontColor = GREEN;
 export const appTopPadding = '100';
 export const borderRadius = '16pt';
+export const sectionGap = '4rem';
 
 export const placeholderImage = css`
   border: 1px ${WHITE} solid;
@@ -95,11 +87,15 @@ export const Title = styled.h1`
   line-height: 9rem;
   padding: 0;
   margin: 0;
-  @media (max-width: 1400px) {
-    font-size: 50pt;
+  @media (max-width: 1100px) {
+    font-size: 55pt;
     line-height: 6rem;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 870px) {
+    font-size: 42pt;
+    line-height: 5rem;
+  }
+  @media (max-width: 550px) {
     font-size: 35pt;
     line-height: 4rem;
   }
@@ -199,6 +195,20 @@ export const hoverUnderline = css`
   }
 `;
 
+export const greenHoverUnderline = css`
+  color: ${GREEN} !important;
+  padding: 8pt 8pt !important;
+  font-size: 1rem;
+  border-radius: 0 !important;
+  background-color: ${GRAY};
+  text-decoration: none;
+  background: linear-gradient(${GREEN}, ${GREEN}) bottom / 0 0.13em no-repeat;
+  transition: 150ms background-size;
+  &:hover {
+    background-size: 100% 0.13em;
+  }
+`;
+
 export const List = styled.ul`
   text-decoration: none;
   list-style-type: none;
@@ -239,7 +249,6 @@ export const Button = styled.button`
   padding: 10pt 14pt;
   display: flex;
   border: none;
-  background-color: ${BEIGE};
   color: WHITE;
   gap: 0.2rem;
   align-items: center;
@@ -251,10 +260,6 @@ export const Button = styled.button`
   img {
     width: auto;
     height: 1rem;
-  }
-  &:hover {
-    color: white;
-    background-color: ${GREEN_HALF_OPAQUE};
   }
 `;
 
@@ -273,16 +278,17 @@ export const greenButton = css`
   border: 1px solid ${GREEN};
   &:hover {
     color: ${GREEN};
-    font-weight: 600;
+    background-color: ${GRAY};
+    border: 2px solid ${GREEN};
   }
 `;
 
 export const pinkButton = css`
   background-color: ${PINK};
+  color: white;
   font-size: ${smallFontSize};
   border: 1px solid ${PINK};
   &:hover {
-    color: white;
     background-color: ${PINK_HALF_OPAQUE};
   }
 `;

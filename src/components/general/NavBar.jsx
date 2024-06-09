@@ -3,9 +3,11 @@ import { css } from '@linaria/core';
 import { Link } from 'react-router-dom';
 import { GREEN } from '../../styles/colors';
 import pinkStemLogo from '../../assets/logo/White_Trans.svg';
-import { hoverUnderline } from '../../styles/styles';
+import { Button, hoverUnderline, pinkButton } from '../../styles/styles';
 
-export default function NavBar() {
+export default function NavBar({ signUpRef }) {
+  const handleSignUpScroll = () => signUpRef.current.scrollIntoView({ behavior: 'smooth' });
+
   return (
     <nav className={navBar}>
       <Link to="/">
@@ -18,6 +20,9 @@ export default function NavBar() {
         <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/contact">
           Contact
         </Link>
+        <Button className={pinkButton} onClick={() => handleSignUpScroll()}>
+          SIGN UP
+        </Button>
       </div>
     </nav>
   );

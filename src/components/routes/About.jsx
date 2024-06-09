@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 
+import { useRef } from 'react';
 import {
   BodyText,
   Heading2,
@@ -7,15 +8,17 @@ import {
   h3PaddingBottom,
   textPaddingBottom
 } from '../../styles/styles';
-import { WHITE } from '../../styles/colors';
 import Header from '../general/Header';
 import Footer from '../general/Footer';
 import TracysKitchen from '../../assets/artwork/AboutUs_Block.svg';
+import DownloadSection from '../general/DownloadSection';
 
 export default function About() {
+  const signUpRef = useRef();
+
   return (
     <>
-      <Header className={fontColorWhite} page="About" />
+      <Header page="About" signUpRef={signUpRef} />
       <Section className={aboutContainer}>
         <div>
           <Heading2 className={h3PaddingBottom}>Why do we cook?</Heading2>
@@ -36,7 +39,10 @@ export default function About() {
           <img alt="Tracy's Kitchen" className={tracyskitchen} src={TracysKitchen} />
         </div>
       </Section>
-      <Footer sectionColor="green" />
+      <DownloadSection />
+      <div ref={signUpRef}>
+        <Footer />
+      </div>
     </>
   );
 }
@@ -48,8 +54,4 @@ const aboutContainer = css`
 const tracyskitchen = css`
   height: auto;
   width: 300px;
-`;
-
-const fontColorWhite = css`
-  color: ${WHITE};
 `;

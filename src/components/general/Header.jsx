@@ -1,7 +1,6 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 import {
-  // AnchorTag,
   Button,
   ButtonContainer,
   GreenBackground,
@@ -24,15 +23,14 @@ import NavBar from './NavBar';
 
 export default function Header({ page, signUpRef }) {
   const screenSize = useScreenSize();
-  const handleSignUpScroll = () => signUpRef.current.scrollIntoView({ behavior: 'smooth' });
 
   switch (page) {
     case 'Title': {
       return (
         <div className={fullPage} style={{ height: screenSize.height }}>
-          <NavBar />
+          <NavBar signUpRef={signUpRef} />
           <TitleHeader className={GreenBackground}>
-            {screenSize.width > 800 ? (
+            {screenSize.width > 870 ? (
               <TitleImages>
                 <img alt="logo" src={RandomCharacter1} />
                 <img alt="logo" src={RandomCharacter2} />
@@ -42,7 +40,7 @@ export default function Header({ page, signUpRef }) {
             )}
             <MiddleTitleSection
               style={
-                screenSize.width < 800 && screenSize.height > 890 ? { paddingTop: '15vh' } : null
+                screenSize.width < 870 && screenSize.height > 860 ? { paddingTop: '15vh' } : null
               }
             >
               <Title>
@@ -54,13 +52,10 @@ export default function Header({ page, signUpRef }) {
                 <Button className={pinkButton} onClick={() => redirectGooglePlay()}>
                   GOOGLE PLAY
                 </Button>
-                <Button className={pinkButton} onClick={() => handleSignUpScroll()}>
-                  JOIN OUR KITCHEN
-                </Button>
               </ButtonContainer>
             </MiddleTitleSection>
             <TitleImages>
-              {screenSize.width < 800 ? <img alt="logo" src={RandomCharacter1} /> : null}
+              {screenSize.width < 870 ? <img alt="logo" src={RandomCharacter1} /> : null}
               <img alt="logo" src={RandomCharacter3} />
               <img alt="logo" src={RandomCharacter4} />
             </TitleImages>
@@ -71,7 +66,7 @@ export default function Header({ page, signUpRef }) {
     case 'About': {
       return (
         <div className={fullPage} style={{ height: screenSize.height }}>
-          <NavBar />
+          <NavBar signUpRef={signUpRef} />
           <AboutHeader>
             <Title>Made by nameless chefs.</Title>
             <TitleImages>
@@ -87,7 +82,7 @@ export default function Header({ page, signUpRef }) {
     case 'Contact': {
       return (
         <>
-          <NavBar />
+          <NavBar signUpRef={signUpRef} />
           <ContactHeaderDiv>
             <Title className={contactTitle}>What&apos;s cooking Chef?</Title>
           </ContactHeaderDiv>
@@ -171,14 +166,24 @@ const TitleHeader = styled.header`
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1100px) {
+    div {
+      gap: 2rem;
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
+
+  @media (max-width: 870px) {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     div {
-      gap: 2rem;
+      gap: 1.5rem;
       img {
-        width: 90px;
+        width: 110px;
         height: auto;
       }
     }
@@ -195,71 +200,12 @@ const TitleHeader = styled.header`
   }
 `;
 
-// const TitleSection = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   height: 100%;
-//   gap: 0;
-//   div {
-//     gap: 4vw;
-//     img {
-//       width: 130px;
-//       height: auto;
-//     }
-//   }
-
-//   @media (max-width: 1000px) {
-//     div {
-//       gap: 2rem;
-//       img {
-//         width: 100px;
-//         height: auto;
-//       }
-//     }
-//   }
-
-//   @media (max-width: 800px) {
-//     flex-direction: column;
-//     align-items: center;
-//     div {
-//       gap: 2rem;
-//       img {
-//         width: 90px;
-//         height: auto;
-//       }
-//     }
-//   }
-
-//   @media (max-width: 450px) {
-//     div {
-//       gap: 1rem;
-//       img {
-//         width: 80px;
-//         height: auto;
-//       }
-//     }
-//   }
-
-//   @media (min-width: 1000px) {
-//     gap: 4vw;
-//   }
-// `;
-
 const MiddleTitleSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
-  @media (max-width: 800px) {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-  }
-  @media (max-width: 800px) {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-  }
 `;
 
 const TitleImages = styled.div`
@@ -284,11 +230,21 @@ const AboutHeader = styled.div`
       margin: 0;
     }
     img {
-      width: 150px;
+      width: 180px;
       height: auto;
     }
   }
-  @media (min-width: 550px) {
+
+  @media (max-width: 1200px) {
+    div {
+      gap: 2vw;
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+  @media (max-width: 800px) {
     div {
       gap: 2vw;
       img {
@@ -306,6 +262,7 @@ const AboutHeader = styled.div`
       }
     }
   }
+
   opacity: 0;
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
