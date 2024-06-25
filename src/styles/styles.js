@@ -87,7 +87,7 @@ export const Title = styled.h1`
   line-height: 9rem;
   padding: 0;
   margin: 0;
-  @media (max-width: 1100px) {
+  @media (max-width: 1200px) {
     font-size: 55pt;
     line-height: 6rem;
   }
@@ -271,6 +271,7 @@ export const ButtonContainer = styled.div`
 
 export const pinkButton = css`
   background-color: ${PINK};
+  cursor: pointer;
   color: white;
   font-size: ${smallFontSize};
   border: 1px solid ${PINK};

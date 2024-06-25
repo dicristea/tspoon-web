@@ -59,7 +59,7 @@ export default function Home() {
             </BodyText>
             <GreenButton />
           </div>
-          <div>
+          <div className={topPadding4rem}>
             <img alt="App Animation" className={normalImageSize} src={HomeAnimation} />
           </div>
         </HomeSection>
@@ -73,7 +73,7 @@ export default function Home() {
 
 const sectionBody = css`
   background-color: ${GRAY};
-  padding: 4rem 0;
+  padding: 4rem 20vw 6rem 20vw;
   display: flex;
   flex-direction: column;
 `;
@@ -86,7 +86,9 @@ const HomeSection = styled.div`
   justify-content: center;
   justify-items: center;
   gap: 4rem;
-  padding: 0 20vw;
+  @media (max-width: 800px) {
+    gap: 2.5rem;
+  }
   @media (max-width: 700px) {
     gap: 2rem;
     grid-template-columns: 1fr;
@@ -113,4 +115,10 @@ const fontColorWhite = css`
 const leftAlign = css`
   align-items: right;
   align-self: right;
+`;
+
+const topPadding4rem = css`
+  @media (max-width: 700px) {
+    padding-top: 4rem;
+  }
 `;

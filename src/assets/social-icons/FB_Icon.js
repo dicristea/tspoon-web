@@ -5,8 +5,9 @@ function FacebookIcon(props) {
     <svg
       fill={WHITE}
       height={50}
+      preserveAspectRatio="xMidYMid"
       role="img"
-      viewBox="0 0 24 24"
+      viewBox="1.5 1.4 21 21"
       width={50}
       xmlns="http://www.w3.org/2000/svg"
       {...props}

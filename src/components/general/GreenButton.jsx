@@ -1,16 +1,12 @@
 import { styled } from '@linaria/react';
 import { redirectGooglePlay } from '../../utils/utils';
-import { GREEN, WHITE } from '../../styles/colors';
+import { GREEN, GREEN_LIGHT, WHITE } from '../../styles/colors';
 
 export default function GreenButton() {
   return (
     <Container>
       <GreenOutlineBtn onClick={() => redirectGooglePlay()}>
-        <svg className="border" height="60px" viewBox="0 0 180 60" width="180px">
-          <polyline className="bg-line" points="179,1 179,59 1,59 1,1 179,1" />
-          <polyline className="hl-line" points="179,1 179,59 1,59 1,1 179,1" />
-        </svg>
-        <span>Start cooking on Google Play!</span>
+        Start cooking on Google Play!
       </GreenOutlineBtn>
     </Container>
   );
@@ -24,38 +20,48 @@ export const Container = styled.div`
   position: absolute;
 `;
 
-const GreenOutlineBtn = styled.button`
-  width: 180px;
-  height: 60px;
+const GreenOutlineBtn = styled.a`
+  background-color: ${GREEN_LIGHT};
   cursor: pointer;
-  background: transparent;
+  width: 180px;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
   border: 1px solid ${GREEN};
-  outline: none;
-  transition: 1s ease-in-out;
-  span {
-    color: ${GREEN};
-    font-size: 18px;
-    font-weight: 100;
-  }
-  svg {
+  border-radius: 10rem;
+  color: ${WHITE};
+  text-align: center;
+  line-height: 1.5rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  ::after {
+    content: '';
     position: absolute;
+    bottom: 0;
     left: 0;
-    top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    z-index: -2;
   }
-  &:hover {
-    transition: 1s ease-in-out;
-    background: ${GREEN};
-    span {
-      transition: 1s ease-in-out;
-      color: ${WHITE};
-    }
-    svg {
-      stroke-dashoffset: -480;
+  ::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: ${GREEN};
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  :hover {
+    ::before {
+      width: 100%;
     }
   }
 `;
+
+// https://codepen.io/alticreation/pen/zBZwOP?editors=1100

@@ -156,6 +156,16 @@ const TitleHeader = styled.header`
     }
   }
 
+  @media (max-width: 1200px) {
+    div {
+      gap: 2rem;
+      img {
+        width: 120px;
+        height: auto;
+      }
+    }
+  }
+
   @media (max-width: 1000px) {
     div {
       gap: 2rem;
@@ -166,20 +176,11 @@ const TitleHeader = styled.header`
     }
   }
 
-  @media (max-width: 1100px) {
-    div {
-      gap: 2rem;
-      img {
-        width: 120px;
-        height: auto;
-      }
-    }
-  }
-
   @media (max-width: 870px) {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 0;
     div {
       gap: 1.5rem;
       img {
@@ -206,6 +207,9 @@ const MiddleTitleSection = styled.div`
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
+  @media (max-width: 870px) {
+    padding: 2rem;
+  }
 `;
 
 const TitleImages = styled.div`
