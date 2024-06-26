@@ -2,32 +2,24 @@ import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { ImgButton, SmallText, horizontalPadding, hoverUnderline } from '../../styles/styles';
+import { IconsContainer, SmallText, horizontalPadding, hoverUnderline } from '../../styles/styles';
 import { GREEN } from '../../styles/colors';
-// import AppleStoreBadge from '../../assets/appstore-badges/App_Store_Badge.svg';
-import GooglePlayBadge from '../../assets/appstore-badges/Play_Store_Badge.svg';
 import { AppContext } from '../../utils/context';
 import MailinglistForm from '../forms/MailinglistForm';
+import useScreenSize from '../../utils/useScreenSize';
 import SocialIcon from './SocialIcon';
+import DownloadSection from './DownloadSection';
 
 export default function Footer() {
   const { currentYear } = useContext(AppContext);
+  const screenSize = useScreenSize();
 
   return (
-    <FooterSection>
+    <div className={footerSection} style={{ height: screenSize.height }}>
       <MailinglistForm />
+      <DownloadSection />
       <IconsContainer>
-        <ImgButton
-          href="https://play.google.com/store/apps/details?id=com.foresthu2006.Spoon"
-          target="_blank"
-        >
-          <img alt="Download on Google Play." src={GooglePlayBadge} />
-        </ImgButton>
-        {/* <ImgButton href="https://www.instagram.com/tspoonapp/" target="_blank">
-          <img alt="Download on the Apple Store." src={AppleStoreBadge} />
-        </ImgButton> */}
-      </IconsContainer>
-      <IconsContainer>
+        <SocialIcon type="discord" />
         <SocialIcon type="instagram" />
         <SocialIcon type="tiktok" />
         <SocialIcon type="facebook" />
@@ -46,17 +38,9 @@ export default function Footer() {
           </Link>
         </SmallText>
       </FooterBar>
-    </FooterSection>
+    </div>
   );
 }
-
-const IconsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 4vw;
-  padding: 15px 0;
-`;
 
 const terms = css`
   display: flex;
@@ -74,7 +58,7 @@ const company = css`
   margin-right: auto;
 `;
 
-const FooterSection = styled.div`
+const footerSection = css`
   color: white;
   background-color: ${GREEN};
   padding: ${horizontalPadding} ${horizontalPadding};
@@ -82,6 +66,7 @@ const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
 `;
 

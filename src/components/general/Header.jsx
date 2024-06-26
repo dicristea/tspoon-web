@@ -1,13 +1,6 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
-import {
-  Button,
-  ButtonContainer,
-  GreenBackground,
-  Title,
-  horizontalPadding,
-  pinkButton
-} from '../../styles/styles';
+import { GreenBackground, Title, horizontalPadding } from '../../styles/styles';
 import { WHITE } from '../../styles/colors';
 import RandomCharacter1 from '../../assets/artwork/RandomChar_1.svg';
 import RandomCharacter2 from '../../assets/artwork/RandomChar_2.svg';
@@ -18,8 +11,8 @@ import Andrew from '../../assets/artwork/Andrew.svg';
 import Forest from '../../assets/artwork/Forest.svg';
 import Diana from '../../assets/artwork/Diana.svg';
 import useScreenSize from '../../utils/useScreenSize';
-import { redirectGooglePlay } from '../../utils/utils';
 import NavBar from './NavBar';
+import DownloadSection from './DownloadSection';
 
 export default function Header({ page, signUpRef }) {
   const screenSize = useScreenSize();
@@ -48,11 +41,7 @@ export default function Header({ page, signUpRef }) {
                 Nameless <br />
                 Chefs
               </Title>
-              <ButtonContainer>
-                <Button className={pinkButton} onClick={() => redirectGooglePlay()}>
-                  GOOGLE PLAY
-                </Button>
-              </ButtonContainer>
+              <DownloadSection />
             </MiddleTitleSection>
             <TitleImages>
               {screenSize.width < 870 ? <img alt="logo" src={RandomCharacter1} /> : null}

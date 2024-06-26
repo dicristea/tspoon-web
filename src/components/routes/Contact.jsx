@@ -5,7 +5,6 @@ import Header from '../general/Header';
 import Footer from '../general/Footer';
 import ContactForm from '../forms/ContactForm';
 import ContactGraphic from '../../assets/artwork/Contact_Graphic.svg';
-import DownloadSection from '../general/DownloadSection';
 
 export default function Contact() {
   const signUpRef = useRef();
@@ -17,7 +16,6 @@ export default function Contact() {
         <img alt="Contact Us Graphic" className={contactArtwork} src={ContactGraphic} />
         <ContactForm />
       </ContactSection>
-      <DownloadSection />
       <div ref={signUpRef}>
         <Footer />
       </div>

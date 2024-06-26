@@ -110,7 +110,7 @@ export default function MailinglistForm() {
               />
               <SmallText>
                 I agree to the{' '}
-                <Link className={hoverUnderline} to="/terms">
+                <Link className={hoverUnderline} to="/terms ">
                   Terms of Service
                 </Link>
                 .
@@ -146,6 +146,7 @@ const formHeader = css`
 const mailinglistForm = css`
   display: flex;
   flex-direction: column;
+  width: 300px;
   gap: 20px;
   color: ${WHITE};
   input:-webkit-autofill,

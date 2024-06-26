@@ -157,6 +157,7 @@ export const SmallText = styled.div`
 export const Section = styled.div`
   background-color: ${GRAY};
   color: ${BLACK};
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -166,9 +167,14 @@ export const Section = styled.div`
   div {
     max-width: 300px;
   }
-  @media (max-width: 700px) {
-    display: grid;
-  }
+`;
+
+export const IconsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4vw;
+  padding: 15px 0;
 `;
 
 export const TextSection = styled.div`
@@ -185,9 +191,22 @@ export const AnchorTag = styled.a`
   text-decoration: none;
 `;
 
+export const blackHoverUnderline = css`
+  color: white;
+  font-size: ${bodyFontSize};
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  background: linear-gradient(${BLACK}, ${BLACK}) bottom / 0 0.08em no-repeat;
+  transition: 200ms background-size;
+  &:hover {
+    background-size: 100% 0.08em;
+  }
+`;
+
 export const hoverUnderline = css`
   color: white;
   text-decoration: none;
+  padding-bottom: 0.2rem;
   background: linear-gradient(${WHITE}, ${WHITE}) bottom / 0 0.1em no-repeat;
   transition: 200ms background-size;
   &:hover {
@@ -291,8 +310,8 @@ export const ImgButton = styled.a`
   border-radius: 16px;
   cursor: pointer;
   img {
-    width: auto;
-    height: 2.5rem;
+    width: auto !important;
+    height: 2.5rem !important;
   }
 `;
 

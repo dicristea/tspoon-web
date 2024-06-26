@@ -1,9 +1,11 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import {
   BodyText,
   Heading3,
+  blackHoverUnderline,
   h3PaddingBottom,
   normalImageSize,
   textPaddingBottom
@@ -13,8 +15,9 @@ import Header from '../general/Header';
 import Footer from '../general/Footer';
 import DinnerArtwork from '../../assets/artwork/Homepage_dinner.svg';
 import ChefArtwork from '../../assets/artwork/Homepage_Block.svg';
-import HomeAnimation from '../../assets/artwork/HomeFeedAnimation.gif';
-import GreenButton from '../general/GreenButton';
+import HomeAnimation from '../../assets/HomeFeedAnimation.gif';
+import DownloadSection from '../general/DownloadSection';
+// import ActionButton from '../general/ActionButton';
 
 export default function Home() {
   const signUpRef = useRef();
@@ -22,48 +25,51 @@ export default function Home() {
   return (
     <div>
       <Header className={fontColorWhite} page="Title" signUpRef={signUpRef} />
-      <div className={sectionBody}>
-        <HomeSection>
-          <div className={leftAlign}>
-            <Heading3 className={h3PaddingBottom}>Where your next dinner plans are found.</Heading3>
-            <BodyText>Date night? Parents coming into town?</BodyText>
-            <BodyText className={textPaddingBottom}>Housewarming party?</BodyText>
-            <BodyText className={textPaddingBottom}>
-              Find plans for your next meal, and cook easily and efficiently with easy to navigate
-              instructions for a hassle-free cooking process.
-            </BodyText>
-          </div>
-          <div>
-            <img alt="Artwork of chef" className={normalImageSize} src={DinnerArtwork} />
-          </div>
-          <div className={item4}>
-            <img alt="Artwork of dinner" className={normalImageSize} src={ChefArtwork} />
-          </div>
-          <div className={item3}>
-            <Heading3 className={h3PaddingBottom}>Chef, build your name.</Heading3>
-            <BodyText className={textPaddingBottom}>
-              No nameless Chefs means we want to give the power to every Chef whose cooking
-              masterpieces go unnoticed and are consumed too fast.
-            </BodyText>
-            <BodyText className={textPaddingBottom}>
-              Tspoon is where Chefs can build their brand and share their creations with loved ones
-              near and far.
-            </BodyText>
-          </div>
-          <div className={leftAlign}>
-            <Heading3 className={h3PaddingBottom}>Share your journey.</Heading3>
-            <BodyText className={textPaddingBottom}>
-              Share recipes, find dinner plans, and start cooking in as few swipes as possible on
-              Tspoon! Our app is designed for home chefs of any skill level to share their
-              creations, grow as Chefs, and discover new, horizon-expanding recipes.
-            </BodyText>
-            <GreenButton />
-          </div>
-          <div className={topPadding4rem}>
-            <img alt="App Animation" className={normalImageSize} src={HomeAnimation} />
-          </div>
-        </HomeSection>
-      </div>
+      <HomeSection>
+        <div className={leftAlign}>
+          <Heading3 className={h3PaddingBottom}>Where your next dinner plans are found.</Heading3>
+          <BodyText>Date night? Parents coming into town?</BodyText>
+          <BodyText className={textPaddingBottom}>Housewarming party?</BodyText>
+          <BodyText className={textPaddingBottom}>
+            Find plans for your next meal, and cook easily and efficiently with easy to navigate
+            instructions for a hassle-free cooking process.
+          </BodyText>
+          {/* <ActionButton text="" onClick={() => redirectToAbout} /> */}
+          <Link className={blackHoverUnderline} style={{ color: 'black' }} to="/about ">
+            → Learn more about us!
+          </Link>
+        </div>
+        <div>
+          <img alt="Artwork of chef" className={normalImageSize} src={DinnerArtwork} />
+        </div>
+        <div className={item4}>
+          <img alt="Artwork of dinner" className={normalImageSize} src={ChefArtwork} />
+        </div>
+        <div className={item3}>
+          <Heading3 className={h3PaddingBottom}>Chef, build your name.</Heading3>
+          <BodyText className={textPaddingBottom}>
+            No nameless Chefs means we want to give the power to every Chef whose cooking
+            masterpieces go unnoticed and are consumed too fast.
+          </BodyText>
+          <BodyText className={textPaddingBottom}>
+            Tspoon is where Chefs can build their brand and share their creations with loved ones
+            near and far.
+          </BodyText>
+        </div>
+        <div className={leftAlign}>
+          <Heading3 className={h3PaddingBottom}>Share your journey.</Heading3>
+          <BodyText className={textPaddingBottom}>
+            Share recipes, find dinner plans, and start cooking in as few swipes as possible on
+            Tspoon! Our app is designed for home chefs of any skill level to share their creations,
+            grow as Chefs, and discover new, horizon-expanding recipes.
+          </BodyText>
+          <DownloadSection />
+        </div>
+        <div className={topPadding4rem}>
+          <img alt="App Animation" className={normalImageSize} src={HomeAnimation} />
+        </div>
+      </HomeSection>
+
       <div ref={signUpRef}>
         <Footer />
       </div>
@@ -71,14 +77,9 @@ export default function Home() {
   );
 }
 
-const sectionBody = css`
-  background-color: ${GRAY};
+export const HomeSection = styled.div`
   padding: 4rem 20vw 6rem 20vw;
-  display: flex;
-  flex-direction: column;
-`;
-
-const HomeSection = styled.div`
+  background-color: ${GRAY};
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;

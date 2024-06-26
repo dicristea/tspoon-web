@@ -3,27 +3,34 @@ import { css } from '@linaria/core';
 import { Link } from 'react-router-dom';
 import { GREEN } from '../../styles/colors';
 import pinkStemLogo from '../../assets/logo/White_Trans.svg';
-import { Button, hoverUnderline, pinkButton } from '../../styles/styles';
+import { hoverUnderline } from '../../styles/styles';
+import useScreenSize from '../../utils/useScreenSize';
+import ActionButton from './ActionButton';
 
 export default function NavBar({ signUpRef }) {
   const handleSignUpScroll = () => signUpRef.current.scrollIntoView({ behavior: 'smooth' });
+  const screenSize = useScreenSize();
 
   return (
     <nav className={navBar}>
       <Link to="/">
         <Img alt="Tspoon logo" src={pinkStemLogo} />
       </Link>
-      <div className="right">
-        <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/about">
-          About
-        </Link>
-        <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/contact">
-          Contact
-        </Link>
-        <Button className={pinkButton} onClick={() => handleSignUpScroll()}>
-          SIGN UP
-        </Button>
-      </div>
+      {screenSize.width > 700 ? (
+        <div className="right">
+          <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/about">
+            About
+          </Link>
+          <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/contact">
+            Contact
+          </Link>
+          <ActionButton color="pink" text="SIGN UP" onClick={() => handleSignUpScroll()} />
+        </div>
+      ) : (
+        <div>
+          <ActionButton color="pink" text="SIGN UP" onClick={() => handleSignUpScroll()} />
+        </div>
+      )}
     </nav>
   );
 }
@@ -40,8 +47,6 @@ const navBar = css`
   @media (max-width: 650px) {
     padding: 4vw;
   }
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   align-items: center;
