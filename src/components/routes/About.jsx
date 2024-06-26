@@ -70,10 +70,6 @@ export default function About() {
   );
 }
 
-// const aboutContainer = css`
-//   padding: 4rem 0;
-// `;
-
 const tracyskitchen = css`
   height: auto;
   width: 300px;

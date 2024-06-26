@@ -27,7 +27,13 @@ export default function NavBar({ signUpRef }) {
           <ActionButton color="pink" text="SIGN UP" onClick={() => handleSignUpScroll()} />
         </div>
       ) : (
-        <div>
+        <div className="right">
+          <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/about">
+            About
+          </Link>
+          <Link className={hoverUnderline} style={{ paddingBottom: '0.2em' }} to="/contact">
+            Contact
+          </Link>
           <ActionButton color="pink" text="SIGN UP" onClick={() => handleSignUpScroll()} />
         </div>
       )}
