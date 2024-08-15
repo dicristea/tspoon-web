@@ -155,9 +155,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
+- [x] App Preview
+- [x] Download the app from Google Play!
+- [x] Download the app from Apple Store!
 - [ ] Scroll Animations
-- [ ] App Preview
-- [ ] Download the App!
 
 See the [open issues](https://github.com/dicristea/tspoon-web/issues) for a full list of proposed features (and known issues).
 
@@ -198,7 +199,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
+###MARKDOWN LINKS & IMAGES
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 <!-- [contributors-shield]: https://img.shields.io/github/contributors/dicristea/tspoon-web.svg?style=for-the-badge
