@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.10cb0036.css",
-    "main.js": "/static/js/main.c64e1bfe.js",
+    "main.css": "/static/css/main.37348113.css",
+    "main.js": "/static/js/main.de3e72fd.js",
     "static/js/529.885b13e3.chunk.js": "/static/js/529.885b13e3.chunk.js",
     "static/media/HomeFeedAnimation.gif": "/static/media/HomeFeedAnimation.40e66a34bbdc201a67c3.gif",
     "static/media/Homepage_dinner.svg": "/static/media/Homepage_dinner.58bd9023aca95583f505f59e811d7d15.svg",
@@ -12,6 +12,7 @@
     "static/media/source-sans-pro-latin-ext-600-normal.woff": "/static/media/source-sans-pro-latin-ext-600-normal.7388c38c78f7a7897242.woff",
     "static/media/source-sans-pro-latin-ext-300-italic.woff": "/static/media/source-sans-pro-latin-ext-300-italic.f9fd3463f4b423dd1e53.woff",
     "static/media/source-sans-pro-latin-ext-200-normal.woff": "/static/media/source-sans-pro-latin-ext-200-normal.58bdb82cf53be247573f.woff",
+    "static/media/pepper.png": "/static/media/pepper.73070df75de1e247f1a8.png",
     "static/media/source-sans-pro-latin-ext-400-italic.woff": "/static/media/source-sans-pro-latin-ext-400-italic.9b1f3fe1f1377985e74d.woff",
     "static/media/source-sans-pro-latin-ext-900-normal.woff": "/static/media/source-sans-pro-latin-ext-900-normal.ea8c5efe3f0f5049f8f7.woff",
     "static/media/source-sans-pro-latin-ext-600-italic.woff": "/static/media/source-sans-pro-latin-ext-600-italic.ca5863ffecc71ac800bb.woff",
@@ -43,9 +44,11 @@
     "static/media/source-sans-pro-latin-700-italic.woff": "/static/media/source-sans-pro-latin-700-italic.22a9d21e019180c3c1ec.woff",
     "static/media/source-sans-pro-latin-600-italic.woff": "/static/media/source-sans-pro-latin-600-italic.7f35efbde68f3c4013c0.woff",
     "static/media/source-sans-pro-latin-900-normal.woff": "/static/media/source-sans-pro-latin-900-normal.2ae47db2ab0330bff44a.woff",
+    "static/media/mushroom.png": "/static/media/mushroom.026841b27d894543e5dc.png",
     "static/media/source-sans-pro-latin-200-italic.woff": "/static/media/source-sans-pro-latin-200-italic.e0dbe15348668ec0fd42.woff",
     "static/media/source-sans-pro-latin-900-italic.woff": "/static/media/source-sans-pro-latin-900-italic.96daef0c3a3fd4f806eb.woff",
     "static/media/Play_Store_Badge.svg": "/static/media/Play_Store_Badge.16db2ca787891659be329b06699abcff.svg",
+    "static/media/broccoli.png": "/static/media/broccoli.03c999e255fb6447bf5b.png",
     "static/media/Diana.svg": "/static/media/Diana.7c64e89357841ddf090ed1af2e534e23.svg",
     "static/media/source-sans-pro-latin-400-normal.woff2": "/static/media/source-sans-pro-latin-400-normal.1402accbefdec6a25762.woff2",
     "static/media/source-sans-pro-latin-600-normal.woff2": "/static/media/source-sans-pro-latin-600-normal.ee990a93df71bfdfb3b5.woff2",
@@ -187,12 +190,12 @@
     "static/media/source-sans-pro-greek-ext-900-italic.woff2": "/static/media/source-sans-pro-greek-ext-900-italic.cb2c3b74cd6928fe1b02.woff2",
     "static/media/source-sans-pro-greek-ext-600-italic.woff2": "/static/media/source-sans-pro-greek-ext-600-italic.6d7636e72f6e17812af7.woff2",
     "static/media/source-sans-pro-greek-ext-700-italic.woff2": "/static/media/source-sans-pro-greek-ext-700-italic.34d65dd8d8d035797afc.woff2",
-    "main.10cb0036.css.map": "/static/css/main.10cb0036.css.map",
-    "main.c64e1bfe.js.map": "/static/js/main.c64e1bfe.js.map",
+    "main.37348113.css.map": "/static/css/main.37348113.css.map",
+    "main.de3e72fd.js.map": "/static/js/main.de3e72fd.js.map",
     "529.885b13e3.chunk.js.map": "/static/js/529.885b13e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10cb0036.css",
-    "static/js/main.c64e1bfe.js"
+    "static/css/main.37348113.css",
+    "static/js/main.de3e72fd.js"
   ]
 }
