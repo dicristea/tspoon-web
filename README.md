@@ -191,7 +191,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-<!-- * [Forest Hu](https://github.com/foresthu2006) -->
+* [Forest Hu](https://github.com/foresthu2006)
 * [Andrew Gao](https://www.linkedin.com/in/andrew-gao/)
 * [Pauline Yang](https://www.linkedin.com/in/pauline-hyejin-yang/)
 
