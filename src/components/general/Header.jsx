@@ -59,10 +59,10 @@ export default function Header({ page, signUpRef }) {
           <AboutHeader>
             <Title>Made by nameless chefs.</Title>
             <TitleImages>
-              <img alt="logo" src={Paul} />
-              <img alt="logo" src={Andrew} />
-              <img alt="logo" src={Forest} />
-              <img alt="logo" src={Diana} />
+              <img alt="Pauline Yang" src={Paul} />
+              <img alt="Andrew Gao" src={Andrew} />
+              <img alt="Forest Hu" src={Forest} />
+              <img alt="Diana Cristea" src={Diana} />
             </TitleImages>
           </AboutHeader>
         </div>
@@ -108,7 +108,7 @@ const TitleHeader = styled.header`
   div:nth-child(2) {
     cursor: pointer;
     opacity: 0;
-    animation: fadeInAnimation ease 0.5s;
+    animation: fadeInAnimation ease 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: both;
     animation-delay: 200ms;

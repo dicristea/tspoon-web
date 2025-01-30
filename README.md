@@ -152,7 +152,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
  -->
 
-<!-- ROADMAP -->
+
 ## Roadmap
 
 - [x] App Preview
@@ -166,40 +166,31 @@ See the [open issues](https://github.com/dicristea/tspoon-web/issues) for a full
 
 
 
+## Contact me
+<p align="left">Diana Cristea - dicristea111@gmail.com</p>
 
-<!-- LICENSE -->
-<!-- ## License
+[![LinkedIn][linkedin-shield]][linkedin-diana-url]
+
+[Contact Tspoon](https://www.tspoonapp.com/#/contact)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+
+## Acknowledgments
+
+* Forest Hu [![GitHub][github-shield]][github-forest-url] [![LinkedIn][linkedin-shield]][linkedin-forest-url]
+* [Andrew Gao][![LinkedIn][linkedin-shield]][linkedin-andrew-url]
+* [Pauline Yang][![LinkedIn][linkedin-shield]][linkedin-paul-url]
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+
+## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right"><a href="#readme-top">back to top</a></p> -->
-
-
-
-<!-- CONTACT -->
-## Contact
-<p align="left">Diana Cristea - dicristea111@gmail.com</p>
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-[Contact Tspoon](https://www.tspoonapp.com/contact)
-
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* [Forest Hu](https://github.com/foresthu2006)
-* [Andrew Gao](https://www.linkedin.com/in/andrew-gao/)
-* [Pauline Yang](https://www.linkedin.com/in/pauline-hyejin-yang/)
-
-<p align="right"><a href="#readme-top">back to top</a></p>
-
-
-
-###MARKDOWN LINKS & IMAGES
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 <!-- [contributors-shield]: https://img.shields.io/github/contributors/dicristea/tspoon-web.svg?style=for-the-badge
@@ -208,8 +199,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-url]: https://github.com/dicristea/tspoon-web/issues -->
 <!-- [license-shield]: https://img.shields.io/github/license/dicristea/tspoon-web.svg?style=for-the-badge
 [license-url]: https://github.com/dicristea/tspoon-web/blob/master/LICENSE.txt -->
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/dicristea
+[linkedin-shield]: https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-diana-url]: https://linkedin.com/in/dicristea
+[linkedin-forest-url]: https://linkedin.com/in/foresthu
+[linkedin-andrew-url]: https://www.linkedin.com/in/andrew-gao
+[linkedin-paul-url]: https://www.linkedin.com/in/pauline-hyejin-yang
+
+
+[github-shield]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
+[github-forest-url]: https://github.com/foresthu2006/
 [product-screenshot]: ./src/assets/Tspoon_Site_Preview.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/

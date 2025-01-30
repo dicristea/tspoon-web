@@ -61,7 +61,6 @@ export default function Home() {
             Find plans for your next meal, and cook easily and efficiently with easy to navigate
             instructions for a hassle-free cooking process.
           </BodyText>
-          {/* <ActionButton text="" onClick={() => redirectToAbout} /> */}
           <Link className={blackHoverUnderline} style={{ color: 'black' }} to="/about ">
             → Learn more about us!
           </Link>
@@ -105,7 +104,7 @@ export default function Home() {
 }
 
 export const HomeSection = styled.div`
-  padding: 4rem 20vw 6rem 20vw;
+  padding: 4rem 15vw 6rem 15vw;
   background-color: ${GRAY};
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -121,7 +120,7 @@ export const HomeSection = styled.div`
   @media (max-width: 800px) {
     gap: 2.5rem;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     gap: 2rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;

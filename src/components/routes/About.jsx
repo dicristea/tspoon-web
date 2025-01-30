@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 
 import { useRef } from 'react';
+import { styled } from '@linaria/react';
 import {
   BodyText,
   Heading2,
@@ -15,6 +16,8 @@ import TracysKitchen from '../../assets/artwork/AboutUs_Block.svg';
 import DownloadSection from '../general/DownloadSection';
 import ScrollToTop from '../../utils/ScrollToTop';
 import HomeAnimation from '../../assets/HomeFeedAnimation.gif';
+import DirectoryCard from '../general/DirectoryCard';
+import { GRAY } from '../../styles/colors';
 import { HomeSection } from './Home';
 
 export default function About() {
@@ -37,6 +40,7 @@ export default function About() {
             your friends, and develop your techniques to become to best version of yourself that you
             can be.
           </BodyText>
+          <DownloadSection />
         </div>
         <div>
           <img alt="App Animation" className={normalImageSize} src={HomeAnimation} />
@@ -60,6 +64,15 @@ export default function About() {
           <img alt="Tracy's Kitchen" className={tracyskitchen} src={TracysKitchen} />
         </div>
       </HomeSection>
+      <CardSection>
+        <Heading2 className={h3PaddingBottom}>Who are we?</Heading2>
+        <CardsContainer>
+          <DirectoryCard name="Andrew" />
+          <DirectoryCard name="Forest" />
+          <DirectoryCard name="Diana" />
+          <DirectoryCard name="Pauline" />
+        </CardsContainer>
+      </CardSection>
       <Section>
         <DownloadSection />
       </Section>
@@ -73,4 +86,28 @@ export default function About() {
 const tracyskitchen = css`
   height: auto;
   width: 300px;
+`;
+
+const CardSection = styled.div`
+  background-color: ${GRAY};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 0 15vw 4rem 15vw;
+`;
+
+const CardsContainer = styled.div`
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 `;
