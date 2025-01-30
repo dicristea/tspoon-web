@@ -18,7 +18,7 @@ export default function DirectoryCard({ name }) {
             rel="noreferrer"
             target="_blank"
           >
-            <img alt="Forest Hu" className={cardImage} src={Diana} />
+            <img alt="Diana Cristea" className={cardImage} src={Diana} />
           </Link>
           <Link
             cursor="pointer"
