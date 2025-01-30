@@ -12,22 +12,22 @@ export default function DirectoryCard({ name }) {
     case 'Diana': {
       return (
         <OutlinedCard>
-          <Link
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/dicristea"
             rel="noreferrer"
             target="_blank"
-          >
-            <img alt="Diana Cristea" className={cardImage} src={Diana} />
-          </Link>
-          <Link
+          > */}
+          <img alt="Diana Cristea" className={cardImage} src={Diana} />
+          {/* </Link> */}
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/dicristea"
             rel="noreferrer"
             target="_blank"
-          >
-            <Heading3 className={namePadding}>Diana Cristea</Heading3>
-          </Link>
+          > */}
+          <Heading3 className={namePadding}>Diana Cristea</Heading3>
+          {/* </Link> */}
           <BodyText className={textPadding}> Software Engineer & Web Developer</BodyText>
         </OutlinedCard>
       );
@@ -35,22 +35,22 @@ export default function DirectoryCard({ name }) {
     case 'Forest': {
       return (
         <OutlinedCard>
-          <Link
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/foresthu"
             rel="noreferrer"
             target="_blank"
-          >
-            <img alt="Forest Hu" className={cardImage} src={Forest} />
-          </Link>
-          <Link
+          > */}
+          <img alt="Forest Hu" className={cardImage} src={Forest} />
+          {/* </Link> */}
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/foresthu"
             rel="noreferrer"
             target="_blank"
-          >
-            <Heading3 className={namePadding}>Forest Hu</Heading3>
-          </Link>
+          > */}
+          <Heading3 className={namePadding}>Forest Hu</Heading3>
+          {/* </Link> */}
           <BodyText className={textPadding}>Founder & Chief Technology Officer</BodyText>
         </OutlinedCard>
       );
@@ -58,22 +58,22 @@ export default function DirectoryCard({ name }) {
     case 'Andrew': {
       return (
         <OutlinedCard>
-          <Link
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/andrew-gao"
             rel="noreferrer"
             target="_blank"
-          >
-            <img alt="Andrew Gao" className={cardImage} src={Andrew} />
-          </Link>
-          <Link
+          > */}
+          <img alt="Andrew Gao" className={cardImage} src={Andrew} />
+          {/* </Link> */}
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/andrew-gao"
             rel="noreferrer"
             target="_blank"
-          >
-            <Heading3 className={namePadding}>Andrew Gao</Heading3>
-          </Link>
+          > */}
+          <Heading3 className={namePadding}>Andrew Gao</Heading3>
+          {/* </Link> */}
           <BodyText className={textPadding}>Founder & Chief Executive Officer</BodyText>
         </OutlinedCard>
       );
@@ -81,22 +81,22 @@ export default function DirectoryCard({ name }) {
     case 'Pauline': {
       return (
         <OutlinedCard>
-          <Link
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/pauline-hyejin-yang"
             rel="noreferrer"
             target="_blank"
-          >
-            <img alt="Pauline Yang" className={cardImage} src={Paul} />
-          </Link>
-          <Link
+          > */}
+          <img alt="Pauline Yang" className={cardImage} src={Paul} />
+          {/* </Link> */}
+          {/* <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/pauline-hyejin-yang"
             rel="noreferrer"
             target="_blank"
-          >
-            <Heading3 className={namePadding}>Pauline Yang</Heading3>
-          </Link>
+          > */}
+          <Heading3 className={namePadding}>Pauline Yang</Heading3>
+          {/* </Link> */}
           <BodyText className={textPadding}>Social Media Manager & Content Creator</BodyText>
         </OutlinedCard>
       );
@@ -130,15 +130,15 @@ const cardImage = css`
 `;
 
 const namePadding = css`
-  cursor: 'pointer';
+  /* cursor: 'pointer'; */
   padding-top: 1rem;
-  text-decoration: none;
+  /* text-decoration: none;
   padding-bottom: 0.2rem;
   background: linear-gradient(${GREEN}, ${GREEN}) bottom / 0 0.08em no-repeat;
   transition: 200ms background-size;
   &:hover {
     background-size: 100% 0.08em;
-  }
+  } */
 `;
 
 const textPadding = css`
@@ -146,6 +146,6 @@ const textPadding = css`
   text-align: center;
 `;
 
-const Link = styled.a`
-  text-decoration: none;
-`;
+// const Link = styled.a`
+//   text-decoration: none;
+// `;
