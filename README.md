@@ -178,9 +178,12 @@ See the [open issues](https://github.com/dicristea/tspoon-web/issues) for a full
 
 ## Acknowledgments
 
-* Forest Hu [![GitHub][github-shield]][github-forest-url] [![LinkedIn][linkedin-shield]][linkedin-forest-url]
-* [Andrew Gao][![LinkedIn][linkedin-shield]][linkedin-andrew-url]
-* [Pauline Yang][![LinkedIn][linkedin-shield]][linkedin-paul-url]
+* Forest Hu 
+[![GitHub][github-shield]][github-forest-url] [![LinkedIn][linkedin-shield]][linkedin-forest-url]
+* [Andrew Gao]
+[![LinkedIn][linkedin-shield]][linkedin-andrew-url]
+* [Pauline Yang]
+[![LinkedIn][linkedin-shield]][linkedin-paul-url]
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 

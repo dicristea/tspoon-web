@@ -12,64 +12,92 @@ export default function DirectoryCard({ name }) {
     case 'Diana': {
       return (
         <OutlinedCard>
-          <img
-            alt="Diana Cristea"
-            className={cardImage}
+          <Link
             cursor="pointer"
-            href="https://linkedin.com/in/dicristea"
-            src={Diana}
+            href="https://www.linkedin.com/in/dicristea"
+            rel="noreferrer"
             target="_blank"
-          />
-          <Heading3 className={namePadding}>Diana Cristea</Heading3>
-          <BodyText>Founding Software Developer</BodyText>
+          >
+            <img alt="Forest Hu" className={cardImage} src={Diana} />
+          </Link>
+          <Link
+            cursor="pointer"
+            href="https://www.linkedin.com/in/dicristea"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Heading3 className={namePadding}>Diana Cristea</Heading3>
+          </Link>
+          <BodyText className={textPadding}> Software Engineer & Web Developer</BodyText>
         </OutlinedCard>
       );
     }
     case 'Forest': {
       return (
         <OutlinedCard>
-          <img
-            alt="Forest Hu"
-            className={cardImage}
+          <Link
             cursor="pointer"
-            href="https://linkedin.com/in/foresthu"
-            src={Forest}
+            href="https://www.linkedin.com/in/foresthu"
+            rel="noreferrer"
             target="_blank"
-          />
-          <Heading3 className={namePadding}>Forest Hu</Heading3>
-          <BodyText>Founder & Chief Technology Officer</BodyText>
+          >
+            <img alt="Forest Hu" className={cardImage} src={Forest} />
+          </Link>
+          <Link
+            cursor="pointer"
+            href="https://www.linkedin.com/in/foresthu"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Heading3 className={namePadding}>Forest Hu</Heading3>
+          </Link>
+          <BodyText className={textPadding}>Founder & Chief Technology Officer</BodyText>
         </OutlinedCard>
       );
     }
     case 'Andrew': {
       return (
         <OutlinedCard>
-          <img
-            alt="Andrew Gao"
-            className={cardImage}
+          <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/andrew-gao"
-            src={Andrew}
+            rel="noreferrer"
             target="_blank"
-          />
-          <Heading3 className={namePadding}>Andrew Gao</Heading3>
-          <BodyText>Founder & Chief Executive Officer</BodyText>
+          >
+            <img alt="Andrew Gao" className={cardImage} src={Andrew} />
+          </Link>
+          <Link
+            cursor="pointer"
+            href="https://www.linkedin.com/in/andrew-gao"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Heading3 className={namePadding}>Andrew Gao</Heading3>
+          </Link>
+          <BodyText className={textPadding}>Founder & Chief Executive Officer</BodyText>
         </OutlinedCard>
       );
     }
     case 'Pauline': {
       return (
         <OutlinedCard>
-          <img
-            alt="Pauline Yang"
-            className={cardImage}
+          <Link
             cursor="pointer"
             href="https://www.linkedin.com/in/pauline-hyejin-yang"
-            src={Paul}
+            rel="noreferrer"
             target="_blank"
-          />
-          <Heading3 className={namePadding}>Pauline Yang</Heading3>
-          <BodyText>Marketing Manager and Artist</BodyText>
+          >
+            <img alt="Pauline Yang" className={cardImage} src={Paul} />
+          </Link>
+          <Link
+            cursor="pointer"
+            href="https://www.linkedin.com/in/pauline-hyejin-yang"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Heading3 className={namePadding}>Pauline Yang</Heading3>
+          </Link>
+          <BodyText className={textPadding}>Social Media Manager & Content Creator</BodyText>
         </OutlinedCard>
       );
     }
@@ -84,7 +112,7 @@ const OutlinedCard = styled.div`
   outline: ${GREEN} solid 3px;
   border-radius: 6px;
   display: grid;
-  height: min-content;
+  height: 375px;
   width: 300px;
   align-items: center;
   justify-content: center;
@@ -102,6 +130,22 @@ const cardImage = css`
 `;
 
 const namePadding = css`
+  cursor: 'pointer';
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  background: linear-gradient(${GREEN}, ${GREEN}) bottom / 0 0.08em no-repeat;
+  transition: 200ms background-size;
+  &:hover {
+    background-size: 100% 0.08em;
+  }
+`;
+
+const textPadding = css`
+  padding-top: 0.5rem;
+  text-align: center;
+`;
+
+const Link = styled.a`
+  text-decoration: none;
 `;
