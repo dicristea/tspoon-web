@@ -5,7 +5,7 @@
       "details": [
         {
           // Example: "QQ57RJ5UTD.com.acme.myapp"
-          "appID": "{APPLE_TEAM_ID}.{BUNDLE_ID}",
+          "appID": "PS73QAKKY9.{BUNDLE_ID}",
           // All paths that should support redirecting
           "paths": ["/records/*"]
         }
@@ -13,11 +13,11 @@
     },
     // This section enables Apple Handoff
     "activitycontinuation": {
-      "apps": ["{APPLE_TEAM_ID}.{BUNDLE_ID}"]
+      "apps": ["PS73QAKKY9.{BUNDLE_ID}"]
     },
     // This section enable Shared Web Credentials
     "webcredentials": {
-      "apps": ["{APPLE_TEAM_ID}.{BUNDLE_ID}"]
+      "apps": ["PS73QAKKY9.{BUNDLE_ID}"]
     }
   }
   
