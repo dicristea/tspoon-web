@@ -14,7 +14,7 @@ export default function DirectoryCard({ name }) {
         <OutlinedCard>
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/dicristea"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
@@ -22,13 +22,13 @@ export default function DirectoryCard({ name }) {
           {/* </Link> */}
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/dicristea"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
           <Heading3 className={namePadding}>Diana Cristea</Heading3>
           {/* </Link> */}
-          <BodyText className={textPadding}> Software Engineer & Web Developer</BodyText>
+          <BodyText className={textPadding}> Co-Founder & Full-Stack Software Engineer </BodyText>
         </OutlinedCard>
       );
     }
@@ -37,7 +37,7 @@ export default function DirectoryCard({ name }) {
         <OutlinedCard>
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/foresthu"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
@@ -45,7 +45,7 @@ export default function DirectoryCard({ name }) {
           {/* </Link> */}
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/foresthu"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
@@ -60,7 +60,7 @@ export default function DirectoryCard({ name }) {
         <OutlinedCard>
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/andrew-gao"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
@@ -68,7 +68,7 @@ export default function DirectoryCard({ name }) {
           {/* </Link> */}
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/andrew-gao"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
@@ -83,7 +83,7 @@ export default function DirectoryCard({ name }) {
         <OutlinedCard>
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/pauline-hyejin-yang"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
@@ -91,7 +91,7 @@ export default function DirectoryCard({ name }) {
           {/* </Link> */}
           {/* <Link
             cursor="pointer"
-            href="https://www.linkedin.com/in/pauline-hyejin-yang"
+            href=""
             rel="noreferrer"
             target="_blank"
           > */}
