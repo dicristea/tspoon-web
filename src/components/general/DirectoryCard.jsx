@@ -51,7 +51,7 @@ export default function DirectoryCard({ name }) {
           > */}
           <Heading3 className={namePadding}>Forest Hu</Heading3>
           {/* </Link> */}
-          <BodyText className={textPadding}>Founder & Chief Technology Officer</BodyText>
+          <BodyText className={textPadding}>Co-Founder & Chief Technology Officer</BodyText>
         </OutlinedCard>
       );
     }
@@ -74,7 +74,7 @@ export default function DirectoryCard({ name }) {
           > */}
           <Heading3 className={namePadding}>Andrew Gao</Heading3>
           {/* </Link> */}
-          <BodyText className={textPadding}>Founder & Chief Executive Officer</BodyText>
+          <BodyText className={textPadding}>Co-Founder & Chief Executive Officer</BodyText>
         </OutlinedCard>
       );
     }
